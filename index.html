@@ -1089,13 +1089,13 @@ margin-top: 120px;
   }
   @media (max-width: 576px) {
     .site-map{
-      padding: 35px;
+      padding: 10px;
     }
   }
 
   @media (max-width: 768px) {
   .site-map {
-    padding: 20px; /* Reduced padding for smaller screens */
+    padding: 10px; /* Reduced padding for smaller screens */
   }
 
   .enquiry-form {
@@ -1331,6 +1331,20 @@ margin-top: 120px;
   color: #fff;
 }
 @media (max-width: 768px) {
+  .map-heading {
+    font-size: 30px; /* Smaller font size for tablets */
+    line-height: 45px; /* Adjust line height for consistency */
+  }
+}
+
+/* Style for mobile devices (e.g., 600px or less) */
+@media (max-width: 600px) {
+  .map-heading {
+    font-size: 24px; /* Smaller font size for mobile */
+    line-height: 36px; /* Adjust line height for consistency */
+  }
+}
+@media (max-width: 768px) {
   .map-container iframe {
     width: 100%; /* Full width for smaller screens */
     height: 300px; /* Adjust height for smaller screens */
@@ -1373,6 +1387,21 @@ margin-top: 120px;
       font-weight: 600;
       line-height: 54px;
     }
+    /* Style for tablets (e.g., between 600px and 768px) */
+@media (max-width: 768px) {
+  .benfits-heading {
+    font-size: 30px; /* Smaller font size for tablets */
+    line-height: 45px; /* Adjust line height for consistency */
+  }
+}
+
+/* Style for mobile devices (e.g., 600px or less) */
+@media (max-width: 600px) {
+  .benfits-heading {
+    font-size: 24px; /* Smaller font size for mobile */
+    line-height: 36px; /* Adjust line height for consistency */
+  }
+}
 .accordion-button{
   color: #fff;
 }
@@ -1758,7 +1787,7 @@ margin-top: 120px;
   <a data-fancybox="gallery" href="Frame 247.png"></a>
   <!-- Add more hidden images if needed -->
 </div>
-<div  class="container-fluid site-map py-5 " style="background-color: #0ECA6D;">
+<div  class="container-fluid site-map py-5" style="background-color: #0ECA6D;">
 
     <div class="container">
        <div class="row">
@@ -1881,7 +1910,7 @@ margin-top: 120px;
             <div class="col-md-6 col-sm-12 pt-5">
               <div class="container">
                 <h1 class="benfits-heading">LOCATION BENFITS</h1>
-                <div class="accordion accordion-flush" id="accordionFlushExample" >
+                <div class="accordion accordion-flush mt-3" id="accordionFlushExample" >
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
