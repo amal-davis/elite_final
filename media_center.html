@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Center</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css"
+        integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="media_center.css" type="text/css">
+</head>
+<style>
+
+
+</style>
+
+<body>
+
+
+    <div class="header">
+        <div class="menu-toggle">
+            <div class="hamburger"></div>
+            <div class="hamburger-border"></div>
+        </div>
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/ezgif.com-webp-to-png-converter (1).png" alt="Logo" class="img-fluid">
+            </a>
+           
+        </div>
+        <div class="phone-icon" style="color: #fff;">
+            <i class="fas fa-phone"></i>
+        </div>
+        <div class="menu">
+            <!-- Menu items will go here -->
+            <div class="menu-header">
+                <h4 style="color: transparent;">.</h4>
+                <i class='fas fa-times fa-xs close-menu'></i>
+            </div>
+            <ul class="menu-list mt-5">
+                <li><a href="index.html" class="menu-link lead">HOME</a></li>
+                <li><a href="#" class="menu-link lead with-arrow">WHO WE ARE<i class="fas fa-arrow-right"></i></a>
+                    <ul class="sub-menu">
+                        <li class="sub-menu-header">
+                            <a href="#" class="close-submenu"><i class="fas fa-arrow-left"></i> Back</a>
+                        </li>
+                        <li><a href="philosophy.html" class="menu-link lead">PHILOSOPHY</a></li>
+                        
+                        <li><a href="residential.html" class="menu-link lead">RESIDENTIAL</a></li>
+                        <li><a href="commercial.html" class="menu-link lead">COMMERCIAL</a></li>
+                        <li><a href="industrias.html" class="menu-link lead">INDUSTRIAL</a></li>
+                    </ul>
+                </li>
+                <!-- <li><a href="#" class="menu-link lead with-arrow">Service<i
+                            class="fas fa-arrow-right"></i></a>
+                    <ul class="sub-menu">
+                        <li class="sub-menu-header">
+                            <a href="#" class="close-submenu"><i class="fas fa-arrow-left"></i> Back</a>
+                        </li>
+                        <li><a href="#" class="menu-link lead">Sub Menu Item 4</a></li>
+                        <li><a href="#" class="menu-link lead">Sub Menu Item 5</a></li>
+                        <li><a href="#" class="menu-link lead">Sub Menu Item 6</a></li>
+                    </ul>
+                </li> -->
+                
+                <li><a href="#" class="menu-link lead with-arrow">Projects <i class="fas fa-arrow-right"></i></a>
+                    <ul class="sub-menu">
+                        <li class="sub-menu-header">
+                            <a href="#" class="close-submenu"><i class="fas fa-arrow-left"></i> Back</a>
+                        </li>
+                        
+                        <li><a href="locations.html" class="menu-link lead">THRISSUR</a></li>
+                        <li><a href="trivandram.html" class="menu-link lead">TRIVANDRUM</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="menu-link lead with-arrow">Info<i class="fas fa-arrow-right"></i></a>
+                    <ul class="sub-menu">
+                        <li class="sub-menu-header">
+                            <a href="#" class="close-submenu"><i class="fas fa-arrow-left"></i> Back</a>
+                        </li>
+                        <li><a href="home_loan_faq.html" class="menu-link lead">HOME LOAN FAQ</a></li>
+                        <li><a href="how_to_buy_house.html" class="menu-link lead">HOME BUYING GUIDE</a></li>
+                        <li><a href="media_center.html" class="menu-link lead">MEDIA CENTER</a></li>
+                        <li><a href="elite_blogs.html" class="menu-link lead">BLOGS</a></li>
+                    </ul>
+                </li>
+                <!-- <li><a href="#" class="menu-link lead with-arrow">Loans <i class="fas fa-arrow-right"></i></a>
+                    <ul class="sub-menu">
+                        <li class="sub-menu-header">
+                            <a href="#" class="close-submenu"><i class="fas fa-arrow-left"></i> Back</a>
+                        </li>
+                        <li><a href="#" class="menu-link lead">Sub Menu Item 13</a></li>
+                        <li><a href="#" class="menu-link lead">Sub Menu Item 14</a></li>
+                        <li><a href="#" class="menu-link lead">Sub Menu Item 15</a></li>
+                    </ul>
+                </li> -->
+                <li><a href="elite_prvilages.html" class="menu-link lead">SERVICES</a></li>
+                <li><a href="contact_us.html" class="menu-link lead">Contact Us</a></li>
+            </ul>
+            <div class="connect-with-us mt-5">
+                <h4>Connect with us</h4>
+                <div class="social-icons ">
+                    <ul>
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="image-section">
+        <!-- Image set in HTML -->
+        <img src="assets/social_medi_image.webp" alt="philosophy" class="img-fluid"> <!-- Use your image source -->
+
+        <!-- Header positioned over the image -->
+        <div class="header-overlay">
+            <h1>MEDIA CENTER</h1> <!-- Header content -->
+            <p></p>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="dropdown-containers mt-3 text-center">
+            <select class="dropdown-menu form-control" id="linkDropdown" onchange="scrollToSection(this.value)"
+                style="border-radius: 0px;">
+                <option value="">Select Section</option>
+                <option value="#section2" selected>NEWS AND EVENTS</option>
+                <option value="#section1">SOCIAL MEDIA FEEDS</option>
+                <option value="#section3">PLANT FOR THE PLANET</option>
+                <option value="#section4">BLOGS</option>
+                <option value="#">BRAND MANUAL</option>
+                
+
+            </select>
+        </div>
+        <div class="link-section">
+
+            <a href="#section2" class="nav-link">NEWS AND EVENTS</a>
+            <a href="#section1" class="nav-link">SOCIAL MEDIA FEEDS</a>
+            <a href="#section3" class="nav-link">PLANT FOR THE PLANET</a>
+            <a href="#section4" class="nav-link">BLOGS</a>
+            <a href="#" class="nav-link">BRAND MANUAL</a>
+            
+        </div>
+    </div>
+
+    <div id="section2" class="content-section mt-5">
+        <div class="container mt-5">
+            <!-- Owl Carousel Wrapper -->
+            <div class="text-center font">
+                <h2>NEWS AND EVENTS</h2>
+            </div>
+            <div class="owl-carousel owl-theme owl-new-section mt-5" style="padding: 20px;">
+                <!-- Initialize the Owl Carousel -->
+                <!-- First Slide -->
+                <div class="item text-center">
+                    <a href="image_galley.html">
+                        <img src="assets/Frame 292.png" alt="Image 1" class="img-fluid"> <!-- Top image -->
+                        <p>March 4, 2021</p> <!-- Date -->
+                        <h4 class="news-heading">National Safety Day at Insignia</h4> <!-- Heading -->
+                    </a>
+
+                </div>
+
+                <!-- Second Slide -->
+                <div class="item text-center">
+                    <a href="image_galley.html">
+                        <img src="assets/Frame 302.png" alt="Image 2" class="img-fluid"> <!-- Top image -->
+                        <p>April 15, 2021</p> <!-- Date -->
+                        <h4 class="news-heading">Environmental Awareness Day</h4> <!-- Heading -->
+                    </a>
+
+                </div>
+
+                <!-- Third Slide -->
+                <div class="item text-center">
+                    <a href="image_galley.html">
+                        <img src="assets/Frame 306.png" alt="Image 3" class="img-fluid"> <!-- Top image -->
+                        <p>May 10, 2021</p> <!-- Date -->
+                        <h4 class="news-heading">Employee Health and Wellness</h4> <!-- Heading -->
+                    </a>
+
+                </div>
+            </div>
+            <!-- Custom Navigation Buttons -->
+            <div class="custom-navigation text-center" style="padding-top: 10px;">
+                <button id="customPrev" class="btn custom-nav-btn" style="border-radius: 0px;">
+                    <i class="fas fa-arrow-left"></i>
+                </button> <!-- Custom "Prev" button -->
+                <button id="customNext" class="btn custom-nav-btn" style="border-radius: 0px;">
+                    <i class="fas fa-arrow-right"></i>
+                </button> <!-- Custom "Next" button -->
+            </div>
+        </div>
+    </div>
+
+    <div id="section1" class="content-section mt-5">
+        <div class="text-center font">
+            <h2>SOCIAL MEDIA FEEDS</h2>
+
+        </div>
+        <div class="container" style="margin-top: 70px;">
+            <div class="row justify-content-center"> <!-- Main responsive row centered -->
+
+                <!-- Instagram section -->
+                <div class="col-lg-4 col-md-8 col-sm-12 pt-5 d-flex justify-content-center">
+                    <!-- Centered within the column -->
+                    <blockquote class="instagram-media"
+                        data-instgrm-permalink="https://www.instagram.com/elitedevelopersindia/"
+                        data-instgrm-version="13">
+                    </blockquote>
+                    <script async src="//www.instagram.com/embed.js"></script>
+                </div>
+
+                <!-- Facebook section -->
+                <div class="col-lg-4 col-md-8 col-sm-12 pt-5 d-flex justify-content-center">
+                    <!-- Centered within the column -->
+                    <iframe
+                        src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/Elitedevlp&tabs=timeline&width=340&height=500"
+                        width="320" height="480" style="border:none;overflow:hidden;" frameborder="0"
+                        allow="encrypted-media">
+                    </iframe>
+                </div>
+                <div class="col-lg-4 col-md-8 col-sm-12 pt-5 d-flex justify-content-center">
+                    <a class="twitter-timeline"
+                       data-width="320"
+                       data-height="480"
+                       href="https://twitter.com/eliterealtydev?ref_src=twsrc%5Etfw">
+                        Tweets by eliterealtydev
+                    </a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="section3" class="content-section mt-5">
+        <div class="text-center font">
+            <h1>IT'S TRUE WE USE TREES FOR CONSTRUCTIONS</h1>
+            <h2 class="mt-3" style="color: #0ECA6D;">BY KEEPING THEM ALIVE!</h2>
+        </div>
+        <div class="container">
+            <div class="planet-paragraph mt-5" style="text-align: center;">
+                <p>Elite Developers launched its “Plant for the Planet” as part of it corporate social responsibility
+                    initiative to bring awareness on sustainable development through tree plantation. As part of this
+                    program, Elite has committed to plant at at least a 1000 trees this year. This initiative was launched
+                    at Shri. Ramakrishna Mission School, Puranattukara and Elite Gardenia Hills under the guidance of KFRI,
+                    Peechi and Kerala Agriculture University (Forestry Dept.) Apart from the tree planting activity, Elite
+                    also organises talks for the students at schools to promote awareness among students on the importance
+                    of trees and the need to protect them.
+    
+                </p>
+            </div>
+            <div class="container mt-5">
+                <div class="owl-carousel owl-theme owl-planet-section mt-5" style="padding: 20px;">
+                    <!-- Initialize the Owl Carousel -->
+                    <!-- First Slide -->
+                    <div class="item text-center">
+                        <a href="">
+                            <img src="assets/plant-1.jpg" alt="Image 1" class="img-fluid"> <!-- Top image -->
+
+                        </a>
+    
+                    </div>
+    
+                    <!-- Second Slide -->
+                    <div class="item text-center">
+                        <img src="assets/plant-2.jpg" alt="Image 2" class="img-fluid"> <!-- Top image -->
+
+                    </div>
+    
+                    <!-- Third Slide -->
+                    <div class="item text-center">
+                        <img src="assets/plant-3.jpg" alt="Image 3" class="img-fluid"> <!-- Top image -->
+
+                    </div>
+                    <div class="item text-center">
+                        <img src="assets/plant-4.jpg" alt="Image 3" class="img-fluid"> <!-- Top image -->
+
+                    </div>
+                    <div class="item text-center">
+                        <img src="assets/plant-5.jpg" alt="Image 3" class="img-fluid"> <!-- Top image -->
+
+                    </div>
+                </div>
+                <div class="custom-navigation text-center" style="padding-top: 10px;">
+                    <button id="customPrevs" class="btn custom-nav-btn" style="border-radius: 0px;">
+                        <i class="fas fa-arrow-left"></i>
+                    </button> <!-- Custom "Prev" button -->
+                    <button id="customNexts" class="btn custom-nav-btn" style="border-radius: 0px;">
+                        <i class="fas fa-arrow-right"></i>
+                    </button> <!-- Custom "Next" button -->
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div id="section4" class="content-section">
+
+        <div class="text-center font">
+            <h2>BLOGS</h2>
+
+        </div>
+
+        <div class="container my-blog-container mt-5">
+            <div class="row">
+              <!-- Blog Card 1 -->
+              <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="card my-blog-card h-100">
+                  <img class="card-img-top img-fluid" src="assets/Frame 245.png" alt="Blog Title">
+                  <div class="card-body d-flex flex-column">
+                    <p class="blog-date text-muted mt-3">March 23, 2024</p>
+                    <h5 class="card-title font mt-3">Discover SFS Tranquil’s Ready-to-Move 4 & 3 BHK Apartments in Kottayam</h5>
+                    <p class="card-text flex-grow-1 mt-3">Contact SFS Homes today and schedule a visit to explore your dream home at SFS...</p>
+                    <a href="#" class="mt-auto blog-read-more">
+                      READ MORE <i class="fas fa-chevron-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Blog Card 2 -->
+              <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="card my-blog-card h-100">
+                  <img class="card-img-top img-fluid" src="assets/Frame 246.png" alt="Blog Title">
+                  <div class="card-body d-flex flex-column">
+                    <p class="blog-date text-muted mt-3">March 23, 2024</p>
+                    <h5 class="card-title font mt-3">Discover SFS Tranquil’s Ready-to-Move 4 & 3 BHK Apartments in Kottayam</h5>
+                    <p class="card-text flex-grow-1 mt-3">Contact SFS Homes today and schedule a visit to explore your dream home at SFS...</p>
+                    <a href="#" class="mt-auto blog-read-more">
+                      READ MORE <i class="fas fa-chevron-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Blog Card 3 -->
+              <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="card my-blog-card h-100">
+                  <img class="card-img-top img-fluid" src="assets/Frame 247.png" alt="Blog Title">
+                  <div class="card-body d-flex flex-column">
+                    <p class="blog-date text-muted mt-3">March 23, 2024</p>
+                    <h5 class="card-title font mt-3">Discover SFS Tranquil’s Ready-to-Move 4 & 3 BHK Apartments in Kottayam</h5>
+                    <p class="card-text flex-grow-1 mt-3">Contact SFS Homes today and schedule a visit to explore your dream home at SFS...</p>
+                    <a href="#" class="mt-auto blog-read-more">
+                      READ MORE <i class="fas fa-chevron-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center mt-4 mb-4">
+                    <a href="link-to-view-all-content" class="view-all-link">
+                        View All <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+          </div>
+          
+    </div>
+
+    <div class="newsletter-signup mt-5">
+        <div class="overlay"></div>
+        <div class="container">
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your Email Id">
+                <button type="submit">Subscribe ➔</button>
+            </form>
+        </div>
+    </div>
+    <footer class="footer  text-white py-5">
+        <div class="container">
+            <div class="row">
+                <!-- First Section -->
+                <div class="col-md-4">
+                    <!-- Logo and vertical line -->
+                    <div class="logo-section">
+                        <img src="assets/logo FOOD 2.png" alt="Logo" class="mb-3">
+                        <div class="vertical-line"></div>
+                        <h5 class=" title mt-3 mb-3"> <span>An Elite Foods <br><span>& Innovations
+                                </span><br><span>Group Enterprise</span> </span> </h5>
+                    </div>
+                    <!-- Heading -->
+
+                    <!-- Paragraph -->
+                    <br>
+                    <p class="address">The Elite Group has been in the real estate business since 1995 and has been part
+                        of numerous projects that have stood the test of time.</p>
+                    <br> <br>
+                    <div class="d-flex justify-content-between">
+                        <img src="assets/Frame 273.png" alt="Logo 1">
+                        <img src="assets/BAI LOG 2.png" alt="Logo 2">
+                        <img src="assets/Frame 274.png" alt="Logo 3">
+                    </div>
+                </div>
+
+                <div class="col-md-1"></div> <!-- Adjust the column size for the desired gap -->
+
+                <!-- Second Section -->
+                <div class="col-md-4">
+                    <!-- Second Section Content -->
+                    <br>
+                    <h5 class="mb-3 with-line">REACH US</h5>
+                    <br><br>
+                    <h6 class="with-line"> ADDRESS</h6>
+                    <p class="address">Elite Gardenia Hills, Near Reliance <br><span>Petrol Pump, Puzhakkal P.O.,</span>
+                        <br> Thrissur – 680 553 Kerala, India
+                    </p>
+                    <br>
+                    <h6 class="with-line">CONTACT US</h6>
+                    <p class="address">Mob: +91 99468 11111 <br><span>Tel: +91 487 2322120</span></p>
+                    <br>
+                    <h6 class="with-line">EMAIL</h6>
+                    <p>sales@elitehomesindia.co.in</p>
+                    <!-- Follow us icons -->
+
+                </div>
+
+
+
+
+                <!-- Third Section -->
+                <div class="col-md-2">
+                    <!-- Third Section Content -->
+                    <br>
+                    <h5 class="mb-3 with-line">PROJECTS</h5>
+                    <br><br><a href="" class="address text-white">Villas in Thrissur</a>
+                    <br><br><a href="" class="address text-white">Apartment in Tvm</a>
+                    <br><br><a href="" class="address text-white">Upcoming Projects</a>
+                    <br><br><a class="mb-3 text-white" href="">FAQs</a>
+                    <br><br><a class="mb-3 text-white" href="">Help & Support</a>
+                    <br>
+                    <!-- <div class="subscription-box mt-5">
+                        <form>
+                            <div class="input-group">
+                                <input type="text" placeholder="Enter your email to subscribe"
+                                    class="form-control subscription-input">
+                                <button type="submit" class="btn btn-danger" style="border-radius: 0px;"><i
+                                        class="fa-solid fa-arrow-right"></i></button>
+                            </div>
+                        </form>
+                    </div> -->
+                </div>
+            </div>
+            <br><br><br>
+            <div class="follow-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+
+
+        </div>
+    </footer>
+
+
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+
+$(document).ready(function () {
+            var owl = $(".owl-planet-section").owlCarousel({
+                items: 3, // Default display for larger screens
+                loop: true, // Infinite looping
+                margin: 30, // Set gap between slides to 30 pixels
+                autoplay: true, // Enable auto-play
+                autoplayHoverPause: true, // Pause on hover
+                nav: false, // Disable default navigation
+                responsive: {
+                    0: { // Mobile view
+                        items: 1, // One slide at a time
+                    },
+                    768: { // Tablet and larger views
+                        items: 3, // Three slides at a time
+                    },
+                },
+            });
+
+            // Custom navigation buttons binding
+            $("#customPrevs").click(function () {
+                owl.trigger("prev.owl.carousel"); // Go to the previous slide
+            });
+
+            $("#customNexts").click(function () {
+                owl.trigger("next.owl.carousel"); // Go to the next slide
+            });
+        });
+
+        $(document).ready(function () {
+            var owl = $(".owl-new-section").owlCarousel({
+                items: 3, // Default display for larger screens
+                loop: true, // Infinite looping
+                margin: 30, // Set gap between slides to 30 pixels
+                autoplay: true, // Enable auto-play
+                autoplayHoverPause: true, // Pause on hover
+                nav: false, // Disable default navigation
+                responsive: {
+                    0: { // Mobile view
+                        items: 1, // One slide at a time
+                    },
+                    768: { // Tablet and larger views
+                        items: 3, // Three slides at a time
+                    },
+                },
+            });
+
+            // Custom navigation buttons binding
+            $("#customPrev").click(function () {
+                owl.trigger("prev.owl.carousel"); // Go to the previous slide
+            });
+
+            $("#customNext").click(function () {
+                owl.trigger("next.owl.carousel"); // Go to the next slide
+            });
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault(); // Prevent default click action
+                const targetId = this.getAttribute('href'); // Get target section ID
+                const targetElement = document.querySelector(targetId); // Find the target element
+                const offset = targetElement.offsetTop; // Get its top position
+
+                window.scrollTo({
+                    top: offset,
+                    behavior: 'smooth' // Smooth scroll effect
+                });
+
+                // Update active link
+                document.querySelectorAll('.nav-link').forEach(item => item.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Function to scroll to a specific section based on the dropdown value
+        function scrollToSection(sectionId) {
+            if (sectionId) {
+                const targetElement = document.querySelector(sectionId); // Find the target element
+                const offset = targetElement.offsetTop; // Get its top position
+
+                window.scrollTo({
+                    top: offset,
+                    behavior: 'smooth' // Smooth scroll effect
+                });
+            }
+        }
+
+
+
+
+
+
+
+        $(document).ready(function () {
+    let initialLoad = true;
+
+    // Initial state
+    $('.menu').css('left', '-495px');
+    $('.menu').removeClass('active');
+
+    // Toggle main menu visibility
+    $('.menu-toggle').click(function () {
+        if ($('.menu').hasClass('active')) {
+            // Close the menu
+            $('.menu').removeClass('active');
+            $('body').removeClass('menu-active'); // If 'menu-active' class controls overflow, consider modifying or removing this class assignment
+            $('.menu').animate({
+                left: '-495px'
+            }, 300); // Speed up the closing animation
+            $('.sub-menu').removeClass('active');
+            $('.sub-menu').css({
+                right: '100%'  // Ensure sub-menus are reset
+            });
+            initialLoad = true;
+        } else {
+            // Open the menu
+            $('.menu').addClass('active');
+            $('body').addClass('menu-active'); // Check if this class adds `overflow: hidden` in your CSS
+            $('.menu').animate({
+                left: '0px'
+            }, initialLoad ? 300 : 0); // Faster opening after initial load
+            initialLoad = false;
+        }
+    });
+
+    // Close the main menu with a button
+    $('.close-menu').click(function () {
+        $('.menu').animate({
+            left: '-495px'
+        }, 300, function () {
+            $('.menu').removeClass('active');
+            $('body').removeClass('menu-active'); // Ensure this does not disable scrolling
+            initialLoad = true;
+        });
+    });
+
+    // Toggle sub-menu
+    $('.with-arrow').click(function (e) {
+        e.preventDefault();
+        let subMenu = $(this).next('.sub-menu');
+        if (subMenu.hasClass('active')) {
+            subMenu.css({
+                right: '90%'  // Adjust to ensure smooth hiding
+            }).animate({
+                right: '100%'  // Smooth transition for sub-menu
+            }, 300, function () {
+                subMenu.removeClass('active');
+            });
+        } else {
+            $('.sub-menu').removeClass('active').css({
+                right: '100%'  // Reset other sub-menus
+            });
+            subMenu.css({
+                right: '100%'
+            }).animate({
+                right: '0'  // Smooth transition for sub-menu
+            }, 300).addClass('active');
+        }
+    });
+
+    // Close sub-menu with a button
+    $('.close-submenu').click(function (e) {
+        e.preventDefault();
+        let subMenu = $(this).closest('.sub-menu');
+        subMenu.animate({
+            right: '100%'  // Smooth transition to hide sub-menu
+        }, 300, function () {
+            subMenu.removeClass('active');
+        });
+    });
+
+    // Close the menu and sub-menu if clicking outside of them
+    $(document).on('click', function (e) {
+        if (!$(e.target).closest('.menu').length && !$(e.target).closest('.menu-toggle').length) {
+            if ($('.menu').hasClass('active')) {
+                $('.menu').removeClass('active');
+                $('body').removeClass('menu-active'); // Ensure this does not disable scrolling
+                $('.menu').animate({
+                    left: '-495px'
+                }, 300);
+                $('.sub-menu').removeClass('active');
+                $('.sub-menu').animate({
+                    right: '100%'  // Smooth transition to hide sub-menu
+                }, 300);
+                initialLoad = true;
+            }
+        }
+    });
+
+    // Update header background on scroll
+    window.addEventListener('scroll', function () {
+        const header = document.querySelector('.header');
+        if (window.scrollY > 0) {
+            header.classList.add('header-bg');
+        } else {
+            header.classList.remove('header-bg');
+        }
+    });
+});
+    </script>
+</body>
+
+</html>

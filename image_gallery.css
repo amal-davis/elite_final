@@ -1,0 +1,762 @@
+body {
+    font-family: 'Poppins';
+
+}
+
+.font {
+    font-family: 'Marcellus SC', serif;
+    font-weight: 600;
+}
+
+body.menu-active {
+    overflow: hidden;
+    /* Prevent scrolling when the menu is active */
+}
+
+/* .menu.active+.menu-overlay,
+body.menu-active .menu-overlay {
+display: block;
+opacity: 1;
+} */
+
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    /* Set below the menu */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 93px;
+    padding: 20px;
+    /* Adjusted padding */
+    color: white;
+    position: fixed;
+    /* Make the header fixed */
+    top: 0;
+    /* Position it at the top */
+
+    z-index: 3;
+    /* Set a higher z-index to position it on top of the hero section */
+}
+
+.header-bg {
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Added a background color to the header */
+}
+
+.menu-toggle {
+    cursor: pointer;
+}
+
+.hamburger {
+    width: 45px;
+    height: 2px;
+    background-color: #fff;
+    margin-bottom: 5px;
+}
+
+.hamburger-border {
+    width: 28px;
+    height: 2px;
+    background-color: #fff;
+}
+
+.logo img {
+    height: 40px;
+    width: 138px;
+}
+
+.phone-icon {
+    font-size: 24px;
+}
+
+.menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: -495px;
+    /* Initial position */
+    width: 495px;
+    height: 100vh;
+    background-color: rgba(59, 59, 59, 0.7);
+    z-index: 1000;
+    border-top-right-radius: 30px;
+    padding: 20px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: left 0.12s ease;
+    /* Increased transition duration */
+}
+
+.menu.active {
+    display: block;
+    left: 0;
+    transition: left 0.12s ease;
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.menu-header h4 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.menu-list {
+    list-style-type: none;
+    padding: 0;
+
+}
+
+.menu-link {
+    display: flex;
+    /* Make the menu link a flex container */
+    align-items: center;
+    /* Align items vertically within the flex container */
+    font-weight: 400;
+    margin-left: 40px;
+    font-size: 24px;
+    color: #ffffff;
+    text-decoration: none;
+    margin-bottom: 35px;
+    transition: margin-left 0.5s ease;
+    text-transform: uppercase;
+}
+
+.menu-link i {
+    margin-left: auto;
+    /* Keep this for pushing to the right side */
+}
+
+.connect-with-us {
+    margin-top: auto;
+}
+
+.connect-with-us h4 {
+    margin-left: 40px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.social-icons {
+    display: flex;
+    margin-left: 40px;
+}
+
+.social-icons ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.social-icons a {
+    display: block;
+    width: 21.88px;
+    height: 21.47px;
+    color: white;
+}
+
+.close-menu {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    /* Adjusted to position the sub-menu to the left of the menu */
+    width: 247.5px;
+    height: 100%;
+    background-color: #111;
+    z-index: 1001;
+    border-top-right-radius: 30px;
+    padding: 20px;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.sub-menu.active {
+    display: block;
+}
+
+.sub-menu .menu-link {
+    font-size: 20px;
+    margin-left: 0;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    transition: margin-left 0.5s ease;
+    color: #0ECA6D;
+}
+
+.sub-menu .menu-link:hover {
+    margin-left: 10px;
+}
+
+.sub-menu .sub-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sub-menu .close-submenu {
+    font-size: 20px;
+    color: #0ECA6D;
+    text-decoration: none;
+    transition: margin-left 0.5s ease;
+    text-transform: uppercase;
+}
+
+.sub-menu .close-submenu:hover {
+    margin-left: 10px;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 992px) {
+    .menu {
+        width: 350px;
+        padding: 15px;
+    }
+
+    .menu-link {
+        font-size: 20px;
+    }
+
+    .phone-icon {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* .header {
+        padding: 10px;
+    } */
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu {
+        display: block;
+        width: 250px;
+        left: -250px;
+    }
+
+    .menu.active {
+        left: 0;
+    }
+
+    .menu-link {
+        font-size: 20px;
+        /* Adjust font size for smaller screens */
+        margin-left: 20px;
+        /* Adjust margin for smaller screens */
+    }
+
+    .menu-link i {
+        margin-right: 3px;
+        /* Adjust icon position for smaller screens */
+    }
+
+    .phone-icon {
+        font-size: 18px;
+    }
+
+
+    .connect-with-us h4 {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    /* .header {
+        padding: 7px;
+    } */
+
+    .logo img {
+        height: 25px;
+        width: 78px;
+    }
+
+    .phone-icon {
+        font-size: 14px;
+    }
+}
+
+/* Container for the image section */
+.image-section {
+    position: relative;
+    /* Position relative for absolute positioning */
+    height: 100vh;
+    /* Set height for the section */
+    overflow: hidden;
+    /* Hide overflowing content */
+}
+
+/* The image that acts as a background */
+.image-section img {
+    width: 100%;
+    /* Ensure image covers the section horizontally */
+    height: 85%;
+    /* Ensure image covers the section vertically */
+    object-fit: cover;
+    /* Cover the section with the image */
+    object-position: center;
+    /* Center the image */
+    filter: brightness(0.5);
+    /* Decrease brightness (less than 1) */
+}
+
+/* Header positioned over the image */
+.header-overlay {
+    position: absolute;
+    /* Position absolutely over the image */
+    top: 50%;
+    /* Align to the top of the section */
+    left: 0;
+    /* Align to the left of the section */
+    width: 100%;
+    /* Full width of the section */
+    height: 93px;
+    /* Set height for the header */
+    display: flex;
+    /* Use Flexbox for alignment */
+    justify-content: center;
+    /* Center the content horizontally */
+    align-items: center;
+    /* Center the content vertically */
+    z-index: 2;
+    /* Ensure header is above the image */
+
+    color: white;
+    /* White text color */
+}
+
+/* Heading within the header overlay */
+.header-overlay h1 {
+    font-size: 32px;
+    /* Font size for the heading */
+    text-transform: uppercase;
+    /* Uppercase text */
+    text-align: center;
+    /* Center the text */
+    font-weight: 600
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .image-section {
+        height: 500px;
+        /* Adjust height for smaller screens */
+    }
+
+    .header-overlay {
+        height: 70px;
+        /* Adjust height for smaller screens */
+    }
+
+    .header-overlay h1 {
+        font-size: 20px;
+        /* Adjusted font size */
+    }
+}
+
+@media (max-width: 576px) {
+    .image-section {
+        height: 400px;
+        /* Adjust height for smaller screens */
+    }
+
+    .header-overlay {
+        height: 60px;
+        /* Adjust height for smaller screens */
+    }
+
+    .header-overlay h1 {
+        font-size: 18px;
+        /* Smaller font size */
+    }
+}
+.footer {
+    background: #0C0C0C;
+    width: 100%;
+    /* Dark background color */
+    }
+    
+    .logo-section {
+    display: flex;
+    align-items: center;
+    }
+    
+    .logo-section img {
+    margin-bottom: 10px; /* Margin between logo and vertical line */
+    }
+    
+    .vertical-line {
+    border-left: 1px solid #fff; /* Vertical line */
+    height: 80px; /* Adjust height as needed */
+    margin-left: 15px; /* Adjust margin as needed */
+    }
+    .footer h5 {
+    color: #fff; /* Heading color */
+    }
+    .title{
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    margin-left: 20px;
+    gap: 0px;
+    opacity: 0px;
+    
+    }
+    .p{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    
+    }
+    
+    
+    
+    
+    .address{
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    
+    }
+    .h5{
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    
+    }
+    .h6
+    {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    text-align: left;
+    
+    }
+    .with-line {
+    position: relative;
+    display: inline-block;
+    }
+    
+    .with-line::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(238, 229, 229); /* Adjust as needed */
+    }
+    
+    
+    
+    
+    .subscription-input {
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #F0483E;
+    width: 100%;
+    
+    gap: 0px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+    background-color: #0C0C0C;
+    
+    }
+    .subscription-input::placeholder {
+    color: #ffffff; /* Gray color for placeholder text */
+    opacity: 1; /* Ensures full opacity */
+    font-size: 10px; /* Adjust this value as needed */
+    }
+    
+    
+    .subscription-box button {
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+    
+    }
+    
+    .subscription-box button:hover {
+    background-color: red; /* Change button background color on hover */
+    color: white; /* Change button text color on hover */
+    margin-left: 150px;
+    }
+    
+    @media (max-width: 768px) {
+    .title {
+        font-size: 16px;
+        line-height: 24px;
+        margin-left: 5px;
+    }
+    .p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .address,
+    .h5,
+    .h6 {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    
+    .subscription-input {
+        width: 70%; /* Adjust as needed */
+        max-width: 300px; /* Set maximum width for smaller screens */
+        border-radius: 0px;
+    }
+    .subscription-box button {
+        margin-left: 0;
+        width: 30%; /* Adjust as needed */
+        max-width: 100px; /* Set maximum width for smaller screens */
+    }
+    }
+    .follow-icons {
+    display: flex;
+    justify-content: center; /* Center the icons horizontally */
+    margin-top: 30px; /* Adjust margin as needed */
+    color: #f8f2f2;
+    }
+    
+    .follow-icons a {
+    margin-right: 10px; /* Adjust margin between icons */
+    color: #d8cece;
+    }
+    
+    /* Media query for responsiveness */
+    @media (max-width: 768px) {
+    .follow-icons {
+        margin-left: 0;
+        justify-content: center;
+    }
+    }
+    /* Responsive styles for smaller screens (tablet view) */
+    @media (max-width: 768px) {
+    .footer .row {
+        flex-direction: column; /* Stack vertically */
+        gap: 20px; /* Space between sections */
+    }
+    
+    .footer .col-md-4, .footer .col-md-2 {
+        width: 100%; /* Full width on smaller screens */
+        padding: 20px 0; /* Padding for sections */
+    }
+    
+    .p, .address, .footer h5 {
+        font-size: 14px; /* Smaller font size */
+        line-height: 20px; /* Adjusted line height */
+    }
+    
+    /* Adjust subscription box for smaller screens */
+    .subscription-box {
+        flex-direction: column; /* Stack vertically */
+        align-items: stretch; /* Stretch to full width */
+    }
+    
+    .subscription-input {
+        width: 100%; /* Full width */
+    }
+    
+    .subscription-box button {
+        width: 100%; /* Full width */
+    }
+    
+    /* Adjust follow icons */
+    .follow-icons {
+        justify-content: center; /* Center icons */
+        flex-wrap: wrap; /* Allow icons to wrap */
+    }
+    
+    .follow-icons a {
+        margin-right: 10px; /* Adjust spacing */
+        margin-bottom: 10px; /* Space for wrapping */
+    }
+    }
+    @media (min-width: 769px) and (max-width: 1024px) {
+    .footer {
+        padding: 30px 15px; /* Adjust padding for smaller screens */
+    }
+    
+    .footer .row {
+        flex-direction: column; /* Stack sections vertically */
+        gap: 15px; /* Space between sections */
+    }
+    
+    .footer .col-md-4,
+    .footer .col-md-2 {
+        width: 100%; /* Full width for each section */
+        padding: 10px 0; /* Adjust padding */
+    }
+    
+    /* Adjust font sizes */
+    .footer h5,
+    .footer h6 {
+        font-size: 18px; /* Smaller font size */
+        line-height: 24px; /* Adjusted line height */
+    }
+    
+    .address, 
+    .p {
+        font-size: 14px; /* Smaller font size */
+        line-height: 22px; /* Adjusted line height */
+    }
+    
+    /* Adjust subscription box layout */
+    
+    /* Adjust follow icons */
+    .follow-icons {
+        justify-content: center; /* Center icons */
+        margin-top: 20px; /* Margin above icons */
+    }
+    
+    .follow-icons a {
+        margin-right: 10px; /* Space between icons */
+        margin-bottom: 10px; /* Add space for wrapping */
+    }
+    }
+    @media (min-width: 769px) and (max-width: 1024px) {
+    .footer .row {
+        flex-direction: column; /* Stack vertically */
+        gap: 20px; /* Space between sections */
+    }
+    
+    /* Ensure sections take up full width */
+    .footer .col-md-4,
+    .footer .col-md-2 {
+        width: 100%; /* Full width */
+        padding: 20px; /* Padding for each section */
+    }
+    }
+    @media (max-width: 576px) {
+    .footer {
+        padding: 20px; /* Padding for the entire footer on mobile screens */
+    }
+    
+    /* Adjust padding for inner elements to maintain spacing */
+    .footer .row {
+        gap: 10px; /* Adjust gap between sections */
+    }
+    }
+    .form-control{
+    border-radius: 0px;
+    }
+    a{
+    text-decoration: none;
+    }
+.newsletter-signup {
+    background-image: url(assets/footer_background.png); /* Add your image URL here */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    padding: 70px 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgb(12, 12, 12) 0%, rgba(12, 12, 12, 0.7) 100%);
+    /* Gradient from black at bottom to transparent at top */
+}
+
+.container {
+    position: relative;
+    z-index: 2; /* Ensures content is above the overlay */
+}
+
+.newsletter-form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.newsletter-form input[type="email"] {
+    flex-grow: 1;
+    margin-right: 10px;
+    padding: 10px;
+    border: none;
+}
+
+.newsletter-form button {
+    padding: 10px 20px;
+    background-color: #606C38; /* Bootstrap's btn-warning color */
+    border: none;
+    color: white;
+}
+
+.newsletter-form button:hover {
+    background-color: #283618; /* Darker shade for hover */
+}
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .newsletter-form {
+            flex-direction: column; /* Stack vertically on smaller screens */
+        }
+
+        .newsletter-form input[type="email"],
+        .newsletter-form button {
+            width: 100%; /* Full width for small devices */
+            margin-top: 10px;
+            margin-right: 0; /* Remove right margin on mobile */
+        }
+
+        .newsletter-form input[type="email"] {
+            margin-top: 0; /* No top margin for the first item */
+        }
+    }

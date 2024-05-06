@@ -1,0 +1,2228 @@
+body {
+    font-family: 'Poppins';
+  }
+  .font {
+        font-family: 'Marcellus SC', serif;
+        
+    }
+
+  body.menu-active {
+    overflow: hidden;
+    /* Prevent scrolling when the menu is active */
+  }
+
+  /* .menu.active+.menu-overlay,
+body.menu-active .menu-overlay {
+    display: block;
+    opacity: 1;
+} */
+
+  .menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    /* Set below the menu */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .hero-section {
+    width: 100%;
+    height: 100vh;
+    background-image: url(elite-2.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    /* Set a z-index to position it behind the header */
+    overflow: hidden;
+    /* Hide overflow for the blur effect */
+  }
+
+  /* Added styles for the hero heading */
+  .hero-heading {
+    position: absolute;
+    bottom: 250px;
+    left: 90px;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 400;
+    z-index: 2;
+    /* Set a higher z-index to position it on top of the hero section */
+    line-height: 60px;
+  }
+
+  /* Responsive styles */
+  @media (max-width: 1200px) {
+    .hero-heading {
+      font-size: 32px;
+      line-height: 44px;
+      bottom: 80px;
+      left: 40px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .hero-heading {
+      font-size: 38px;
+      line-height: 40px;
+      bottom: 420px;
+      left: 30px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-heading {
+      font-size: 34px;
+      line-height: 36px;
+      bottom: 420px;
+      left: 20px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .hero-heading {
+      font-size: 30px;
+      line-height: 32px;
+      bottom: 420px;
+      left: 15px;
+    }
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 93px;
+    padding: 20px;
+    /* Adjusted padding */
+    color: white;
+    position: fixed;
+    /* Make the header fixed */
+    top: 0;
+    /* Position it at the top */
+
+    z-index: 3;
+    /* Set a higher z-index to position it on top of the hero section */
+  }
+
+  .header-bg {
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Added a background color to the header */
+  }
+
+  .menu-toggle {
+    cursor: pointer;
+  }
+
+  .hamburger {
+    width: 45px;
+    height: 2px;
+    background-color: #fff;
+    margin-bottom: 5px;
+  }
+
+  .hamburger-border {
+    width: 28px;
+    height: 2px;
+    background-color: #fff;
+  }
+
+  .logo img {
+    height: 40px;
+    width: 138px;
+  }
+
+  .phone-icon {
+    font-size: 24px;
+  }
+
+  .menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: -495px;
+    /* Initial position */
+    width: 495px;
+    height: 100vh;
+    background-color: rgba(59, 59, 59, 0.7);
+    z-index: 1000;
+    border-top-right-radius: 30px;
+    padding: 20px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: left 0.12s ease;
+    /* Increased transition duration */
+  }
+
+  .menu.active {
+    display: block;
+    left: 0;
+    transition: left 0.12s ease;
+  }
+
+  .menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .menu-header h4 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .menu-list {
+    list-style-type: none;
+    padding: 0;
+
+  }
+
+  .menu-link {
+    display: flex;
+    /* Make the menu link a flex container */
+    align-items: center;
+    /* Align items vertically within the flex container */
+    font-weight: 400;
+    margin-left: 40px;
+    font-size: 24px;
+    color: #ffffff;
+    text-decoration: none;
+    margin-bottom: 35px;
+    transition: margin-left 0.5s ease;
+    text-transform: uppercase;
+  }
+
+  .menu-link i {
+    margin-left: auto;
+    /* Keep this for pushing to the right side */
+  }
+
+  .connect-with-us {
+    margin-top: auto;
+  }
+
+  .connect-with-us h4 {
+    margin-left: 40px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+  .social-icons {
+    display: flex;
+    margin-left: 40px;
+  }
+
+  .social-icons ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .social-icons li {
+    display: inline-block;
+    margin-left: 10px;
+  }
+
+  .social-icons a {
+    display: block;
+    width: 21.88px;
+    height: 21.47px;
+    color: white;
+  }
+
+  .close-menu {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  .sub-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    /* Adjusted to position the sub-menu to the left of the menu */
+    width: 247.5px;
+    height: 100%;
+    background-color: #111;
+    z-index: 1001;
+    border-top-right-radius: 30px;
+    padding: 20px;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .sub-menu.active {
+    display: block;
+  }
+
+  .sub-menu .menu-link {
+    font-size: 20px;
+    margin-left: 0;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    transition: margin-left 0.5s ease;
+    color: #0ECA6D;
+  }
+
+  .sub-menu .menu-link:hover {
+    margin-left: 10px;
+  }
+
+  .sub-menu .sub-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .sub-menu .close-submenu {
+    font-size: 20px;
+    color: #0ECA6D;
+    text-decoration: none;
+    transition: margin-left 0.5s ease;
+    text-transform: uppercase;
+  }
+
+  .sub-menu .close-submenu:hover {
+    margin-left: 10px;
+  }
+
+  a:hover {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  /* Media Query for smaller screens */
+  @media (max-width: 992px) {
+    .menu {
+      width: 350px;
+      padding: 15px;
+    }
+
+    .menu-link {
+      font-size: 20px;
+    }
+
+    .phone-icon {
+      font-size: 20px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .header {
+      padding: 10px;
+    }
+
+    .menu-toggle {
+      display: block;
+    }
+
+    .menu {
+      display: block;
+      width: 250px;
+      left: -250px;
+    }
+
+    .menu.active {
+      left: 0;
+    }
+
+    .menu-link {
+      font-size: 20px;
+      /* Adjust font size for smaller screens */
+      margin-left: 20px;
+      /* Adjust margin for smaller screens */
+    }
+
+    .menu-link i {
+      margin-right: 3px;
+      /* Adjust icon position for smaller screens */
+    }
+
+    .phone-icon {
+      font-size: 18px;
+    }
+
+
+    .connect-with-us h4 {
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .header {
+      padding: 7px;
+    }
+
+    .logo img {
+      height: 25px;
+      width: 80px;
+    }
+
+    .phone-icon {
+      font-size: 18px;
+    }
+  }
+
+  /* Hero Section Styles */
+
+
+  .buttons {
+    margin-bottom: 10px;
+  }
+
+
+
+  .owl-carousel-main {
+    position: relative;
+    width: 100%;
+
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .owl-carousel-main .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* Full height */
+    width: 100%;
+    /* Full width to prevent overflow */
+  }
+
+  .owl-carousel-main .item img {
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    object-fit: cover;
+    /* Ensure images maintain proper aspect ratio */
+  }
+
+
+
+  /* Responsive adjustments using media queries */
+  @media (max-width: 768px) {
+    .owl-carousel-main {
+
+      overflow-x: hidden;
+      /* Ensure no horizontal scrolling */
+    }
+
+    .header {
+      padding: 10px;
+      /* Adjusted padding */
+    }
+  }
+
+  @media (max-width: 576px) {
+    .owl-carousel-main {
+
+      overflow-x: hidden;
+      /* Prevent horizontal scrolling */
+    }
+
+
+  }
+
+
+
+
+  .buttons button {
+    margin-right: 10px;
+    background: #F0483E;
+    width: 200px;
+  }
+
+  .buttons {
+    width: 200px;
+    background-color: white;
+  }
+
+  .oval-button {
+    border-radius: 10px;
+    /* Adjust the value as needed to control the oval shape */
+  }
+
+
+  .space {
+    display: inline-block;
+    width: 1px;
+    /* Adjust the width of the spacer */
+  }
+
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    .social-icons {
+      margin-top: 1px;
+    }
+  }
+
+  .head {
+
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: 0.02em;
+    text-align: left;
+
+  }
+
+  .location {
+
+    font-size: 10px;
+    font-weight: 400;
+    /* line-height: 30px; */
+    /* letter-spacing: 0.02em; */
+    /* text-align: left; */
+    letter-spacing: 0.2em;
+    color: #000000;
+    max-width: 467px;
+
+
+  }
+
+  .para {
+
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 30px;
+    /* letter-spacing: 0.02em; */
+    text-align: justify;
+    max-width: 545px;
+    color: #000000;
+
+  }
+  .paras{
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 30px;
+    /* letter-spacing: 0.02em; */
+    text-align: justify;
+   
+    color: #000000;
+  }
+  @media (max-width: 768px) {
+    .paras {
+      font-size: 18px;
+      /* Slightly smaller font size */
+      line-height: 27px;
+      /* Adjusted line height */
+    }
+  }
+  @media (max-width: 480px) {
+    .paras {
+      font-size: 16px;
+      /* Smaller font size for mobile */
+      line-height: 24px;
+      /* Adjusted line height for readability */
+    }
+  }
+  @media (max-width: 768px) {
+    .para {
+      font-size: 18px;
+      /* Slightly smaller font size */
+      line-height: 27px;
+      /* Adjusted line height */
+    }
+
+    .head {
+      font-size: 22px;
+      /* Slightly smaller for medium screens */
+      line-height: 32px;
+      /* Adjusted line height */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .para {
+      font-size: 16px;
+      /* Smaller font size for mobile */
+      line-height: 24px;
+      /* Adjusted line height for readability */
+    }
+
+    .head {
+      font-size: 20px;
+      /* Smaller font size for mobile */
+      line-height: 28px;
+      /* Adjusted line height */
+    }
+  }
+
+  /* Base styles for social media icons */
+  .social-media-icons {
+    display: flex;
+    flex-direction: row;
+    /* Horizontal alignment */
+    justify-content: space-between;
+    /* Even spacing */
+    align-items: center;
+    /* Align icons vertically */
+    flex-wrap: nowrap;
+    /* Prevent wrapping */
+    gap: 10px;
+    /* Space between icons */
+    margin-top: 10px;
+    /* Space above icons */
+  }
+
+  .social-media-icons a {
+    display: flex;
+    /* Flex layout */
+    justify-content: center;
+    /* Center content */
+    align-items: center;
+    /* Vertical alignment */
+    border-radius: 50%;
+    /* Circular shape */
+    width: 40px;
+    /* Consistent width */
+    height: 40px;
+    /* Consistent height */
+    font-size: 20px;
+    /* Icon size */
+    color: white;
+    /* Icon color */
+    transition: background-color 0.3s ease;
+    /* Smooth transition */
+    margin-right: 10px;
+    /* Space between icons */
+    flex-shrink: 0;
+    /* Prevent shrinking */
+  }
+
+  /* Background colors for each icon */
+  .social-media-icons a:nth-child(1) {
+    background-color: #4267B2;
+    /* Facebook blue */
+  }
+
+  .social-media-icons a:nth-child(2) {
+    background-color: #25D366;
+    /* WhatsApp green */
+  }
+
+  .social-media-icons a:nth-child(3) {
+    background-color: #1DA1F2;
+    /* Twitter blue */
+  }
+
+  .social-media-icons a:nth-child(4) {
+    background-color: #E60023;
+    /* Pinterest red */
+  }
+
+  .social-media-icons a:nth-child(5) {
+    background-color: #0072B1;
+    /* LinkedIn blue */
+  }
+
+  /* Hover effect */
+  .social-media-icons a:hover {
+    opacity: 0.8;
+    /* Reduced opacity on hover */
+  }
+
+  /* Responsive styles for smaller screens (mobile) */
+  @media (max-width: 576px) {
+    .social-media-icons {
+      justify-content: center;
+      /* Center icons */
+      flex-wrap: wrap;
+      /* Allow wrapping */
+    }
+
+    .social-media-icons a {
+      width: 30px;
+      /* Smaller size for smaller screens */
+      height: 30px;
+      /* Consistent shape */
+      font-size: 16px;
+      /* Adjusted font size */
+      margin-right: 5px;
+      /* Reduced space between icons */
+    }
+  }
+
+  /* Responsive styles for tablets */
+  @media (min-width: 577px) and (max-width: 992px) {
+    .social-media-icons {
+      flex-wrap: nowrap;
+      /* Prevent wrapping */
+      justify-content: space-around;
+      /* Even spacing */
+    }
+
+    .social-media-icons a {
+      width: 35px;
+      /* Adjust icon size for tablets */
+      height: 35px;
+      /* Maintain circular shape */
+      font-size: 18px;
+      /* Adjust font size */
+      margin-right: 10px;
+      /* Maintain spacing */
+    }
+  }
+
+  /* Hover effects for larger screens */
+  @media (min-width: 992px) {
+    .social-media-icons a {
+      transition: transform 0.3s ease;
+      /* Smooth transition */
+    }
+
+    .social-media-icons a:hover {
+      transform: scale(1.1);
+      /* Slight zoom on hover */
+    }
+  }
+
+  /* Responsive styles for tablets (1024px width for iPad Pro) */
+  @media (max-width: 1024px) {
+    .social-media-icons {
+      justify-content: space-around;
+      /* Evenly space icons */
+      flex-wrap: nowrap;
+      /* Prevent wrapping */
+    }
+
+    .social-media-icons a {
+      width: 35px;
+      /* Adjust icon size */
+      height: 35px;
+      /* Maintain circular shape */
+      font-size: 18px;
+      /* Adjust font size */
+      margin-right: 5px;
+      /* Reduced gap */
+    }
+  }
+
+
+
+  a {
+    text-decoration: none;
+  }
+
+  /* General styles */
+  .heading {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 48px;
+    text-align: left;
+  }
+
+  @media (max-width: 768px) {
+    .heading {
+      font-size: 28px;
+      /* Reduce font size for tablets */
+      line-height: 40px;
+      /* Adjust line height */
+      text-align: left;
+      /* Keep alignment consistent */
+    }
+
+    .btn-danger {
+      padding: 8px 16px;
+      /* Reduce padding for smaller screens */
+      font-size: 14px;
+      /* Smaller font size */
+    }
+  }
+
+  @media (max-width: 576px) {
+    .heading {
+      font-size: 15px;
+      /* Further reduce font size for smaller devices */
+      line-height: 36px;
+      /* Adjust line height */
+      text-align: center;
+      /* Center align for smaller screens */
+    }
+
+    .btn-danger {
+      padding: 6px 12px;
+      /* Further reduce padding */
+      font-size: 12px;
+      /* Smaller font size */
+      display: block;
+      /* Display as a block to avoid overlap */
+      width: 100%;
+      /* Full-width button on smaller screens */
+    }
+
+    .container {
+      padding: 0 15px;
+      /* Add padding to avoid overflow */
+    }
+  }
+
+  .card-title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: left;
+  }
+
+  .card-text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+  }
+
+  .h6 {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    text-align: left;
+  }
+
+  .card-texts {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 21px;
+    text-align: left;
+  }
+
+  .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Responsive styles for tablet screens (iPad Air, iPad Mini, etc.) */
+  @media (max-width: 992px) {
+    .col-md-4 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .card-title {
+      font-size: 18px;
+    }
+
+    .card-text {
+      font-size: 14px;
+    }
+
+
+    .h6 {
+      font-size: 12px;
+    }
+
+    .card-texts {
+      font-size: 12px;
+    }
+  }
+
+  /* Responsive styles for smaller tablets (like iPad Mini) */
+  @media (max-width: 768px) {
+    .col-md-4 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    .card-title {
+      font-size: 16px;
+    }
+
+    .card-text {
+      font-size: 12px;
+    }
+
+    .h6 {
+      font-size: 10px;
+    }
+
+    .card-texts {
+      font-size: 10px;
+    }
+  }
+
+  .footer {
+    background: #0C0C0C;
+    width: 100%;
+    /* Dark background color */
+  }
+
+  .logo-section {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo-section img {
+    margin-bottom: 10px;
+    /* Margin between logo and vertical line */
+  }
+
+  .vertical-line {
+    border-left: 1px solid #fff;
+    /* Vertical line */
+    height: 80px;
+    /* Adjust height as needed */
+    margin-left: 15px;
+    /* Adjust margin as needed */
+  }
+
+  .footer h5 {
+    color: #fff;
+    /* Heading color */
+  }
+
+  .title {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    margin-left: 20px;
+    gap: 0px;
+    opacity: 0px;
+
+  }
+
+  .p {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    text-align: left;
+
+  }
+
+
+
+
+  .address {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    text-align: left;
+
+  }
+
+  .h5 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: 0.02em;
+    text-align: left;
+
+  }
+
+  .h6 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    text-align: left;
+
+  }
+
+  .with-line {
+    position: relative;
+    display: inline-block;
+  }
+
+  .with-line::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(238, 229, 229);
+    /* Adjust as needed */
+  }
+
+
+
+
+  .subscription-input {
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #F0483E;
+    width: 100%;
+
+    gap: 0px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+    background-color: #0C0C0C;
+
+  }
+
+  .subscription-input::placeholder {
+    color: #ffffff;
+    /* Gray color for placeholder text */
+    opacity: 1;
+    /* Ensures full opacity */
+    font-size: 10px;
+    /* Adjust this value as needed */
+  }
+
+
+  .subscription-box button {
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+
+  }
+
+  .subscription-box button:hover {
+    background-color: red;
+    /* Change button background color on hover */
+    color: white;
+    /* Change button text color on hover */
+    margin-left: 150px;
+  }
+
+  @media (max-width: 768px) {
+    .title {
+      font-size: 16px;
+      line-height: 24px;
+      margin-left: 5px;
+    }
+
+    .p {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    .address,
+    .h5,
+    .h6 {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    .subscription-input {
+      width: 70%;
+      /* Adjust as needed */
+      max-width: 300px;
+      /* Set maximum width for smaller screens */
+      border-radius: 0px;
+    }
+
+    .subscription-box button {
+      margin-left: 0;
+      width: 30%;
+      /* Adjust as needed */
+      max-width: 100px;
+      /* Set maximum width for smaller screens */
+    }
+  }
+
+  .follow-icons {
+    display: flex;
+    justify-content: center;
+    /* Center the icons horizontally */
+    margin-top: 30px;
+    /* Adjust margin as needed */
+    color: #f8f2f2;
+  }
+
+  .follow-icons a {
+    margin-right: 10px;
+    /* Adjust margin between icons */
+    color: #d8cece;
+  }
+
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    .follow-icons {
+      margin-left: 0;
+      justify-content: center;
+    }
+  }
+
+  /* Responsive styles for smaller screens (tablet view) */
+  @media (max-width: 768px) {
+    .footer .row {
+      flex-direction: column;
+      /* Stack vertically */
+      gap: 20px;
+      /* Space between sections */
+    }
+
+    .footer .col-md-4,
+    .footer .col-md-2 {
+      width: 100%;
+      /* Full width on smaller screens */
+      padding: 20px 0;
+      /* Padding for sections */
+    }
+
+    .p,
+    .address,
+    .footer h5 {
+      font-size: 14px;
+      /* Smaller font size */
+      line-height: 20px;
+      /* Adjusted line height */
+    }
+
+    /* Adjust subscription box for smaller screens */
+    .subscription-box {
+      flex-direction: column;
+      /* Stack vertically */
+      align-items: stretch;
+      /* Stretch to full width */
+    }
+
+    .subscription-input {
+      width: 100%;
+      /* Full width */
+    }
+
+    .subscription-box button {
+      width: 100%;
+      /* Full width */
+    }
+
+    /* Adjust follow icons */
+    .follow-icons {
+      justify-content: center;
+      /* Center icons */
+      flex-wrap: wrap;
+      /* Allow icons to wrap */
+    }
+
+    .follow-icons a {
+      margin-right: 10px;
+      /* Adjust spacing */
+      margin-bottom: 10px;
+      /* Space for wrapping */
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .footer {
+      padding: 30px 15px;
+      /* Adjust padding for smaller screens */
+    }
+
+    .footer .row {
+      flex-direction: column;
+      /* Stack sections vertically */
+      gap: 15px;
+      /* Space between sections */
+    }
+
+    .footer .col-md-4,
+    .footer .col-md-2 {
+      width: 100%;
+      /* Full width for each section */
+      padding: 10px 0;
+      /* Adjust padding */
+    }
+
+    /* Adjust font sizes */
+    .footer h5,
+    .footer h6 {
+      font-size: 18px;
+      /* Smaller font size */
+      line-height: 24px;
+      /* Adjusted line height */
+    }
+
+    .address,
+    .p {
+      font-size: 14px;
+      /* Smaller font size */
+      line-height: 22px;
+      /* Adjusted line height */
+    }
+
+    /* Adjust subscription box layout */
+
+    /* Adjust follow icons */
+    .follow-icons {
+      justify-content: center;
+      /* Center icons */
+      margin-top: 20px;
+      /* Margin above icons */
+    }
+
+    .follow-icons a {
+      margin-right: 10px;
+      /* Space between icons */
+      margin-bottom: 10px;
+      /* Add space for wrapping */
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .footer .row {
+      flex-direction: column;
+      /* Stack vertically */
+      gap: 20px;
+      /* Space between sections */
+    }
+
+    /* Ensure sections take up full width */
+    .footer .col-md-4,
+    .footer .col-md-2 {
+      width: 100%;
+      /* Full width */
+      padding: 20px;
+      /* Padding for each section */
+    }
+  }
+
+  @media (max-width: 576px) {
+    .footer {
+      padding: 20px;
+      /* Padding for the entire footer on mobile screens */
+    }
+
+    /* Adjust padding for inner elements to maintain spacing */
+    .footer .row {
+      gap: 10px;
+      /* Adjust gap between sections */
+    }
+  }
+
+  .form-control {
+    border-radius: 0px;
+  }
+
+  /* .btn{
+    border-radius: 0px;
+} */
+  .plan-heading h2 {
+    margin-bottom: 10px;
+    /* Space below the heading */
+    color: #021B29;
+
+  }
+
+  .btnse {
+    width: 135px;
+  }
+
+  .btnse.active {
+    background-color: #FEFAE0;
+    /* Blue background color for the active button */
+    color: #111;
+  }
+
+  .btnse:hover {
+    background-color: #FEFAE0;
+    /* Blue background color on hover */
+    color: #111;
+  }
+
+  .enquiry-form {
+    max-width: 500px;
+    margin: auto;
+    padding: 50px;
+    background-color: #F8F3E7;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .enquiry-form .form-control {
+    border-radius: 10px;
+    border-color: #000;
+  }
+
+  .enquiry-form h2 {
+    margin-bottom: 2.5rem;
+    /* space below the heading */
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  .enquiry-form .form-group {
+    margin-bottom: 1.5rem;
+    /* space between form groups */
+  }
+
+  .enquiry-form textarea.form-control {
+    height: 150px;
+  }
+
+  .enquiry-form .btn-submit {
+    background-color: #d9534f;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    margin-top: 2rem;
+    /* space above the button */
+    color: #fff;
+  }
+
+  @media (max-width: 576px) {
+    .site-map {
+      padding: 10px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .site-map {
+      padding: 10px;
+      /* Reduced padding for smaller screens */
+    }
+
+    .enquiry-form {
+      padding: 20px;
+      /* Reduced padding for the enquiry form on smaller screens */
+    }
+
+    .enquiry-form {
+      padding: 20px;
+    }
+
+    /* Flexible button layout */
+    .btn-row {
+      display: flex;
+      /* Use flex layout for alignment */
+      justify-content: center;
+      /* Center buttons within the row */
+      flex-wrap: wrap;
+      /* Allow wrapping if needed */
+    }
+
+    /* Adjust button width and spacing for smaller screens */
+    .btnse {
+      width: 120px;
+      /* Adjusted button width */
+      margin: 5px;
+      /* Consistent margin between buttons */
+    }
+  }
+
+  .virtual-tour-container {
+    position: relative;
+    background-image: url(assets/frame49.png);
+    background-size: cover;
+    background-position: center;
+    height: 438px;
+    /* Adjust based on your preference */
+  }
+
+  .virtual-tour-heading {
+    position: absolute;
+    top: 10px;
+    /* Adjust as necessary */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    /* Assuming white text */
+    font-size: 36px;
+    /* Adjust as necessary */
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 50px;
+  }
+
+  .play-button {
+    position: absolute;
+    top: 50%;
+    /* Center vertically */
+    left: 50%;
+    /* Center horizontally */
+    transform: translate(-50%, -50%);
+    /* Align the center of the button to the center */
+    padding: 10px 20px;
+    /* Adjust as necessary */
+    font-size: 16px;
+    /* Adjust as necessary */
+    color: #fff;
+    background-color: #d9534f;
+    /* Adjust to match your button color */
+    border: none;
+    border-radius: 5px;
+    /* Adjust as necessary */
+    display: flex;
+    align-items: center;
+  }
+
+  .play-button i {
+    margin-right: 8px;
+    /* Adjust as necessary */
+  }
+
+  .heading-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 100px 0;
+    /* Adjust the margin as needed */
+  }
+
+  .line {
+    flex-grow: 1;
+    /* Lines will fill up the space */
+    border: none;
+    height: 1px;
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.75), rgba(255, 255, 255, 0));
+    /* Gradient line */
+    margin: 0 10px;
+    /* Spacing around the text */
+  }
+
+  .line2 {
+    flex-grow: 1;
+    /* Lines will fill up the space */
+    border: none;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(255, 255, 255, 0));
+    /* Gradient line */
+    margin: 0 10px;
+    /* Spacing around the text */
+  }
+
+  .heading-text {
+    white-space: nowrap;
+    padding: 0 10px;
+    /* Spacing around the text */
+    background: #fff;
+    /* Background color of the container */
+    color: #000;
+    /* Text color */
+    font-size: 24px;
+    /* Adjust the font size as needed */
+    font-weight: bold;
+    /* Adjust font weight as needed */
+  }
+
+  .carousel-container {
+    width: 100%;
+    /* Increase the width to 90% of the parent */
+    max-width: 1250px;
+    /* Set a maximum width if needed */
+    margin: 0 auto;
+    /* Center the container */
+  }
+
+  .square {
+    width: 228px;
+    height: 244px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid #000;
+    background-color: #fff;
+  }
+
+  /* Ensure the surrounding container doesn't have unexpected padding or margin */
+  .owl-item {
+    padding: 0;
+    /* No extra padding */
+    margin: 0;
+    /* No extra margin */
+  }
+
+  /* Style for the square images */
+  .square img {
+    max-width: 80%;
+    /* Limit width to maintain aspect ratio */
+    max-height: 80%;
+    /* Keep image within square */
+    object-fit: contain;
+    width: 114px;
+    height: 114px;
+  }
+
+  /* Style for custom pagination dots */
+  .custom-dot {
+    display: inline-block;
+    /* Inline display for dots */
+    height: 5px;
+    /* Fixed height */
+    width: 6px;
+    /* Initial width of dots */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Default color */
+    border-radius: 5px;
+    /* Rounded corners */
+    margin: 0 1.4px;
+    /* Spacing between dots */
+    transition: all 0.3s;
+    /* Smooth transition for size changes */
+    cursor: pointer;
+  }
+
+  /* Style for active dot (wider and darker) */
+  .custom-dot.active {
+    width: 29px;
+    /* Expanded width for active dot */
+    background-color: #000000;
+    /* Darker color for active dot */
+    height: 8px;
+  }
+
+  .custom-pagination {
+    display: flex;
+    /* Use flex layout */
+    justify-content: center;
+    /* Center the dots horizontally */
+    align-items: center;
+    /* Align items vertically */
+    gap: 5px;
+    /* Space between dots */
+    margin-top: 20px;
+    /* Add margin from the carousel */
+  }
+  .navigation-buttons {
+    display: flex;
+  justify-content: center;   /* Center the buttons horizontally */
+  align-items: center;       /* Center the buttons vertically */
+  gap: 10px;                 /* Add spacing between buttons */
+  padding: 10px;             /* Padding for some space */
+  margin-top: 20px;  
+}
+
+.prev-button,
+.next-button {
+  background-color: #606c38;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.prev-button:hover,
+.next-button:hover {
+  background-color: #333;
+}
+
+  /* Further responsive adjustment for mobile screens */
+  @media (max-width: 576px) {
+    .carousel-container {
+      width: 70%;
+      /* Decrease width for smaller mobile screens */
+      max-width: 820px;
+      /* Adjust maximum width */
+    }
+  }
+
+  @media (max-width: 768px) {
+    .owl-nav {
+      display: none;
+      /* Hide the navigation buttons for smaller screens */
+    }
+  }
+
+  .section-heading {
+    font-size: 36px;
+    font-weight: 600;
+    text-align: left;
+    position: relative;
+    /* Required for positioning the pseudo-element */
+  }
+
+  .section-heading::after {
+    content: "";
+    /* Create a line without additional text */
+    position: absolute;
+    /* Position it relative to the heading */
+    bottom: -10px;
+    /* Place the line at the bottom of the heading */
+    left: 0;
+    /* Start from the left edge */
+    width: 170px;
+    /* Underline spans the entire width of the heading */
+    height: 2px;
+    /* Thickness of the underline */
+    background-color: #000;
+    /* Underline color */
+  }
+
+  /* Responsive styling for tablets and smaller screens */
+  @media (max-width: 768px) {
+    .section-heading {
+      font-size: 30px;
+      /* Smaller font size for tablets */
+
+    }
+
+    .section-heading::after {
+      width: 100px;
+      /* Shorten underline width */
+      bottom: -8px;
+      /* Adjust position slightly */
+    }
+  }
+
+  /* Responsive styling for mobile devices (e.g., 600px or less) */
+  @media (max-width: 600px) {
+    .section-heading {
+      font-size: 24px;
+      /* Smaller font size for mobile */
+    }
+
+    .section-heading::after {
+      width: 70px;
+      /* Further shorten underline width */
+      height: 1px;
+      /* Adjust underline thickness */
+    }
+  }
+
+
+
+
+
+  .btn-block {
+    display: block;
+    /* Ensure the button spans the entire width */
+  }
+
+  .btnsy {
+    background-color: #242660;
+    /* Dark blue button */
+    border: none;
+    /* No border */
+    color: white;
+    /* White text */
+    text-transform: uppercase;
+    /* Uppercase text */
+    padding: 10px 20px;
+    /* Adjust button padding as needed */
+    width: 66.3%;
+
+  }
+
+  .invest-section {
+    /* max-width: 681px; */
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 50px;
+  }
+
+  .text-span {
+    color: #F0483E;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+  }
+
+  .section-headings {
+    font-size: 24px;
+    /* Font size for the heading */
+    font-weight: 600;
+    /* Bold font */
+    text-align: center;
+    /* Center the heading */
+    margin-bottom: 20px;
+    /* Space between heading and images */
+  }
+
+
+
+  .logos {
+    padding: 20px;
+    /* Padding for the container */
+  }
+
+
+
+  .logose {
+    padding: 10px;
+    /* Padding around images */
+  }
+
+  .gradient-line {
+    position: relative;
+    /* Ensure correct positioning */
+    width: 100%;
+    /* Full width of the container */
+    height: 2px;
+    /* Thickness of the line */
+    background: linear-gradient(to right, #FFFFFF 0%, #000000 50%, #FFFFFF 100%);
+    /* White at both ends, black in the center */
+    opacity: 0.7;
+    /* Adjust opacity if needed */
+    margin-top: 60px;
+    /* Space above the line */
+  }
+
+  .map-container {
+    width: 100%;
+    /* Full width to ensure responsiveness */
+    height: auto;
+    /* Height adjusts with content */
+
+  }
+
+  .map-heading {
+    font-size: 36px;
+    /* Font size for the heading */
+    font-weight: 600;
+    /* Bold font */
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    /* Space between the heading and the map */
+    color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    .map-heading {
+      font-size: 30px;
+      /* Smaller font size for tablets */
+      line-height: 45px;
+      /* Adjust line height for consistency */
+    }
+  }
+
+  /* Style for mobile devices (e.g., 600px or less) */
+  @media (max-width: 600px) {
+    .map-heading {
+      font-size: 24px;
+      /* Smaller font size for mobile */
+      line-height: 36px;
+      /* Adjust line height for consistency */
+    }
+  }
+
+  @media (max-width: 768px) {
+    .map-container iframe {
+      width: 100%;
+      /* Full width for smaller screens */
+      height: 300px;
+      /* Adjust height for smaller screens */
+    }
+  }
+
+  .map-frame {
+
+    border-radius: 20px;
+    /* Set border radius for rounded corners */
+    overflow: hidden;
+    /* Ensure content within the rounded border doesn't overflow */
+    border: none;
+    /* Remove any default border */
+  }
+
+  .gradient-line {
+    position: relative;
+    /* Ensure correct positioning */
+    width: 100%;
+    /* Full width of the container */
+    height: 2px;
+    /* Thickness of the line */
+    background: linear-gradient(to right, #FFFFFF 0%, #000000 50%, #FFFFFF 100%);
+    /* White at both ends, black in the center */
+    opacity: 0.7;
+    /* Adjust opacity if needed */
+    margin-top: 60px;
+    /* Space above the line */
+  }
+
+  .map-container {
+    margin-right: 20px;
+    /* Add space to the right */
+  }
+
+  .accordion {
+    margin-left: 40px;
+    /* Add space to the left */
+  }
+
+  .accordion {
+    --bs-accordion-btn-bg: #606c38;
+    --bs-accordion-active-bg: #606c38;
+    --bs-accordion-btn-focus-box-shadow: none;
+    --bs-accordion-border-color: #fff;
+    --bs-accordion-border-radius: none;
+    --bs-accordion-btn-focus-box-shadow: #fff;
+    --bs-accordion-body-bg: #606c38;
+    --bs-accordion-active-color: #fff;
+  }
+
+  .benfits-heading {
+    font-size: 36px;
+    color: #FFFFFF;
+    font-weight: 600;
+    line-height: 54px;
+  }
+
+  /* Style for tablets (e.g., between 600px and 768px) */
+  @media (max-width: 768px) {
+    .benfits-heading {
+      font-size: 30px;
+      /* Smaller font size for tablets */
+      line-height: 45px;
+      /* Adjust line height for consistency */
+    }
+  }
+
+  /* Style for mobile devices (e.g., 600px or less) */
+  @media (max-width: 600px) {
+    .benfits-heading {
+      font-size: 24px;
+      /* Smaller font size for mobile */
+      line-height: 36px;
+      /* Adjust line height for consistency */
+    }
+  }
+
+  .accordion-button {
+    color: #fff;
+  }
+
+  .accordion-button::after {
+    content: url('data:image/svg+xml;utf8,<svg width="16" height="16" fill="white" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 1 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');
+    /* Custom white arrow icon */
+  }
+
+  .accordion-body {
+    color: #FFFFFF;
+  }
+
+  @media (max-width: 768px) {
+    .accordion-button {
+      font-size: 12px;
+      /* Reduce font size */
+      padding: 10px;
+      /* Adjust padding for smaller screens */
+    }
+
+    .accordion-body {
+      font-size: 0.9em;
+      /* Slightly smaller font size for body content */
+    }
+
+    .col-md-6 {
+      width: 100%;
+      /* Full width on smaller screens */
+    }
+
+    .map-container {
+      padding-right: 20px;
+      /* Add space to the right of the map */
+    }
+
+    .map-area {
+      padding: 12px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .col-md-6 {
+      width: 100%;
+      /* Full width on smaller screens */
+    }
+
+    .map-container {
+      padding-right: 20px;
+      /* Add space to the right of the map */
+      padding: 10px;
+    }
+  }
+
+  /* Adjusting layout for smaller screens */
+  @media (max-width: 1024px) {
+    .container {
+      flex-direction: column;
+      /* Stacking elements vertically */
+    }
+
+    .col-md-6 {
+      width: 100%;
+      /* Full width for each column */
+    }
+
+    /* Adjusting map and accordion styles for smaller screens */
+    .map-area {
+      padding: 20px;
+      /* Add padding for a consistent look */
+    }
+
+    .map-container {
+      height: auto;
+      /* Auto height to adjust with content */
+      padding-bottom: 20px;
+      /* Space at the bottom to separate from accordion */
+    }
+
+    /* Adjust accordion for smaller screens */
+    .accordion {
+      margin-top: 20px;
+      /* Add space at the top for separation from the map */
+    }
+  }
+
+  .grid-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    /* Gap between sections */
+    height: 702px;
+    /* Total height */
+  }
+
+  .grid-item a {
+    display: block;
+    /* Anchor tags should be block-level */
+    width: 100%;
+    /* Fill the entire width of the containing section */
+    height: 100%;
+    /* Fill the entire height of the containing section */
+  }
+
+
+  .grid-item {
+    border: 0.5px solid #ccc;
+    overflow: hidden;
+    /* Clipping for images */
+    position: relative;
+  }
+
+  /* Set calculated width percentages for sections */
+  .section-1 {
+    width: 36.58%;
+    /* Computed width for this section */
+    height: 100%;
+    /* Full grid height */
+  }
+
+  .section-2 {
+    width: 21.81%;
+    /* Computed width */
+    height: 100%;
+    /* Full height */
+    display: flex;
+    flex-direction: column;
+    /* Vertical alignment */
+    gap: 10px;
+    /* Space between inner items */
+  }
+
+  .section-3 {
+    width: 19.45%;
+    /* Computed width */
+    height: 100%;
+    /* Full height */
+  }
+
+  .section-4 {
+    width: 22.17%;
+    /* Computed width */
+    height: 100%;
+    /* Full height */
+    display: flex;
+    flex-direction: column;
+    /* Vertical alignment */
+    gap: 10px;
+    /* Space between inner items */
+  }
+
+  /* Ensure images fill their sections without distortion */
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Keep aspect ratio and avoid distortion */
+  }
+
+  /* Zoom-in effect on hover */
+  .image {
+    transition: transform 0.3s ease-in-out;
+    /* Smooth zoom transition */
+    cursor: pointer;
+  }
+
+  .image:hover {
+    transform: scale(1.1);
+    /* Zoom in by 10% on hover */
+  }
+
+  /* Styles for the heading overlay */
+  .gallery-heading {
+    position: absolute;
+    top: 10px;
+    /* Distance from the top of the image */
+    left: 10px;
+    /* Distance from the left edge */
+    color: #021B29;
+    /* Text color */
+    font-weight: 600;
+
+    border-radius: 5px;
+    /* Rounded corners */
+    font-size: 1.5em;
+    /* Adjust font size as needed */
+  }
+
+  /* Change layout for smaller screens */
+  @media (max-width: 768px) {
+    .grid-container {
+      flex-direction: column;
+      /* Stack sections vertically */
+      height: auto;
+      /* Let height adjust to content */
+    }
+
+    .section-1,
+    .section-2,
+    .section-3,
+    .section-4 {
+      width: 100%;
+      /* Sections take full width */
+      height: 50vh;
+      /* A default height for smaller screens */
+    }
+
+    .section-2,
+    .section-4 {
+      flex-direction: row;
+      /* Align images horizontally */
+    }
+  }
+
+  @media (max-width: 480px) {
+
+    /* Smaller screens can have smaller height or use less zoom */
+    .section-1,
+    .section-2,
+    .section-3,
+    .section-4 {
+      height: 30vh;
+      /* Further reduced height */
+    }
+
+    .image:hover {
+      transform: scale(1.05);
+      /* Less zoom effect */
+    }
+  }
+
+  /* Ensure sections have consistent heights within this range */
+  @media (min-width: 840px) and (max-width: 1050px) {
+
+    .section-1,
+    .section-2,
+    .section-3,
+    .section-4 {
+      height: 60vh;
+      /* Adjusted height to fit the screen */
+    }
+
+    /* Maintain column structure for these sections */
+    .section-2,
+    .section-4 {
+      flex-direction: column;
+      /* Align vertically */
+      gap: 10px;
+      /* Small gap between inner elements */
+    }
+  }
+
+  /* Adjust text properties within this range */
+  @media (min-width: 820px) and (max-width: 992px) {
+
+
+    .image {
+      transition: transform 0.3s ease-in-out;
+      /* Maintain hover transition */
+    }
+
+    .image:hover {
+      transform: scale(1.05);
+      /* Smaller hover effect */
+    }
+  }
+
+  /* For smaller tablets like iPad Air and similar devices */
+  @media (max-width: 820px) {
+    .grid-container {
+      flex-direction: column;
+      /* Stack sections vertically */
+      height: auto;
+      /* Let the height adjust dynamically */
+    }
+
+    .section-1,
+    .section-2,
+    .section-3,
+    .section-4 {
+      width: 100%;
+      /* Make sections take the full width */
+      height: 50vh;
+      /* Set a default height for each section */
+    }
+
+    /* Align images horizontally for these sections */
+    .section-2,
+    .section-4 {
+      flex-direction: row;
+      /* Horizontal alignment */
+      gap: 10px;
+      /* Gap between inner items */
+    }
+  }
+
+  /* For slightly larger tablets and smaller screens */
+  @media (max-width: 1024px) {
+    .grid-container {
+      flex-direction: column;
+      /* Stack sections vertically */
+      height: auto;
+      /* Dynamic height */
+    }
+
+    .section-1,
+    .section-2,
+    .section-3,
+    .section-4 {
+      width: 100%;
+      /* Full-width sections */
+      height: 50vh;
+      /* Default section height */
+    }
+
+    /* Keep images aligned horizontally */
+    .section-2,
+    .section-4 {
+      flex-direction: row;
+      /* Horizontal alignment */
+      gap: 10px;
+      /* Maintain spacing */
+    }
+  }
+  /* .section-content {
+    
+    text-align: center;
+  } */
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .section-heading {
+      text-align: left; /* Adjust heading alignment for smaller screens */
+    }
+  }
+  .detail-heading{
+    font-size: 20px;
+    font-weight: 600;
+  }
+  @media (max-width: 768px) {
+    .property-btn {
+      padding: 6px 12px; /* Smaller padding for smaller screens */
+      font-size: 0.8rem; /* Smaller font size */
+    }
+
+    .property-btn-small {
+      padding: 4px 8px; /* Further reduced padding for smaller screens */
+      font-size: 0.7rem; /* Further reduced font size */
+    }
+  }
+  @media (max-width: 1024px) { /* iPad Pro screen width */
+    .property-btn {
+      padding: 8px 16px; /* Adjust padding */
+      font-size: 10px; /* Decrease font size */
+    }
+
+    .property-btn-small {
+      padding: 4px 10px; /* Decrease padding for smaller buttons */
+      font-size: 10px; /* Decrease font size */
+    }
+
+    .card-body {
+      padding: 20px; /* Adjust card body padding */
+    }
+
+    .status-label {
+      font-size: 0.8rem; /* Adjust status label font size */
+      padding: 4px 8px; /* Adjust padding for status label */
+    }
+  }
+  .rera-btn {
+    display: block; /* Ensure it is a block element to center it */
+    width: auto; /* Default width */
+    margin: 0 auto; /* Center the button horizontally */
+    padding: 10px 20px; /* Comfortable padding */
+    background-color: #000000; /* Bootstrap primary color or choose your own */
+    color: white; /* Text color */
+    text-decoration: none; /* No underline */
+    border-radius: 0; /* No rounded corners as per your design */
+}
+.newsletter-signup {
+  background-image: url(assets/footer_background.png); /* Add your image URL here */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+  padding: 70px 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgb(12, 12, 12) 0%, rgba(12, 12, 12, 0.7) 100%);
+  /* Gradient from black at bottom to transparent at top */
+}
+
+.container {
+  position: relative;
+  z-index: 2; /* Ensures content is above the overlay */
+}
+
+.newsletter-form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.newsletter-form input[type="email"] {
+  flex-grow: 1;
+  margin-right: 10px;
+  padding: 10px;
+  border: none;
+}
+
+.newsletter-form button {
+  padding: 10px 20px;
+  background-color: #606C38; /* Bootstrap's btn-warning color */
+  border: none;
+  color: white;
+}
+
+.newsletter-form button:hover {
+  background-color: #283618; /* Darker shade for hover */
+}
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+      .newsletter-form {
+          flex-direction: column; /* Stack vertically on smaller screens */
+      }
+
+      .newsletter-form input[type="email"],
+      .newsletter-form button {
+          width: 100%; /* Full width for small devices */
+          margin-top: 10px;
+          margin-right: 0; /* Remove right margin on mobile */
+      }
+
+      .newsletter-form input[type="email"] {
+          margin-top: 0; /* No top margin for the first item */
+      }
+  }

@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philosophy</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css"
+        integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="philosophy.css" type="text/css">
+</head>
+
+
+<body>
+
+
+
+    <div class="header">
+        <div class="menu-toggle">
+            <div class="hamburger"></div>
+            <div class="hamburger-border"></div>
+        </div>
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/ezgif.com-webp-to-png-converter (1).png" alt="Logo" class="img-fluid">
+            </a>
+           
+        </div>
+        <div class="phone-icon" style="color: #fff;">
+            <i class="fas fa-phone"></i>
+        </div>
+        <div class="menu">
+            <!-- Menu items will go here -->
+            <div class="menu-header">
+                <h4 style="color: transparent;">.</h4>
+                <i class='fas fa-times fa-xs close-menu'></i>
+            </div>
+            <ul class="menu-list mt-5">
+                <li><a href="index.html" class="menu-link lead">HOME</a></li>
+                <li><a href="#" class="menu-link lead with-arrow">WHO WE ARE<i class="fas fa-arrow-right"></i></a>
+                    <ul class="sub-menu">
+                        <li class="sub-menu-header">
+                            <a href="#" class="close-submenu"><i class="fas fa-arrow-left"></i> Back</a>
+                        </li>
+                        <li><a href="philosophy.html" class="menu-link lead">PHILOSOPHY</a></li>
+                        
+                        <li><a href="residential.html" class="menu-link lead">RESIDENTIAL</a></li>
+                        <li><a href="commercial.html" class="menu-link lead">COMMERCIAL</a></li>
+                        <li><a href="industrias.html" class="menu-link lead">INDUSTRIAL</a></li>
+                    </ul>
+                </li>
+                <!-- <li><a href="#" class="menu-link lead with-arrow">Service<i
+                            class="fas fa-arrow-right"></i></a>
+                    <ul class="sub-menu">
+                        <li class="sub-menu-header">
+                            <a href="#" class="close-submenu"><i class="fas fa-arrow-left"></i> Back</a>
+                        </li>
+                        <li><a href="#" class="menu-link lead">Sub Menu Item 4</a></li>
+                        <li><a href="#" class="menu-link lead">Sub Menu Item 5</a></li>
+                        <li><a href="#" class="menu-link lead">Sub Menu Item 6</a></li>
+                    </ul>
+                </li> -->
+                
+                <li><a href="#" class="menu-link lead with-arrow">Projects <i class="fas fa-arrow-right"></i></a>
+                    <ul class="sub-menu">
+                        <li class="sub-menu-header">
+                            <a href="#" class="close-submenu"><i class="fas fa-arrow-left"></i> Back</a>
+                        </li>
+                        
+                        <li><a href="locations.html" class="menu-link lead">THRISSUR</a></li>
+                        <li><a href="trivandram.html" class="menu-link lead">TRIVANDRUM</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="menu-link lead with-arrow">Info<i class="fas fa-arrow-right"></i></a>
+                    <ul class="sub-menu">
+                        <li class="sub-menu-header">
+                            <a href="#" class="close-submenu"><i class="fas fa-arrow-left"></i> Back</a>
+                        </li>
+                        <li><a href="home_loan_faq.html" class="menu-link lead">HOME LOAN FAQ</a></li>
+                        <li><a href="how_to_buy_house.html" class="menu-link lead">HOME BUYING GUIDE</a></li>
+                        <li><a href="media_center.html" class="menu-link lead">MEDIA CENTER</a></li>
+                        <li><a href="elite_blogs.html" class="menu-link lead">BLOGS</a></li>
+                    </ul>
+                </li>
+                <!-- <li><a href="#" class="menu-link lead with-arrow">Loans <i class="fas fa-arrow-right"></i></a>
+                    <ul class="sub-menu">
+                        <li class="sub-menu-header">
+                            <a href="#" class="close-submenu"><i class="fas fa-arrow-left"></i> Back</a>
+                        </li>
+                        <li><a href="#" class="menu-link lead">Sub Menu Item 13</a></li>
+                        <li><a href="#" class="menu-link lead">Sub Menu Item 14</a></li>
+                        <li><a href="#" class="menu-link lead">Sub Menu Item 15</a></li>
+                    </ul>
+                </li> -->
+                <li><a href="elite_prvilages.html" class="menu-link lead">SERVICES</a></li>
+                <li><a href="contact_us.html" class="menu-link lead">Contact Us</a></li>
+            </ul>
+            <div class="connect-with-us mt-5">
+                <h4>Connect with us</h4>
+                <div class="social-icons ">
+                    <ul>
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="image-section">
+        <!-- Image set in HTML -->
+        <img src="assets/philosophy_banner.png" alt="philosophy" class="img-fluid"> <!-- Use your image source -->
+
+        <!-- Header positioned over the image -->
+        <div class="header-overlay">
+            <h1>PHILOSOPHY</h1> <!-- Header content -->
+            <p></p>
+        </div>
+    </div>
+    <div class="container mt-5" style="padding: 20px;">
+        <div class="row">
+            <div class="col-md-6 pt-3">
+                <img src="assets/gallery_1.png" alt="construction_image" class="img-fluid">
+                <div class="row mt-5 d-flex justify-content-center">
+                    <div class="col-md-4 d-flex justify-content-center align-items-center pt-3">
+                        <img src="assets/logo FOOD 2.png" alt="Logo 1" class="logo img-fluid" />
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-center align-items-center pt-3">
+                        <img src="assets/solgen.webp" alt="Logo 2" class="logo img-fluid" />
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-center align-items-center pt-3">
+                        <img src="assets/green_logo.webp" alt="Logo 3" class="logo img-fluid" />
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-md-6 pt-3">
+                <p class="description">Our group legacy in business for more than half a century, bears testament to our
+                    reliability and trustworthiness as a business group. We have transformed lifestyles, established
+                    iconic landmarks, and expanded our footprint into multiple cities, with many more on the horizon.
+                    <br> <br>
+                    As we look ahead for our real-estate vertical, we remain steadfastly committed to creating
+                    intelligent, sustainable urban living spaces that harmoniously blend residential, professional, and
+                    recreational elements. We are acutely aware of the challenges posed by rapid urbanization, and as a
+                    responsible industry leader, we will continue to pioneer intelligent, lifestyle-driven solutions.
+                    <br> <br>
+                    We rely on our team's innovative spirit, passion for design, and embrace of technology to craft
+                    environments that add tremendous value to the lives of our residents and stakeholders. We will
+                    continually push boundaries, setting new benchmarks in the industry, strengthening our commitment to
+                    building lifestyles that inspire and enrich.
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/wfBBiNtPZ_w?si=jVTOMGktjAAGEm-m" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="logo-sections" style="text-align: center;">
+            <img src="assets/elite_developer_2.png" alt="elite_logo" class="img-fluid">
+        </div>
+        <div class="heading-container mt-5">
+            <hr class="line">
+            <span class="heading-text font">OUR LOGO</span>
+            <hr class="line2">
+        </div>
+        <div class="logo-para text-center mt-5">
+            <p>The logo presents a bold and vibrant visual identity that reflects Elite's commitment to building
+                lifestyles. The circular emblem at the center serves as the focal point, with its concentric rings of
+                red, white, and yellow-green hues creating a radiant and energetic impression.</p> <br>
+            <p>The inner red circle with a white horizontal line represents a stylized letterform "e," seamlessly
+                integrated into the design. This letterform symbolizes the brand's initials and establishes a strong,
+                recognizable icon. The warm red and yellow tones exude a sense of passion, energy, and vitality,
+                perfectly capturing the brand's dedication to creating dynamic living experiences.</p> <br>
+            <p>The outermost green hue not only adds a pop of colour but also subtly evokes associations with nature,
+                sustainability, and growth – elements that are often integral to modern lifestyles. This ring acts as a
+                vibrant frame, encapsulating the essence of the brand within its boundaries.</p> <br>
+
+            <!-- Hidden extra content -->
+            <div id="extra-content" class="extra-content">
+                <p>The wordmark "ELITE building lifestyles" sits below the emblem, rendered in a clean, modern typeface.
+                    The use of lowercase letters lends a sense of approachability and friendliness, while the bold
+                    styling maintains a strong presence. The tagline "building lifestyles" reinforces the brand's core
+                    philosophy and mission, serving as a constant reminder of Elite's commitment to creating holistic
+                    living experiences.</p> <br>
+                <p>Overall, the Elite logo strikes a balanced harmony between bold, energetic visuals and a clear
+                    messaging that resonates with the brand's values. The combination of the dynamic emblem and
+                    descriptive wordmark effectively communicates Elite's dedication to building lifestyles that are
+                    vibrant, sustainable, and tailored to the needs of modern living</p> <br>
+            </div>
+
+            <!-- Read More button -->
+            <span id="read-more-btn" class="read-more-btn" onclick="toggleReadMore()">Read More</span>
+        </div>
+    </div>
+    <div class="heading-container mt-5">
+        <hr class="line">
+        <span class="heading-text font">OUR JOURNEY</span>
+        <hr class="line2">
+    </div>
+    <div class="timeline" style="margin-top: 30px;">
+        <ul>
+          <li>
+            <div class="content">
+              <h3>OUR TEAM</h3>
+              <p>Elite Developers is focused on development of residential, commercial and plotted real estate. Our team consists of professionals with a contagious passion for premium quality, design, innovation, environment and standards.
+    
+              </p>
+            </div>
+            <div class="time">
+              <h4>01</h4>
+            </div>
+          </li>
+          
+          <li>
+            <div class="content">
+              <h3>FOUR DECADES</h3>
+              <p>A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116). Length and appearance do not determine whether a section in a paper is a paragraph. For instance, in some styles of writing, particularly journalistic styles, a paragraph can be just one sentence long.
+    
+              </p>
+            </div>
+            <div class="time">
+              <h4>02</h4>
+            </div>
+          </li>
+          
+          <li>
+            <div class="content">
+              <h3>LANDMARK PROJECTS</h3>
+              <p>Landmark projects in Thrissur such as the Puzhakkal bridge, Bini Tourist Home, Sea wall construction at Chavakad, Chamakkala & Vadanappaly, Sree Narayana College at Nattika, old Income Tax building at Padinjare Kotta, Model Girls High School are but a few of the legacies, that today stand tall as a testament to their quality & workmanship. In 1990’s Elite pioneered in bringing the concept of plotted development through projects such as Elite Gardenia, Elite Enclave and Elite Knowledge Village.
+    
+              </p>
+              <img src="assets/Landmark.png" alt="Description of the image" style="width:100%; max-width:350px;" class="img-fluid">
+    
+            </div>
+            <div class="time">
+              <h4>03</h4>
+            </div>
+            
+          </li>
+          
+          <li>
+            <div class="content">
+              <h3>SEPTEMBER 2012</h3>
+              <p>A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116). Length and appearance do not determine whether a section in a paper is a paragraph. For instance, in some styles of writing, particularly journalistic styles, a paragraph can be just one sentence long.
+    
+              </p>
+            </div>
+            <div class="time">
+              <h4>04</h4>
+            </div>
+          </li>
+          
+          <!-- <li>
+            <div class="content">
+              <h3>What is Lorem Ipsum?</h3>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+            </div>
+            <div class="time">
+              <h4>May 2018</h4>
+            </div>
+          </li>
+          
+          <li>
+            <div class="content">
+              <h3>What is Lorem Ipsum?</h3>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+            </div>
+            <div class="time">
+              <h4>June 2018</h4>
+            </div>
+          </li>
+          
+          <li>
+            <div class="content">
+              <h3>What is Lorem Ipsum?</h3>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+            </div>
+            <div class="time">
+              <h4>July 2018</h4>
+            </div>
+          </li>
+          
+          <li>
+            <div class="content">
+              <h3>What is Lorem Ipsum?</h3>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+            </div>
+            <div class="time">
+              <h4>August 2018</h4>
+            </div>
+          </li>
+          
+          <li>
+            <div class="content">
+              <h3>What is Lorem Ipsum?</h3>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+            </div>
+            <div class="time">
+              <h4>September 2018</h4>
+            </div>
+          </li>
+          
+          <li>
+            <div class="content">
+              <h3>What is Lorem Ipsum?</h3>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+            </div>
+            <div class="time">
+              <h4>October 2018</h4>
+            </div>
+          </li>
+          
+          <li>
+            <div class="content">
+              <h3>What is Lorem Ipsum?</h3>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+            </div>
+            <div class="time">
+              <h4>November 2018</h4>
+            </div>
+          </li>
+          
+          <li>
+            <div class="content">
+              <h3>What is Lorem Ipsum?</h3>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+            </div>
+            <div class="time">
+              <h4>December 2018</h4>
+            </div>
+          </li> -->
+          <div style="clear:both;"></div>
+        </ul>
+      </div>
+      <div class="heading-container" style="margin-top: 60px;">
+        <hr class="line">
+        <span class="heading-text font">OUR CORE VALUES</span>
+        <hr class="line2">
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Mission Section -->
+            <div class="col-md-4 col-sm-12 pt-5">
+                <h2 class="mision-text">MISSION</h2>
+                <ul class="spaced-list max-width-list">
+                    <li>We will enhance the ecology of all our project locations through plantation of more trees and environment friendly landscaping.</li>
+                    <li>We will protect the local flora and fauna.</li>
+                    <li>We will promote and use of green building practices in building design, construction materials etc.</li>
+                    <li>We will reduce our carbon footprint through promotion and use of energy efficient lighting & alternative fuel vehicles.</li>
+                    <li>We will augment our energy requirements through real energy sources such as solar, wind, hydro etc</li>
+                    <li>We will work towards inclusive growth of all our stakeholders</li>
+                </ul>
+            </div>
+            
+            <!-- Vision Section -->
+            <div class="col-md-4 col-sm-12 pt-5 max-width-list">
+                <h2 class="mision-text">VISION</h2>
+                
+                <p>
+                    Elite Developers aims to be the most premier Infrastructure & Real estate developer with superior quality standards, design, sustainable practices & professionalism, which will reflect in our people, projects, processes and systems
+                </p>
+            </div>
+            
+            <!-- Quality Policy Section -->
+            <div class="col-md-4 col-sm-12 pt-5">
+                <h2 class="mision-text">QUALITY POLICY</h2>
+                <ul class="spaced-list max-width-list">
+                    <li>To be the industry champion in employing modern and proven techniques, material and management systems, and to maintain sustainable development in every area.</li>
+                    <li>To efficiently and effectively manage the company's resources, enabling timely realisation of projects conforming to every quality standard prescribed.</li>
+                    <li>To establish an excellent information management system and communication link among all stakeholders.</li>
+                    <li>To provide best in class solutions to clients through assessment of their needs and demands.</li>
+                    <li>To conform to every valid standard within the context of project at the maximum level.</li>
+                    <li>To conform to the country's all legal laws and ethical rules.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="newsletter-signup mt-5">
+        <div class="overlay"></div>
+        <div class="container">
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your Email Id">
+                <button type="submit">Subscribe ➔</button>
+            </form>
+        </div>
+    </div>
+    <footer class="footer  text-white py-5">
+        <div class="container">
+            <div class="row">
+                <!-- First Section -->
+                <div class="col-md-4">
+                    <!-- Logo and vertical line -->
+                    <div class="logo-section">
+                        <img src="assets/logo FOOD 2.png" alt="Logo" class="mb-3">
+                        <div class="vertical-line"></div>
+                        <h5 class=" title mt-3 mb-3"> <span>An Elite Foods <br><span>& Innovations
+                                </span><br><span>Group Enterprise</span> </span> </h5>
+                    </div>
+                    <!-- Heading -->
+
+                    <!-- Paragraph -->
+                    <br>
+                    <p class="address">The Elite Group has been in the real estate business since 1995 and has been part
+                        of numerous projects that have stood the test of time.</p>
+                    <br> <br>
+                    <div class="d-flex justify-content-between">
+                        <img src="assets/Frame 273.png" alt="Logo 1">
+                        <img src="assets/BAI LOG 2.png" alt="Logo 2">
+                        <img src="assets/Frame 274.png" alt="Logo 3">
+                    </div>
+                </div>
+
+                <div class="col-md-1"></div> <!-- Adjust the column size for the desired gap -->
+
+                <!-- Second Section -->
+                <div class="col-md-4">
+                    <!-- Second Section Content -->
+                    <br>
+                    <h5 class="mb-3 with-line">REACH US</h5>
+                    <br><br>
+                    <h6 class="with-line"> ADDRESS</h6>
+                    <p class="address">Elite Gardenia Hills, Near Reliance <br><span>Petrol Pump, Puzhakkal P.O.,</span>
+                        <br> Thrissur – 680 553 Kerala, India
+                    </p>
+                    <br>
+                    <h6 class="with-line">CONTACT US</h6>
+                    <p class="address">Mob: +91 99468 11111 <br><span>Tel: +91 487 2322120</span></p>
+                    <br>
+                    <h6 class="with-line">EMAIL</h6>
+                    <p>sales@elitehomesindia.co.in</p>
+                    <!-- Follow us icons -->
+
+                </div>
+
+
+
+
+                <!-- Third Section -->
+                <div class="col-md-2">
+                    <!-- Third Section Content -->
+                    <br>
+                    <h5 class="mb-3 with-line">PROJECTS</h5>
+                    <br><br><a href="" class="address text-white">Villas in Thrissur</a>
+                    <br><br><a href="" class="address text-white">Apartment in Tvm</a>
+                    <br><br><a href="" class="address text-white">Upcoming Projects</a>
+                    <br><br><a class="mb-3 text-white" href="">FAQs</a>
+                    <br><br><a class="mb-3 text-white" href="">Help & Support</a>
+                    <br>
+                    <!-- <div class="subscription-box mt-5">
+                        <form>
+                            <div class="input-group">
+                                <input type="text" placeholder="Enter your email to subscribe"
+                                    class="form-control subscription-input">
+                                <button type="submit" class="btn btn-danger" style="border-radius: 0px;"><i
+                                        class="fa-solid fa-arrow-right"></i></button>
+                            </div>
+                        </form>
+                    </div> -->
+                </div>
+            </div>
+            <br><br><br>
+            <div class="follow-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+
+
+        </div>
+    </footer>
+
+
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+
+
+
+function toggleReadMore() {
+      var extraContent = document.getElementById("extra-content");
+      var readMoreBtn = document.getElementById("read-more-btn");
+
+      if (extraContent.classList.contains("open")) {
+        extraContent.classList.remove("open");
+        readMoreBtn.innerText = "Read More";
+      } else {
+        extraContent.classList.add("open");
+        readMoreBtn.innerText = "Read Less";
+      }
+    }
+
+
+
+
+
+    $(document).ready(function () {
+    let initialLoad = true;
+
+    // Initial state
+    $('.menu').css('left', '-495px');
+    $('.menu').removeClass('active');
+
+    // Toggle main menu visibility
+    $('.menu-toggle').click(function () {
+        if ($('.menu').hasClass('active')) {
+            // Close the menu
+            $('.menu').removeClass('active');
+            $('body').removeClass('menu-active'); // If 'menu-active' class controls overflow, consider modifying or removing this class assignment
+            $('.menu').animate({
+                left: '-495px'
+            }, 300); // Speed up the closing animation
+            $('.sub-menu').removeClass('active');
+            $('.sub-menu').css({
+                right: '100%'  // Ensure sub-menus are reset
+            });
+            initialLoad = true;
+        } else {
+            // Open the menu
+            $('.menu').addClass('active');
+            $('body').addClass('menu-active'); // Check if this class adds `overflow: hidden` in your CSS
+            $('.menu').animate({
+                left: '0px'
+            }, initialLoad ? 300 : 0); // Faster opening after initial load
+            initialLoad = false;
+        }
+    });
+
+    // Close the main menu with a button
+    $('.close-menu').click(function () {
+        $('.menu').animate({
+            left: '-495px'
+        }, 300, function () {
+            $('.menu').removeClass('active');
+            $('body').removeClass('menu-active'); // Ensure this does not disable scrolling
+            initialLoad = true;
+        });
+    });
+
+    // Toggle sub-menu
+    $('.with-arrow').click(function (e) {
+        e.preventDefault();
+        let subMenu = $(this).next('.sub-menu');
+        if (subMenu.hasClass('active')) {
+            subMenu.css({
+                right: '90%'  // Adjust to ensure smooth hiding
+            }).animate({
+                right: '100%'  // Smooth transition for sub-menu
+            }, 300, function () {
+                subMenu.removeClass('active');
+            });
+        } else {
+            $('.sub-menu').removeClass('active').css({
+                right: '100%'  // Reset other sub-menus
+            });
+            subMenu.css({
+                right: '100%'
+            }).animate({
+                right: '0'  // Smooth transition for sub-menu
+            }, 300).addClass('active');
+        }
+    });
+
+    // Close sub-menu with a button
+    $('.close-submenu').click(function (e) {
+        e.preventDefault();
+        let subMenu = $(this).closest('.sub-menu');
+        subMenu.animate({
+            right: '100%'  // Smooth transition to hide sub-menu
+        }, 300, function () {
+            subMenu.removeClass('active');
+        });
+    });
+
+    // Close the menu and sub-menu if clicking outside of them
+    $(document).on('click', function (e) {
+        if (!$(e.target).closest('.menu').length && !$(e.target).closest('.menu-toggle').length) {
+            if ($('.menu').hasClass('active')) {
+                $('.menu').removeClass('active');
+                $('body').removeClass('menu-active'); // Ensure this does not disable scrolling
+                $('.menu').animate({
+                    left: '-495px'
+                }, 300);
+                $('.sub-menu').removeClass('active');
+                $('.sub-menu').animate({
+                    right: '100%'  // Smooth transition to hide sub-menu
+                }, 300);
+                initialLoad = true;
+            }
+        }
+    });
+
+    // Update header background on scroll
+    window.addEventListener('scroll', function () {
+        const header = document.querySelector('.header');
+        if (window.scrollY > 0) {
+            header.classList.add('header-bg');
+        } else {
+            header.classList.remove('header-bg');
+        }
+    });
+});
+
+
+
+    </script>
+</body>
+
+</html>

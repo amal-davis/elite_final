@@ -1,0 +1,2197 @@
+body {
+    font-family: 'Poppins';
+
+}
+.font {
+    font-family: 'Marcellus SC', serif;
+    
+}
+body.menu-active {
+    overflow: hidden;
+    /* Prevent scrolling when the menu is active */
+}
+
+/* .menu.active+.menu-overlay,
+body.menu-active .menu-overlay {
+display: block;
+opacity: 1;
+} */
+
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    /* Set below the menu */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.hero-section {
+    width: 100%;
+    height: 100vh;
+    background-image: url(elite-2.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    /* Set a z-index to position it behind the header */
+    overflow: hidden;
+    /* Hide overflow for the blur effect */
+}
+
+/* Added styles for the hero heading */
+.hero-heading {
+    position: absolute;
+    bottom: 250px;
+    left: 90px;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 400;
+    z-index: 2;
+    /* Set a higher z-index to position it on top of the hero section */
+    line-height: 60px;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .hero-heading {
+        font-size: 32px;
+        line-height: 44px;
+        bottom: 80px;
+        left: 40px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-heading {
+        font-size: 38px;
+        line-height: 40px;
+        bottom: 420px;
+        left: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-heading {
+        font-size: 34px;
+        line-height: 36px;
+        bottom: 420px;
+        left: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-heading {
+        font-size: 30px;
+        line-height: 32px;
+        bottom: 420px;
+        left: 15px;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 93px;
+    padding: 20px;
+    /* Adjusted padding */
+    color: white;
+    position: fixed;
+    /* Make the header fixed */
+    top: 0;
+    /* Position it at the top */
+
+    z-index: 3;
+    /* Set a higher z-index to position it on top of the hero section */
+}
+
+.header-bg {
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Added a background color to the header */
+}
+
+.menu-toggle {
+    cursor: pointer;
+}
+
+.hamburger {
+    width: 45px;
+    height: 2px;
+    background-color: #fff;
+    margin-bottom: 5px;
+}
+
+.hamburger-border {
+    width: 28px;
+    height: 2px;
+    background-color: #fff;
+}
+
+.logo img {
+    height: 40px;
+    width: 138px;
+}
+
+.phone-icon {
+    font-size: 24px;
+}
+
+.menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: -495px;
+    /* Initial position */
+    width: 495px;
+    height: 100vh;
+    background-color: rgba(59, 59, 59, 0.7);
+    z-index: 1000;
+    border-top-right-radius: 30px;
+    padding: 20px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: left 0.12s ease;
+    /* Increased transition duration */
+}
+
+.menu.active {
+    display: block;
+    left: 0;
+    transition: left 0.12s ease;
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.menu-header h4 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.menu-list {
+    list-style-type: none;
+    padding: 0;
+
+}
+
+.menu-link {
+    display: flex;
+    /* Make the menu link a flex container */
+    align-items: center;
+    /* Align items vertically within the flex container */
+    font-weight: 400;
+    margin-left: 40px;
+    font-size: 24px;
+    color: #ffffff;
+    text-decoration: none;
+    margin-bottom: 35px;
+    transition: margin-left 0.5s ease;
+    text-transform: uppercase;
+}
+
+.menu-link i {
+    margin-left: auto;
+    /* Keep this for pushing to the right side */
+}
+
+.connect-with-us {
+    margin-top: auto;
+}
+
+.connect-with-us h4 {
+    margin-left: 40px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.social-icons {
+    display: flex;
+    margin-left: 40px;
+}
+
+.social-icons ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.social-icons a {
+    display: block;
+    width: 21.88px;
+    height: 21.47px;
+    color: white;
+}
+
+.close-menu {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    /* Adjusted to position the sub-menu to the left of the menu */
+    width: 247.5px;
+    height: 100%;
+    background-color: #111;
+    z-index: 1001;
+    border-top-right-radius: 30px;
+    padding: 20px;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.sub-menu.active {
+    display: block;
+}
+
+.sub-menu .menu-link {
+    font-size: 20px;
+    margin-left: 0;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    transition: margin-left 0.5s ease;
+    color: #0ECA6D;
+}
+
+.sub-menu .menu-link:hover {
+    margin-left: 10px;
+}
+
+.sub-menu .sub-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sub-menu .close-submenu {
+    font-size: 20px;
+    color: #0ECA6D;
+    text-decoration: none;
+    transition: margin-left 0.5s ease;
+    text-transform: uppercase;
+}
+
+.sub-menu .close-submenu:hover {
+    margin-left: 10px;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 992px) {
+    .menu {
+        width: 350px;
+        padding: 15px;
+    }
+
+    .menu-link {
+        font-size: 20px;
+    }
+
+    .phone-icon {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu {
+        display: block;
+        width: 250px;
+        left: -250px;
+    }
+
+    .menu.active {
+        left: 0;
+    }
+
+    .menu-link {
+        font-size: 20px;
+        /* Adjust font size for smaller screens */
+        margin-left: 20px;
+        /* Adjust margin for smaller screens */
+    }
+
+    .menu-link i {
+        margin-right: 3px;
+        /* Adjust icon position for smaller screens */
+    }
+
+    .phone-icon {
+        font-size: 18px;
+    }
+
+
+    .connect-with-us h4 {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .header {
+        padding: 7px;
+    }
+
+    .logo img {
+        height: 25px;
+        width: 80px;
+    }
+
+    .phone-icon {
+        font-size: 18px;
+    }
+}
+
+/* Hero Section Styles */
+
+
+.buttons {
+    margin-bottom: 10px;
+}
+
+.owl-carousel-main {
+    position: relative;
+    width: 100%;
+
+    overflow: hidden;
+    z-index: 1;
+}
+
+.owl-carousel-main .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* Full height */
+    width: 100%;
+    /* Full width to prevent overflow */
+}
+
+.owl-carousel-main .item img {
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    object-fit: cover;
+    /* Ensure images maintain proper aspect ratio */
+}
+
+.carousel-video {
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    object-fit: cover;
+    /* Maintain aspect ratio and cover the area */
+    position: relative;
+    /* Ensure it's in the same position as other slides */
+}
+
+
+/* Overlay content on top of the image */
+.carousel-content {
+    position: absolute;
+    bottom: 20px;
+    /* Aligns the content at the bottom */
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    /* Adjust padding for content */
+
+}
+
+/* Left Section Styles */
+.carousel-content-left {
+    flex: 1;
+    text-align: left;
+    color: white;
+}
+
+.carousel-content-left h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.carousel-content-left .location {
+    font-size: 1em;
+}
+
+/* Middle Section Styles - Arrows displayed vertically */
+.carousel-content-middle {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* Aligns elements vertically */
+    justify-content: flex-end;
+    /* Aligns arrows at the bottom */
+}
+
+.arrows {
+    display: flex;
+    flex-direction: column;
+    /* Arranges arrows vertically */
+    align-items: center;
+    /* Center-aligned */
+}
+
+.arrows i {
+    color: white;
+    margin: 2px 0;
+    /* Decreased margin between arrows */
+}
+
+/* Animation for arrow brightness */
+.arrow-fade-1 {
+    animation: fadeInOut 3s infinite;
+}
+
+.arrow-fade-2 {
+    animation: fadeInOut 3s infinite;
+    animation-delay: 0.5s;
+    /* Staggered effect */
+}
+
+.arrow-fade-3 {
+    animation: fadeInOut 3s infinite;
+    animation-delay: 1s;
+    /* Further staggered effect */
+}
+
+/* Right Section Styles */
+.carousel-content-right {
+    flex: 1;
+    text-align: right;
+    color: white;
+}
+
+/* Right Section Styles */
+.carousel-content-right {
+    flex: 1;
+    text-align: right;
+    color: white;
+}
+
+.price {
+    font-size: 1em;
+}
+
+.enquire-now {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 25px;
+    /* Makes the button oval */
+}
+
+.enquire-now:hover {
+    background: white;
+    color: black;
+}
+
+/* Animation keyframes */
+@keyframes fadeInOut {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .owl-carousel-main {
+        overflow-x: hidden;
+    }
+
+    .carousel-content {
+        padding: 10px;
+        /* Reduced padding for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+
+    .carousel-content-left,
+    .carousel-content-middle,
+    .carousel-content-right {
+        font-size: 0.8em;
+        /* Smaller text on compact screens */
+    }
+}
+
+/* Responsive adjustments using media queries */
+@media (max-width: 768px) {
+    .owl-carousel-main {
+
+        overflow-x: hidden;
+        /* Ensure no horizontal scrolling */
+    }
+
+    .header {
+        padding: 10px;
+        /* Adjusted padding */
+    }
+}
+
+@media (max-width: 576px) {
+    .owl-carousel-main {
+
+        overflow-x: hidden;
+        /* Prevent horizontal scrolling */
+    }
+
+
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+
+    /* Adjust padding for smaller screens */
+    .carousel-content {
+        padding: 15px;
+        /* Reduced padding for smaller screens */
+    }
+
+    .carousel-content-left h2 {
+        font-size: 1.2em;
+        /* Smaller font size */
+    }
+
+    .carousel-content-left .location {
+        font-size: 0.9em;
+        /* Smaller font size */
+    }
+
+    .carousel-content-middle {
+        padding: 0 10px;
+        /* Reduced padding */
+    }
+
+    .arrows i {
+        margin: 1px 0;
+        /* Smaller gap between arrows */
+    }
+
+    .carousel-content-right {
+        padding-left: 10px;
+        /* Reduced padding */
+    }
+
+    .price {
+        font-size: 0.9em;
+        /* Smaller font size for price */
+    }
+
+    .enquire-now {
+        padding: 8px 15px;
+        /* Reduced padding for smaller button */
+        border-radius: 20px;
+        /* Adjusted border radius for smaller shape */
+    }
+}
+
+@media (max-width: 576px) {
+
+    /* Additional adjustments for mobile view */
+    .carousel-content {
+        padding: 10px;
+        /* Further reduced padding */
+    }
+
+    .carousel-content-left h2 {
+        font-size: 1em;
+        /* Further smaller font size */
+    }
+
+    .carousel-content-left .location {
+        font-size: 0.8em;
+        /* Smaller font size */
+    }
+
+    .arrows i {
+        margin: 1px 0;
+        /* Smaller gap between arrows */
+    }
+
+    .carousel-content-right {
+        padding-left: 5px;
+        /* Further reduced padding */
+    }
+
+    .price {
+        font-size: 0.6em;
+        /* Smaller font size for price */
+    }
+
+    .enquire-now {
+        padding: 5px 8px;
+        /* Further reduced padding */
+        border-radius: 12px;
+        /* Adjusted border radius */
+    }
+}
+
+/* Top heading with uppercase text and bold font */
+.top-heading {
+    font-weight: bold;
+    /* Bold text */
+    text-transform: uppercase;
+    /* Uppercase text */
+    font-size: 2em;
+    /* Default font size for large screens */
+}
+
+/* Bottom heading with bold red text */
+.bottom-heading {
+    color: #f0483e;
+    /* Red color */
+    font-weight: bold;
+    /* Bold text */
+    text-transform: uppercase;
+    /* Uppercase text */
+    font-size: 1.5em;
+    /* Default font size for large screens */
+}
+
+/* Responsive font size for smaller screens */
+@media (max-width: 768px) {
+
+    /* For tablets and smaller devices */
+    .top-heading {
+        font-size: 1.5em;
+        /* Adjusted font size */
+    }
+
+    .bottom-heading {
+        font-size: 1.2em;
+        /* Adjusted font size */
+    }
+}
+
+@media (max-width: 576px) {
+
+    /* For mobile devices */
+    .top-heading {
+        font-size: 1.2em;
+        /* Further reduced font size */
+    }
+
+    .bottom-heading {
+        font-size: 1em;
+        /* Further reduced font size */
+    }
+}
+
+/* Paragraph description */
+.description {
+    font-size: 1em;
+    /* Default font size */
+    line-height: 1.5;
+    /* Line height for readability */
+    text-align: justify;
+    max-width: 663px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+/* Adjust font size for smaller screens */
+@media (max-width: 768px) {
+
+    /* Tablets and smaller devices */
+    .description {
+        font-size: 18px;
+        /* Slightly smaller font size */
+        max-width: 500px;
+        /* Reduce maximum width */
+    }
+}
+
+@media (max-width: 576px) {
+
+    /* Mobile devices */
+    .description {
+        font-size: 16px;
+        /* Further smaller font size */
+        max-width: 400px;
+        /* Smaller maximum width */
+    }
+}
+
+.btnsy {
+    text-transform: uppercase;
+    /* Uppercase text */
+    padding: 10px 20px;
+    /* Padding for medium-to-large screens */
+    width: 180px;
+    /* Fixed width for larger screens */
+    border-radius: 20px;
+    /* Rounded corners */
+    background-color: #f0483e;
+    /* Red color */
+    color: #ffffff;
+    /* White text */
+    border: none;
+    /* No border */
+    text-align: center;
+    /* Center text within the button */
+    transition: all 0.3s;
+    /* Smooth hover effect */
+}
+
+/* Responsive padding for smaller screens */
+@media (max-width: 768px) {
+
+    /* For tablets and smaller devices */
+    .btnsy {
+        padding: 8px 15px;
+        /* Reduce padding */
+        width: 150px;
+        /* Reduce width */
+    }
+}
+
+@media (max-width: 576px) {
+
+    /* For mobile devices */
+    .btnsy {
+        padding: 6px 10px;
+        /* Further reduce padding */
+        width: 120px;
+        /* Smaller button width */
+    }
+}
+
+.heading-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.line {
+    flex-grow: 1;
+    /* Lines will fill up the space */
+    border: none;
+    height: 1px;
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.75), rgba(255, 255, 255, 0));
+    /* Gradient line */
+    margin: 0 10px;
+    /* Spacing around the text */
+}
+
+.line2 {
+    flex-grow: 1;
+    /* Lines will fill up the space */
+    border: none;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(255, 255, 255, 0));
+    /* Gradient line */
+    margin: 0 10px;
+    /* Spacing around the text */
+}
+
+.heading-text {
+    white-space: nowrap;
+    padding: 0 10px;
+    /* Spacing around the text */
+
+    color: #000;
+    /* Text color */
+    font-size: 22px;
+    /* Adjust the font size as needed */
+    font-weight: bold;
+    /* Adjust font weight as needed */
+}
+
+.heading-containers {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.lines {
+    flex-grow: 1;
+    /* Lines will fill up the space */
+    border: none;
+    height: 1px;
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+    /* Gradient line */
+    margin: 0 10px;
+    /* Spacing around the text */
+}
+
+.lines2 {
+    flex-grow: 1;
+    /* Lines will fill up the space */
+    border: none;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+
+    /* Gradient line */
+    margin: 0 10px;
+    /* Spacing around the text */
+}
+
+.heading-texts {
+    white-space: nowrap;
+    padding: 0 10px;
+    /* Spacing around the text */
+
+    color: #fff;
+    /* Text color */
+    font-size: 24px;
+    /* Adjust the font size as needed */
+    font-weight: bold;
+    /* Adjust font weight as needed */
+}
+
+
+.project-text p {
+    color: rgba(0, 0, 0, 1);
+    font-size: 22px;
+    font-weight: 300;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+
+    /* For tablets and smaller devices */
+    .project-text p {
+        font-size: 20px;
+        /* Slightly smaller font size */
+    }
+}
+
+@media (max-width: 576px) {
+
+    /* For mobile devices */
+    .project-text p {
+        font-size: 18px;
+        /* Further reduced font size */
+    }
+}
+
+
+@media screen and (orientation: landscape) {
+    .carousel img {
+        height: 100vh;
+    }
+}
+
+/* Styling for Swiper Slides */
+.swiper-slide img {
+    width: 100%;
+    /* Full-width image */
+    height: auto;
+    /* Maintains aspect ratio */
+}
+
+/* Zoom-in effect for carousel images */
+.image-container {
+    overflow: hidden;
+    /* Prevents image from overflowing on zoom */
+}
+
+.carousel-images {
+    width: 100%;
+    /* Full-width image */
+    height: auto;
+    /* Maintains aspect ratio */
+    transition: transform 0.3s ease-in-out;
+    /* Smooth transition for zoom */
+}
+
+.carousel-images:hover {
+    transform: scale(1.1);
+    /* Zoom-in effect */
+}
+
+/* Styling for carousel heading */
+.carousel-heading {
+    text-align: center;
+    /* Center the heading */
+    margin-top: 10px;
+    /* Margin above the heading */
+    font-size: 1.2em;
+    /* Adjust font size as needed */
+    font-weight: bold;
+    /* Bold text */
+}
+.carousel-heading:hover{
+    color: #000;
+}
+.loc-link:hover{
+    color: #000;
+}
+
+/* Custom styling for navigation buttons */
+.swiper-button-prev.custom-prev,
+.swiper-button-next.custom-next {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+    padding: 10px;
+    /* Ensures space within the circle */
+    border-radius: 50%;
+    /* Circular shape */
+    width: 40px;
+    /* Equal width and height */
+    height: 40px;
+    /* Equal width and height */
+    display: flex;
+    /* Centering content */
+    justify-content: center;
+    /* Centering icon */
+    align-items: center;
+    /* Centering icon */
+    color: white;
+    /* Icon color */
+}
+
+.swiper-button-prev.custom-prev:after,
+.swiper-button-next.custom-next:after {
+    font-size: 20px;
+    /* Size of the icon */
+}
+
+/* Custom styling for pagination */
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    /* Position at the bottom */
+
+    text-align: center;
+    /* Centered pagination */
+
+}
+
+.swiper-pagination-bullet {
+    background-color: grey;
+    /* Default color for inactive bullets */
+    opacity: 0.7;
+    /* Slight transparency */
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #333;
+    /* Darker grey for active bullets */
+}
+
+/* Styling for the bottom button container */
+.bottom-button-container {
+    text-align: center;
+    /* Center the button */
+    padding-top: 20px;
+    /* Add space above the button */
+}
+
+/* Styling for the button with no border radius */
+.bottom-button {
+    background-color: #F0483E;
+    /* Red background */
+    color: white;
+    /* White text */
+    border: none;
+    /* No border */
+    padding: 10px 20px;
+    /* Padding for button size */
+    border-radius: 0;
+    /* Straight edges (no rounding) */
+    text-transform: uppercase;
+    /* Uppercase text */
+    cursor: pointer;
+    /* Cursor changes to pointer on hover */
+}
+
+.bottom-button:hover {
+    background-color: #cc0000;
+    /* Darker red on hover */
+}
+
+.mission-text h2 {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 54px;
+    text-align: center;
+    text-align: center;
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 600px) {
+    .mission-text h2 {
+        font-size: 24px;
+        /* Smaller font size */
+        line-height: 36px;
+        /* Adjusted line height */
+    }
+}
+
+/* Media query for medium screens */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .mission-text h2 {
+        font-size: 30px;
+        /* Medium font size */
+        line-height: 45px;
+        /* Adjusted line height */
+    }
+}
+
+.section {
+    display: flex;
+    /* Using flexbox for horizontal layout */
+    justify-content: space-around;
+    /* Distribute evenly */
+    padding: 20px;
+    /* Padding for spacing */
+}
+
+.part {
+    text-align: center;
+    /* Center the text */
+}
+
+.part h2 {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+    letter-spacing: 2%;
+}
+
+.part p {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 600px) {
+    .part h2 {
+        font-size: 24px;
+        /* Smaller font size for heading */
+        line-height: 30px;
+        /* Adjusted line height */
+        letter-spacing: 1%;
+        /* Reduced letter spacing */
+    }
+
+    .part p {
+        font-size: 19px;
+        /* Smaller font size for paragraph */
+        line-height: 24px;
+        /* Adjusted line height */
+    }
+}
+
+/* Media query for medium screens */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .part h2 {
+        font-size: 28px;
+        /* Medium font size for heading */
+        line-height: 42px;
+        /* Adjusted line height */
+        letter-spacing: 1.5%;
+        /* Reduced letter spacing */
+    }
+
+    .part p {
+        font-size: 20px;
+        /* Medium font size for paragraph */
+        line-height: 30px;
+        /* Adjusted line height */
+    }
+}
+
+
+.divider {
+    border-left: 2px solid #fff;
+    /* 2px solid black border */
+    height: 60px;
+    /* Adjust based on section height */
+    align-self: center;
+    /* Align in the center */
+}
+
+@media only screen and (max-width: 600px) {
+
+    /* Media query for responsive layout */
+    .section {
+        flex-direction: column;
+        /* Stack vertically */
+        align-items: center;
+        /* Center content */
+    }
+
+    .divider {
+        display: none;
+        /* Hide the divider in the vertical layout */
+    }
+}
+
+.vision-paragraph p {
+    font-weight: 200;
+    font-size: 28px;
+    line-height: 36px;
+    text-align: center;
+
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 600px) {
+    .vision-paragraph p {
+        font-size: 20px;
+        /* Smaller font size */
+        line-height: 28px;
+        /* Adjusted line height */
+    }
+}
+
+/* Media query for medium screens */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .vision-paragraph p {
+        font-size: 24px;
+        /* Medium font size */
+        line-height: 32px;
+        /* Corresponding line height */
+    }
+}
+
+.view-btn {
+    background-color: #F0483E;
+    color: #ffffff;
+    margin: 0 auto;
+}
+
+.cust-para p {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 600px) {
+    .cust-para p {
+        font-size: 18px;
+        /* Smaller font size for smaller screens */
+        line-height: 27px;
+        /* Adjusted line height */
+        margin-top: 10px;
+        /* Reduce margin-top */
+    }
+}
+
+/* Media query for medium screens */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .cust-para p {
+        font-size: 20px;
+        /* Medium font size */
+        line-height: 30px;
+        /* Corresponding line height */
+        margin-top: 15px;
+        /* Adjusted margin-top */
+    }
+}
+
+.owle {
+    text-align: center;
+}
+
+iframe {
+    max-width: 100%;
+    /* Ensure iframe is responsive */
+}
+
+/* styles.css */
+.carousel-navigation {
+    text-align: center;
+    /* Center the navigation buttons */
+    margin-top: 20px;
+    /* Add space between carousel and buttons */
+}
+
+.custom-nav-btn {
+    background-color: #F0483E;
+    /* Dark background for contrast */
+    color: white;
+    /* White text for visibility */
+    border: none;
+    /* No border for clean look */
+    padding: 10px 20px;
+    /* Padding for button */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: all 0.3s;
+    /* Smooth transition on hover */
+}
+
+.custom-nav-btn:hover {
+    background-color: #555;
+    /* Lighter background on hover */
+    color: #fff;
+}
+
+.what-text p {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .what-text p {
+        font-size: 18px;
+        /* Smaller font size for smaller screens */
+        line-height: 27px;
+        /* Adjusted line height */
+        margin-top: 10px;
+        /* Reduce margin-top */
+    }
+}
+
+/* Media query for medium screens */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .what-text p {
+        font-size: 20px;
+        /* Medium font size */
+        line-height: 30px;
+        /* Corresponding line height */
+        margin-top: 15px;
+        /* Adjusted margin-top */
+    }
+}
+
+.image-what {
+    overflow: hidden;
+    /* Ensures that the image doesn't overflow its container */
+    cursor: pointer;
+}
+
+.image-what img {
+    transition: transform 0.5s ease;
+    /* Smooth transition for the zoom effect */
+}
+
+.image-what:hover img {
+    transform: scale(1.2);
+    /* Scale up the image to create the zoom effect */
+}
+
+.find-heading h2 {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 54px;
+    text-align: justify;
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 768px) {
+
+    /* For tablets and smaller devices */
+    .find-heading h2 {
+        font-size: 30px;
+        /* Smaller font size */
+        line-height: 45px;
+        /* Adjusted line height */
+    }
+}
+
+@media (max-width: 576px) {
+
+    /* For mobile devices */
+    .find-heading h2 {
+        font-size: 24px;
+        /* Further reduced font size */
+        line-height: 36px;
+        /* Adjusted line height */
+    }
+
+    .custom-section {
+        width: 100%;
+    }
+}
+
+.fin-para p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 768px) {
+
+    /* For tablets and smaller devices */
+    .fin-para p {
+        font-size: 18px;
+        /* Adjust font size for smaller screens */
+        line-height: 28px;
+        /* Adjust line height */
+    }
+}
+
+@media (max-width: 576px) {
+
+    /* For mobile devices */
+    .fin-para p {
+        font-size: 16px;
+        /* Further reduced font size */
+        line-height: 26px;
+        /* Adjusted line height */
+    }
+}
+
+.read-btn {
+    background-color: #F0483E;
+    color: #ffffff;
+    border-radius: 20px;
+}
+
+.news-heading h4 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 768px) {
+
+    /* For tablets and smaller devices */
+    .news-heading {
+        font-size: 18px;
+        /* Slightly smaller font size */
+        line-height: 28px;
+        /* Adjusted line height */
+    }
+}
+
+@media (max-width: 576px) {
+
+    /* For mobile devices */
+    .news-heading {
+        font-size: 16px;
+        /* Further reduced font size */
+        line-height: 26px;
+        /* Adjusted line height */
+    }
+}
+
+.social-media-content {
+    padding: 20px;
+    /* Add padding for inner container */
+}
+
+.instagram-col,
+.facebook-col,
+.twitter-col {
+    padding-top: 20px;
+    /* Consistent padding for all columns */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+
+    /* For tablets and smaller devices */
+    .social-media-container {
+        padding-left: 10px;
+        /* Adjust padding for smaller screens */
+        padding-right: 10px;
+    }
+
+    .instagram-col,
+    .facebook-col,
+    .twitter-col {
+        padding-top: 10px;
+        /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+
+    /* For mobile devices */
+    .instagram-col,
+    .facebook-col,
+    .twitter-col {
+        padding-top: 15px;
+        /* Further reduced padding for mobile */
+    }
+}
+
+.footer {
+    background: #0C0C0C;
+    width: 100%;
+    
+    /* Dark background color */
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo-section img {
+    margin-bottom: 10px;
+    /* Margin between logo and vertical line */
+}
+
+.vertical-line {
+    border-left: 1px solid #fff;
+    /* Vertical line */
+    height: 80px;
+    /* Adjust height as needed */
+    margin-left: 15px;
+    /* Adjust margin as needed */
+}
+
+.footer h5 {
+    color: #fff;
+    /* Heading color */
+}
+
+.title {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    margin-left: 20px;
+    gap: 0px;
+    opacity: 0px;
+
+}
+
+.p {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    text-align: left;
+
+}
+
+
+
+
+.address {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    text-align: left;
+
+}
+
+.h5 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: 0.02em;
+    text-align: left;
+
+}
+
+.h6 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    text-align: left;
+
+}
+
+.with-line {
+    position: relative;
+    display: inline-block;
+}
+
+.with-line::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(238, 229, 229);
+    /* Adjust as needed */
+}
+
+
+
+
+.subscription-input {
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #F0483E;
+    width: 100%;
+
+    gap: 0px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+    background-color: #0C0C0C;
+
+}
+
+.subscription-input::placeholder {
+    color: #ffffff;
+    /* Gray color for placeholder text */
+    opacity: 1;
+    /* Ensures full opacity */
+    font-size: 10px;
+    /* Adjust this value as needed */
+}
+
+
+.subscription-box button {
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+
+}
+
+.subscription-box button:hover {
+    background-color: red;
+    /* Change button background color on hover */
+    color: white;
+    /* Change button text color on hover */
+    margin-left: 150px;
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 16px;
+        line-height: 24px;
+        margin-left: 5px;
+    }
+
+    .p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .address,
+    .h5,
+    .h6 {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .subscription-input {
+        width: 70%;
+        /* Adjust as needed */
+        max-width: 300px;
+        /* Set maximum width for smaller screens */
+        border-radius: 0px;
+    }
+
+    .subscription-box button {
+        margin-left: 0;
+        width: 30%;
+        /* Adjust as needed */
+        max-width: 100px;
+        /* Set maximum width for smaller screens */
+    }
+}
+
+.follow-icons {
+    display: flex;
+    justify-content: center;
+    /* Center the icons horizontally */
+    margin-top: 30px;
+    /* Adjust margin as needed */
+    color: #f8f2f2;
+}
+
+.follow-icons a {
+    margin-right: 10px;
+    /* Adjust margin between icons */
+    color: #d8cece;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .follow-icons {
+        margin-left: 0;
+        justify-content: center;
+    }
+}
+
+/* Responsive styles for smaller screens (tablet view) */
+@media (max-width: 768px) {
+    .footer .row {
+        flex-direction: column;
+        /* Stack vertically */
+        gap: 20px;
+        /* Space between sections */
+    }
+
+    .footer .col-md-4,
+    .footer .col-md-2 {
+        width: 100%;
+        /* Full width on smaller screens */
+        padding: 20px 0;
+        /* Padding for sections */
+    }
+
+    .p,
+    .address,
+    .footer h5 {
+        font-size: 14px;
+        /* Smaller font size */
+        line-height: 20px;
+        /* Adjusted line height */
+    }
+
+    /* Adjust subscription box for smaller screens */
+    .subscription-box {
+        flex-direction: column;
+        /* Stack vertically */
+        align-items: stretch;
+        /* Stretch to full width */
+    }
+
+    .subscription-input {
+        width: 100%;
+        /* Full width */
+    }
+
+    .subscription-box button {
+        width: 100%;
+        /* Full width */
+    }
+
+    /* Adjust follow icons */
+    .follow-icons {
+        justify-content: center;
+        /* Center icons */
+        flex-wrap: wrap;
+        /* Allow icons to wrap */
+    }
+
+    .follow-icons a {
+        margin-right: 10px;
+        /* Adjust spacing */
+        margin-bottom: 10px;
+        /* Space for wrapping */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .footer {
+        padding: 30px 15px;
+        /* Adjust padding for smaller screens */
+    }
+
+    .footer .row {
+        flex-direction: column;
+        /* Stack sections vertically */
+        gap: 15px;
+        /* Space between sections */
+    }
+
+    .footer .col-md-4,
+    .footer .col-md-2 {
+        width: 100%;
+        /* Full width for each section */
+        padding: 10px 0;
+        /* Adjust padding */
+    }
+
+    /* Adjust font sizes */
+    .footer h5,
+    .footer h6 {
+        font-size: 18px;
+        /* Smaller font size */
+        line-height: 24px;
+        /* Adjusted line height */
+    }
+
+    .address,
+    .p {
+        font-size: 14px;
+        /* Smaller font size */
+        line-height: 22px;
+        /* Adjusted line height */
+    }
+
+    /* Adjust subscription box layout */
+
+    /* Adjust follow icons */
+    .follow-icons {
+        justify-content: center;
+        /* Center icons */
+        margin-top: 20px;
+        /* Margin above icons */
+    }
+
+    .follow-icons a {
+        margin-right: 10px;
+        /* Space between icons */
+        margin-bottom: 10px;
+        /* Add space for wrapping */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .footer .row {
+        flex-direction: column;
+        /* Stack vertically */
+        gap: 20px;
+        /* Space between sections */
+    }
+
+    /* Ensure sections take up full width */
+    .footer .col-md-4,
+    .footer .col-md-2 {
+        width: 100%;
+        /* Full width */
+        padding: 20px;
+        /* Padding for each section */
+    }
+}
+
+@media (max-width: 576px) {
+    .footer {
+        padding: 20px;
+        /* Padding for the entire footer on mobile screens */
+    }
+
+    /* Adjust padding for inner elements to maintain spacing */
+    .footer .row {
+        gap: 10px;
+        /* Adjust gap between sections */
+    }
+}
+
+.form-control {
+    border-radius: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.whatsapp-icon {
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    /* Adjust this value as needed */
+    z-index: 1000;
+    /* Set a high z-index value */
+    animation: bounce 2s infinite;
+}
+
+/* Styling for the Chat Window */
+.chat-window {
+    position: fixed;
+    /* Fixed position */
+    bottom: 80px;
+    /* Position from the bottom */
+    right: 20px;
+    /* Position from the right */
+    width: 300px;
+    /* Chat window width */
+    background: white;
+    /* Background color */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    /* Light shadow */
+    z-index: 1000;
+    /* High z-index to ensure it's on top */
+}
+
+.chat-header {
+    display: flex;
+    /* Flex layout for header */
+    justify-content: space-between;
+    /* Spaced header items */
+    padding: 10px;
+    /* Padding */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.chat-content {
+    height: 200px;
+    /* Chat content height */
+    overflow-y: auto;
+    /* Enable scrolling */
+    padding: 10px;
+    /* Padding */
+}
+
+.chat-input {
+    display: flex;
+    /* Flex layout */
+    padding: 10px;
+    /* Padding */
+}
+
+.chat-input input {
+    flex: 1;
+    /* Input takes most space */
+    padding: 5px;
+    /* Padding */
+}
+
+.chat-input button {
+    padding: 5px 10px;
+    /* Padding for send button */
+}
+
+.close-chat-button {
+    background-color: transparent;
+    /* No background */
+    border: none;
+    /* No border */
+    color: white;
+    /* White color */
+    cursor: pointer;
+    /* Cursor changes to pointer */
+    padding: 5px;
+    /* Padding */
+    font-size: 16px;
+    /* Font size for the icon */
+}
+
+.close-chat-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Background on hover */
+    border-radius: 5px;
+    /* Rounded corners on hover */
+}
+
+/* Style for User Messages */
+.user-message {
+    background-color: #e0f7fa;
+    /* Light blue background */
+    color: #004d40;
+    /* Dark teal text color */
+    padding: 8px;
+    /* Padding */
+    border-radius: 10px;
+    /* Rounded corners */
+    margin: 5px 0;
+    /* Margin */
+    text-align: right;
+    /* Align text to the right */
+    float: right;
+    /* Align message to the right */
+    max-width: 60%;
+    /* Restrict width */
+}
+
+/* Style for Bot Responses */
+.bot-message {
+    background-color: #e8f5e9;
+    /* Light green background */
+    color: #1b5e20;
+    /* Dark green text color */
+    padding: 8px;
+    /* Padding */
+    border-radius: 10px;
+    /* Rounded corners */
+    margin: 5px 0;
+    /* Margin */
+    text-align: left;
+    /* Align text to the left */
+    float: left;
+    /* Align message to the left */
+    max-width: 60%;
+    /* Restrict width */
+    clear: both;
+    /* Clear float */
+}
+
+/* Base Style for the "Send" Button */
+.send-button {
+    background-color: #1b5e20;
+    /* Green background color */
+    color: white;
+    /* White text color */
+    border: none;
+    /* No border */
+    padding: 10px 20px;
+    /* Padding for comfortable size */
+    border-radius: 0px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Cursor changes to pointer */
+    transition: all 0.3s ease;
+    /* Smooth transition for hover effects */
+    font-weight: bold;
+    /* Bold text */
+    text-transform: uppercase;
+    /* Uppercase text */
+}
+
+/* Hover Effect for the "Send" Button */
+.send-button:hover {
+    background-color: #388E3C;
+    /* Darker green on hover */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    /* Light shadow on hover */
+}
+
+@media (max-width: 768px) {
+    .learn-btn {
+        padding: 8px 15px;
+        /* Reduced padding for smaller screens */
+        font-size: 0.9em;
+        /* Smaller font size */
+    }
+}
+
+@media (max-width: 576px) {
+    .learn-btn {
+        padding: 5px 10px;
+        /* Further reduced padding for mobile view */
+        font-size: 0.8em;
+        /* Smaller font size */
+    }
+}
+
+/* Default font size */
+.responsive-heading {
+    font-size: 2rem;
+    /* Base size for larger screens */
+    font-weight: bold;
+    color: white;
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+    .responsive-heading {
+        font-size: 1.5rem;
+        /* Decrease size for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .responsive-heading {
+        font-size: 14px;
+        /* Decrease size for smaller devices like phones */
+    }
+
+    .carousel-caption p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .carousel-nav-prev,
+    .carousel-nav-next {
+        width: 30px;
+        /* Decrease the button width */
+        height: 30px;
+        /* Decrease the button height */
+        font-size: 10px;
+        /* Adjust font size to match smaller button */
+    }
+}
+.my-card {
+margin-bottom: 30px; /* Spacing between cards */
+}
+
+.my-card-img {
+width: 100%;
+height: auto; /* Adjust height accordingly or use a fixed height if preferred */
+object-fit: cover; /* Ensures the image covers the card area */
+}
+
+.my-card-body {
+padding: 20px; /* Padding inside the card */
+}
+
+.my-card-title {
+font-weight: bold;
+color: #333;
+}
+
+.my-card-text {
+color: #666;
+}
+
+.my-card-link {
+color: #111; /* Color for the link */
+text-decoration: none; /* Removes underline */
+font-weight: bold; /* Makes it bold */
+}
+
+.my-card-link i {
+margin-left: 5px; /* Space between text and icon */
+transition: margin-left 0.3s ease;
+}
+.my-card {
+margin-bottom: 30px; /* Spacing between cards */
+border: 1px solid #fff; /* Adjust the border thickness here, or set to 0 to remove */
+border-radius: 0px; /* Adjust the border-radius here for less rounded corners */
+
+
+}
+.my-card-link:hover {
+color: #111; /* Darker shade of blue for example, or any color you prefer */
+text-decoration: none; /* Optional: if you want to underline on hover */
+}
+.my-card-link:hover i {
+margin-left: 10px; /* Increase margin to move the icon to the right */
+}
+
+@media (min-width: 992px) {
+.my-card-body {
+padding: 20px; /* Slightly larger padding for larger screens */
+}
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media  (max-width: 991.98px) {
+.my-card-body {
+padding: 14px; /* Medium padding for medium screens */
+}
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 767.98px) {
+.my-card {
+margin-bottom: 20px; /* Less space between cards for small screens */
+}
+
+.my-card-body {
+padding: 15px; /* Smaller padding for small screens */
+}
+
+.my-card-title,
+.my-card-text {
+text-align: center; /* Center text for small screens */
+}
+
+.my-card-link {
+display: block; /* Make the link take the full width */
+margin-top: 10px; /* Add some space above the link */
+}
+}
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+.my-card-body {
+padding: 12px; /* Even smaller padding for extra small screens */
+}
+}
+a{
+    color: #111;
+}
+a:hover{
+    color: none;
+}
+.newsletter-signup {
+    background-image: url(assets/footer_background.png); /* Add your image URL here */
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        color: white;
+        padding: 70px 0;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to top, rgb(12, 12, 12) 0%, rgba(12, 12, 12, 0.7) 100%);
+        /* Gradient from black at bottom to transparent at top */
+    }
+
+    .container {
+        position: relative;
+        z-index: 2; /* Ensures content is above the overlay */
+    }
+
+    .newsletter-form {
+        max-width: 600px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .newsletter-form input[type="email"] {
+        flex-grow: 1;
+        margin-right: 10px;
+        padding: 10px;
+        border: none;
+    }
+
+    .newsletter-form button {
+        padding: 10px 20px;
+        background-color: #606C38; /* Bootstrap's btn-warning color */
+        border: none;
+        color: white;
+    }
+
+    .newsletter-form button:hover {
+        background-color: #283618; /* Darker shade for hover */
+    }
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .newsletter-form {
+                flex-direction: column; /* Stack vertically on smaller screens */
+            }
+    
+            .newsletter-form input[type="email"],
+            .newsletter-form button {
+                width: 100%; /* Full width for small devices */
+                margin-top: 10px;
+                margin-right: 0; /* Remove right margin on mobile */
+            }
+    
+            .newsletter-form input[type="email"] {
+                margin-top: 0; /* No top margin for the first item */
+            }
+        }
