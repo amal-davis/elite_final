@@ -208,24 +208,24 @@ opacity: 1;
 }
 
 .sub-menu {
-    display: none;
+    display: block;
     position: absolute;
     top: 0;
-    right: 100%;
-    /* Adjusted to position the sub-menu to the left of the menu */
+    right: 100%;  
     width: 247.5px;
     height: 100%;
     background-color: #111;
     z-index: 1001;
     border-top-right-radius: 30px;
     padding: 20px;
-
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: right 0.01s ease-in-out;  
 }
 
 .sub-menu.active {
-    display: block;
+    right: 0; 
 }
+
 
 .sub-menu .menu-link {
     font-size: 20px;
