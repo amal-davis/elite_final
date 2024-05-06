@@ -30,69 +30,11 @@ opacity: 1;
     opacity: 0;
     transition: opacity 0.5s ease;
 }
-
-.hero-section {
-    width: 100%;
-    height: 100vh;
-    background-image: url(elite-2.png);
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    z-index: 1;
-    /* Set a z-index to position it behind the header */
-    overflow: hidden;
-    /* Hide overflow for the blur effect */
+.body-no-scroll {
+overflow: hidden;
 }
 
-/* Added styles for the hero heading */
-.hero-heading {
-    position: absolute;
-    bottom: 250px;
-    left: 90px;
-    color: #ffffff;
-    font-size: 40px;
-    font-weight: 400;
-    z-index: 2;
-    /* Set a higher z-index to position it on top of the hero section */
-    line-height: 60px;
-}
 
-/* Responsive styles */
-@media (max-width: 1200px) {
-    .hero-heading {
-        font-size: 32px;
-        line-height: 44px;
-        bottom: 80px;
-        left: 40px;
-    }
-}
-
-@media (max-width: 992px) {
-    .hero-heading {
-        font-size: 38px;
-        line-height: 40px;
-        bottom: 420px;
-        left: 30px;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-heading {
-        font-size: 34px;
-        line-height: 36px;
-        bottom: 420px;
-        left: 20px;
-    }
-}
-
-@media (max-width: 576px) {
-    .hero-heading {
-        font-size: 30px;
-        line-height: 32px;
-        bottom: 420px;
-        left: 15px;
-    }
-}
 
 .header {
     display: flex;
@@ -144,27 +86,25 @@ opacity: 1;
 }
 
 .menu {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: -495px;
-    /* Initial position */
-    width: 495px;
-    height: 100vh;
-    background-color: rgba(59, 59, 59, 0.7);
-    z-index: 1000;
-    border-top-right-radius: 30px;
-    padding: 20px;
-    backdrop-filter: blur(5px);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    transition: left 0.12s ease;
-    /* Increased transition duration */
+display: none;
+position: fixed;
+top: 0;
+left: -495px; /* Original position */
+width: 495px;
+height: 100vh;
+background-color: rgba(59, 59, 59, 0.7);
+z-index: 1000;
+border-top-right-radius: 30px;
+padding: 20px;
+backdrop-filter: blur(5px);
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+transition: left 0.13s ease; /* Adjusted for smoother and faster transition */
 }
 
 .menu.active {
     display: block;
     left: 0;
-    transition: left 0.12s ease;
+    
 }
 
 .menu-header {
@@ -323,9 +263,9 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-    .header {
+    /* .header {
         padding: 10px;
-    }
+    } */
 
     .menu-toggle {
         display: block;
@@ -364,17 +304,17 @@ a:hover {
 }
 
 @media (max-width: 576px) {
-    .header {
+    /* .header {
         padding: 7px;
-    }
+    } */
 
     .logo img {
         height: 25px;
-        width: 80px;
+        width: 78px;
     }
 
     .phone-icon {
-        font-size: 18px;
+        font-size: 14px;
     }
 }
 
