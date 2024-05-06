@@ -142,6 +142,9 @@ opacity: 1;
     margin-left: auto;
     /* Keep this for pushing to the right side */
 }
+.menu-link:hover{
+    color: #fff;
+}
 
 .connect-with-us {
     margin-top: auto;
@@ -464,6 +467,7 @@ a:hover {
         /* Full width for better accessibility */
         padding: 10px 0;
         /* Add some vertical padding */
+        z-index: 2; /* Ensure dropdown is higher */
     }
 
     .dropdown-menu {

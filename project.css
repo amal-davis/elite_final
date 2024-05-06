@@ -2009,6 +2009,10 @@ body.menu-active .menu-overlay {
       transform: scale(1.05);
       /* Less zoom effect */
     }
+    .qr-code img{
+      width: 80px;
+      
+    }
   }
 
   /* Ensure sections have consistent heights within this range */

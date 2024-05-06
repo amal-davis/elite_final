@@ -245,6 +245,9 @@ a:hover {
     text-decoration: none;
     color: #fff;
 }
+.blog-read-more:hover{
+    color: #111;
+}
 
 /* Media Query for smaller screens */
 @media (max-width: 992px) {
