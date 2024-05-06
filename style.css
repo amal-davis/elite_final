@@ -513,10 +513,10 @@ a:hover {
         /* Ensure no horizontal scrolling */
     }
 
-    .header {
+    /* .header {
         padding: 10px;
-        /* Adjusted padding */
-    }
+        
+    } */
 }
 
 @media (max-width: 576px) {
