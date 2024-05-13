@@ -16,14 +16,23 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
+        <link href="https://db.onlinewebfonts.com/c/f929174bda22c1821db22ab9760b082a?family=Baskerville" rel="stylesheet" type="text/css"/>    <script src="https://unpkg.com/scrollreveal@4.0.0-beta.6"></script>
         <link rel="stylesheet" href="contact.css" type="text/css">
 
 </head>
 
 <body>
     
-
+    <div class="fixed-icons">
+        <a href="https://api.whatsapp.com/send?phone=917025306368" target="_blank" class="icon-link whatsapp-icon">
+            <!-- Replace `fa-whatsapp` with the appropriate class or image -->
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="#" class="icon-link question-icon" data-bs-toggle="modal" data-bs-target="#leadModal">
+            <!-- Replace `fa-question-circle` with the appropriate class or image -->
+            <i class="fa fa-question-circle" aria-hidden="true"></i>
+        </a>
+    </div>
     <div class="header">
         <div class="menu-toggle">
             <div class="hamburger"></div>
@@ -31,9 +40,9 @@
         </div>
         <div class="logo">
             <a href="index.html">
-                <img src="assets/ezgif.com-webp-to-png-converter (1).png" alt="Logo" class="img-fluid">
+                <!-- Initially set both classes; JS will adjust on load -->
+                <img src="assets/elite_flag_log.png" alt="Logo" class="img-fluid">
             </a>
-           
         </div>
         <div class="phone-icon" style="color: #fff;">
             <i class="fas fa-phone"></i>
@@ -123,11 +132,82 @@
 
         <!-- Header positioned over the image -->
         <div class="header-overlay">
-            <h1>CONTACT US</h1> <!-- Header content -->
+            <h1 class="font">Contact Us</h1> <!-- Header content -->
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-3 pt-5">
+                <!-- Buttons for selecting locations -->
+                <div class="button-section" role="group" id="location-buttons">
+                    <button type="button" class="btn btnsys  active" data-target="#thrissur">Thrissur</button>
+                    <button type="button" class="btn btnsys" data-target="#trivandrum">Trivandrum</button>
+
+                </div>
+            </div>
+            <div class="col-md-9 pt-5">
+                <div class="card py-5">
+                    <div class="card-body">
+                        <div class="tab-content" id="location-info">
+                            <!-- Trivandrum Details -->
+                            <div class="tab-pane fade show active" id="thrissur" role="tabpanel">
+                                <div class="row">
+                                    <div class="col-md-4 ">
+                                        <h5 style="color: #606C38;">LOCATION</h5>
+                                        <p>Thrissur – Corporate Office Elite Gardenia Hills, Near Reliance Petrol Pump, Puzhakkal P.O., Thrissur – 680 553 KERALA, India</p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h5 style="color: #606C38;">CONTACT INFO</h5>
+                                        <p>+91 99468 11111<br>+91 487 2322120</p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h5 style="color: #606C38;">MAIL</h5>
+                                        <p>sales@elitehomesindia.co.in<br>info@elitehomesindia.co.in</p>
+                                    </div>
+                                </div>
+                                <!-- New row for the link -->
+                                <div class="row">
+                                    <div class="col-12 text-center "> <!-- Centered text column -->
+                                        <a href="https://www.google.com/maps/place/Elite+Developers/@10.5484897,76.1746162,15z/data=!4m6!3m5!1s0x3ba7ee573da096f5:0xf4ad0bfcf8cb6bea!8m2!3d10.5484897!4d76.1746162!16s%2Fg%2F1jgl_hngm?entry=ttu" class="btn" target="_blank" style="color: #fff;">View Location</a> <!-- Replace 'URL_TO_MAP_OR_LOCATION' with the actual URL -->
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Cochin Details -->
+                            <div  class="tab-pane fade" id="trivandrum" role="tabpanel">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <h5 style="color: #606C38;">LOCATION</h5>
+                                        <p>Trivandrum - Branch Office 375/1, Elite Samruddhi, Vellaramkunnu Rd, Menamkulam, Kazhakuttom P.O, Trivandrum-695 582</p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h5 style="color: #606C38;">CONTACT INFO</h5>
+                                        <p>+91 99468 11111<br>91 487 2322120</p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h5 style="color: #606C38;">MAIL</h5>
+                                        <p>sales@elitehomesindia.co.in<br>info@elitehomesindia.co.in</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 text-center pt-3"> <!-- Centered text column -->
+                                        <a href="https://www.google.com/maps/place/Elite+Developers-+Samrudhi+Apartments+in+Trivandrum/@8.5628552,76.8536949,17z/data=!3m1!4b1!4m14!1m7!3m6!1s0x3ba7ee573da096f5:0xf4ad0bfcf8cb6bea!2sElite+Developers!8m2!3d10.5484897!4d76.1746162!16s%2Fg%2F1jgl_hngm!3m5!1s0x3b05bfa586b89c7f:0x7e0be0b29cf55497!8m2!3d8.5628552!4d76.8562698!16s%2Fg%2F11j7j5l8zj?entry=ttu" target="_blank" class="btn" style="color: #fff;">View Location</a> <!-- Replace 'URL_TO_MAP_OR_LOCATION' with the actual URL -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Additional locations as needed -->
+                        </div>
+                        
+                       
+                        
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="container contact-form-container mt-5">
-        <h2 class="top-heading font">LEAVE A MESSAGE</h2>
+        <h2 class="top-heading font">Leave A Message</h2>
         <form>
             <div class="form-group">
                 <input type="text" class="borderless-input" placeholder="Name" required>
@@ -144,80 +224,8 @@
             <div class="form-group">
                 <textarea class="borderless-input" placeholder="Message" rows="3"></textarea>
             </div>
-            <button type="submit" class="btn btn-dark submit-btn">Submit</button>
+            <button type="submit" class="btn btnsys">Submit</button>
         </form>
-    </div>
-    <div class="container mt-5">
-        <div class="text-center">
-            <button class="btn  large-button inactive-button" id="button1">CONTACT IN THRISSUR</button>
-            <button class="btn  large-button inactive-button" id="button2">CONTACT IN TRIVANDRUM</button>
-        </div>
-                <!-- Contact info section for the first location -->
-                <div id="info1" class="contact-info text-center mt-5">
-                    <div class="row">
-                        <div class="col-md-4 pt-3">
-                            <h4 class="contact-heading">LOCATION</h4>
-                            <p class="contact-text mt-3">Thrissur - Corporate Office Elite Gardenia Hills,
-                                Near Reliance Petrol Pump, Puzhakkal P.O.,
-                                Thrissur - 680 553 kERALA, India</p>
-                        </div>
-                        <div class="col-md-4 pt-3">
-                            <h4 class="contact-heading">CONTACT INFO</h4>
-                            <p class="contact-text">+91 99468 11111 <br>
-                                +91 487 2322120</p>
-                        </div>
-                        <div class="col-md-4 pt-3">
-                            <h4 class="contact-heading">MAIL</h4>
-                            <p class="contact-text">sales@elitehomesindia.co.in <br>
-                                info@elitehomesindia.co.in</p>
-                        </div>
-                    </div>
-                    <div class="map mt-3">
-                        <!-- Google Maps embed for the first location -->
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3922.3916981250295!2d76.174616!3d10.54849!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7ee573da096f5%3A0xf4ad0bfcf8cb6bea!2sElite%20Developers!5e0!3m2!1sen!2sin!4v1714230427388!5m2!1sen!2sin"
-                            width="100%"
-                            height="500px"
-                            frameborder="0"
-                            style="border:0;"
-                            allowfullscreen
-                        ></iframe>
-                    </div>
-                </div>
-                        <!-- Contact info section for the second location -->
-        <div id="info2" class="contact-info text-center mt-5">
-            <div class="row">
-                <div class="col-md-4 pt-3">
-                    <h4 class="contact-heading">LOCATION</h4>
-                    <p class="contact-text">Trivandrum - Branch Office 375/1,
-                        Elite Samruddhi, Vellaramkunnu Rd,
-                        Menamkulam, Kazhakuttom P.O,
-                        Trivandrum-695 582</p>
-                </div>
-                <div class="col-md-4 pt-3">
-                    <h4 class="contact-heading">CONTACT INFO</h4>
-                    <p class="contact-text">+91 99468 11111 <br>
-                        +91 487 2322120</p>
-                </div>
-                <div class="col-md-4 pt-3">
-                    <h4 class="contact-heading">MAIL</h4>
-                    <p class="contact-text">sales@elitehomesindia.co.in <br>
-                        info@elitehomesindia.co.in</p>
-                </div>
-            </div>
-            <div class="map mt-3">
-                <!-- Google Maps embed for the second location -->
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.344281943687!2d76.85369487533298!3d8.56285519148105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bfa586b89c7f%3A0x7e0be0b29cf55497!2sElite%20Developers-%20Samrudhi%20Apartments%20in%20Trivandrum!5e0!3m2!1sen!2sin!4v1714231364047!5m2!1sen!2sin"
-                    width="100%"
-                    height="500px"
-                    frameborder="0"
-                    style="border:0;"
-                    allowfullscreen
-                ></iframe>
-            </div>
-        </div>
-
     </div>
     </div>
 
@@ -226,100 +234,128 @@
         <div class="overlay"></div>
         <div class="container">
             <form class="newsletter-form">
+                <div class="text-section">
+                    <h2 class="newsletter-heading">Join Our Newsletter</h2>
+                    <p class="newsletter-text">Stay updated with our latest news and offers.</p>
+                </div>
                 <input type="email" placeholder="Your Email Id">
-                <button type="submit">Subscribe ➔</button>
+                <button type="submit" class="read-btns">Subscribe ➔</button>
             </form>
         </div>
     </div>
-    <footer class="footer  text-white py-5">
+    <footer class="footer  text-white" style="padding: 40px;">
         <div class="container">
-            <div class="row">
-                <!-- First Section -->
-                <div class="col-md-4">
-                    <!-- Logo and vertical line -->
-                    <div class="logo-section">
-                        <img src="assets/logo FOOD 2.png" alt="Logo" class="mb-3">
-                        <div class="vertical-line"></div>
-                        <h5 class=" title mt-3 mb-3"> <span>An Elite Foods <br><span>& Innovations
-                                </span><br><span>Group Enterprise</span> </span> </h5>
-                    </div>
-                    <!-- Heading -->
-
-                    <!-- Paragraph -->
-                    <br>
-                    <p class="address">The Elite Group has been in the real estate business since 1995 and has been part
-                        of numerous projects that have stood the test of time.</p>
-                    <br> <br>
-                    <div class="d-flex justify-content-between">
-                        <img src="assets/Frame 273.png" alt="Logo 1">
-                        <img src="assets/BAI LOG 2.png" alt="Logo 2">
-                        <img src="assets/Frame 274.png" alt="Logo 3">
-                    </div>
-                </div>
-
-                <div class="col-md-1"></div> <!-- Adjust the column size for the desired gap -->
-
-                <!-- Second Section -->
-                <div class="col-md-4">
-                    <!-- Second Section Content -->
-                    <br>
-                    <h5 class="mb-3 with-line">REACH US</h5>
-                    <br><br>
-                    <h6 class="with-line"> ADDRESS</h6>
-                    <p class="address">Elite Gardenia Hills, Near Reliance <br><span>Petrol Pump, Puzhakkal P.O.,</span>
-                        <br> Thrissur – 680 553 Kerala, India
-                    </p>
-                    <br>
-                    <h6 class="with-line">CONTACT US</h6>
-                    <p class="address">Mob: +91 99468 11111 <br><span>Tel: +91 487 2322120</span></p>
-                    <br>
-                    <h6 class="with-line">EMAIL</h6>
-                    <p>sales@elitehomesindia.co.in</p>
-                    <!-- Follow us icons -->
-
-                </div>
-
-
-
-
-                <!-- Third Section -->
-                <div class="col-md-2">
-                    <!-- Third Section Content -->
-                    <br>
-                    <h5 class="mb-3 with-line">PROJECTS</h5>
-                    <br><br><a href="" class="address text-white">Villas in Thrissur</a>
-                    <br><br><a href="" class="address text-white">Apartment in Tvm</a>
-                    <br><br><a href="" class="address text-white">Upcoming Projects</a>
-                    <br><br><a class="mb-3 text-white" href="">FAQs</a>
-                    <br><br><a class="mb-3 text-white" href="">Help & Support</a>
-                    <br>
-                    <!-- <div class="subscription-box mt-5">
-                        <form>
-                            <div class="input-group">
-                                <input type="text" placeholder="Enter your email to subscribe"
-                                    class="form-control subscription-input">
-                                <button type="submit" class="btn btn-danger" style="border-radius: 0px;"><i
-                                        class="fa-solid fa-arrow-right"></i></button>
-                            </div>
-                        </form>
-                    </div> -->
-                </div>
+          <div class="row ">
+            <!-- First Section -->
+           
+    
+    
+            <!-- Second Section -->
+            <div class="col-md-3 pt-5">
+              <!-- Second Section Content -->
+             
+              <div class="logo-section">
+                <img src="assets/logo FOOD 2.png" alt="Logo" class="mb-3">
+                <div class="vertical-line"></div>
+                <h5 class=" title mt-3 mb-3"> <span>An Elite Foods <br><span>& Innovations
+                    </span><br><span>Group Enterprise</span> </span> </h5>
+              </div>
+              <!-- Heading -->
+    
+              <!-- Paragraph -->
+              
+              
+              <h6 class="with-line"> ADDRESS</h6>
+              <p class="address">Elite Gardenia Hills, Near Reliance <br><span>Petrol Pump, Puzhakkal P.O.,</span>
+                <br> Thrissur – 680 553 Kerala, India
+              </p>
+              <br>
+              <h6 class="with-line">CONTACT US</h6>
+              <p class="address">Mob: +91 99468 11111 <br><span>Tel: +91 487 2322120</span></p>
+              <br>
+              <h6 class="with-line">EMAIL</h6>
+              <p>sales@elitehomesindia.co.in</p>
+    
+          
+          <div class="follow-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+              
+              
+              
+              
+              
+              
+              <!-- Follow us icons -->
+    
             </div>
-            <br><br><br>
-            <div class="follow-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
+    
+    
+    
+    
+            <!-- Third Section -->
+            <div class="col-md-3 pt-5">
+              <h5 class="mb-3 with-line">For More Information</h5>
+              <br><br><a href="index.html" class="address text-white">Home</a>
+              <br><br><a href="philosophy.html" class="address text-white">Philosphy</a>
+              <br><br><a href="home_loan_faq.html" class="address text-white">Home Loan FAQ</a>
+              <br><br><a class="mb-3 address text-white" href="contact_us.html">Contact Us</a>
+              <br><br><a class="mb-3 address text-white" href="">Privacy Policy</a>
+              
+              
             </div>
-
-
+            <div class="col-md-3 pt-5">
+              <h5 class="mb-3 with-line">Appartment In Thrissur</h5>
+              <br><br><a href="" class="address text-white">Villas in Patturailkal</a>
+              <br><br><a href="" class="address text-white">Apartment in kuttor</a>
+              <div class="d-flex mt-5 afliate-logo">
+                <img src="assets/Frame 273.png" alt="Logo 1">
+                <img src="assets/BAI LOG 2.png" alt="Logo 2">
+                <img src="assets/logo-tripadviser.webp" alt="Logo 3">
+              </div>
+            </div>
+            <div class="col-md-3 pt-5">
+              <h5 class="mb-3 with-line">Appartment In Trivandrum</h5>
+              <br><br><a href="" class="address text-white">Flat in Kazhakkoottam</a>
+              <br><br>
+    
+            </div>
+            
+          </div>
+          <br>         
+    
+    
+    
         </div>
-    </footer>
+      </footer>
 
 
 
-
+    <div class="modal fade" id="leadModal" tabindex="-1" aria-labelledby="leadModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="leadModalLabel">Get In Touch</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                
+                <div class="modal-body">
+                    <!-- Form elements here -->
+                    <form id="leadForm">
+                        <!-- Input fields for the form -->
+                        <input type="text" class="form-control mb-3" placeholder="Your Name" required>
+                        <input type="email" class="form-control mb-3" placeholder="Your Email" required>
+                        <input type="tel" class="form-control mb-3" placeholder="Your Phone Number" required>
+                        <textarea name="message" id="" placeholder="Message" class="form-control mb-3"></textarea>
+                        <button type="submit" class="btn btnsy">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
         <!-- Bootstrap JS and dependencies -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -333,142 +369,158 @@
         <script>
     
     
-// Function to activate the selected section and deactivate others
-function activateSection(id) {
-    // Hide all sections and reset button styles
-    $('.contact-info').hide(); // Hide all contact-info sections
-    $('.large-button').removeClass('active-button').addClass('inactive-button'); // Reset button styles
-
-    // Show the selected section and set its button to active
-    $('#' + id).show(); // Show the chosen section
-    $('#' + id.replace('info', 'button')).removeClass('inactive-button').addClass('active-button'); // Activate its button
-}
-
-// Button click event handlers
-$('#button1').click(function () {
-    activateSection('info1'); // Activate the first section
-});
-
-$('#button2').click(function () {
-    activateSection('info2'); // Activate the second section
-});
-
-// Set the default active section
-$(document).ready(function () {
-    activateSection('info1'); // Ensure the first section is active by default
-});
 
 
+    $(document).ready(function() {
+    $('#location-buttons .btn').click(function() {
+        var previousActive = $('.tab-pane.show.active');
+        var target = $(this).data('target');
+        var newActive = $(target);
 
+        $('#location-buttons .btn').removeClass('active'); // Remove 'active' from all buttons
+        $(this).addClass('active'); // Add 'active' to the clicked button
 
-
-
-$(document).ready(function () {
-    let initialLoad = true;
-
-    // Initial state
-    $('.menu').css('left', '-495px');
-    $('.menu').removeClass('active');
-
-    // Toggle main menu visibility
-    $('.menu-toggle').click(function () {
-        if ($('.menu').hasClass('active')) {
-            // Close the menu
-            $('.menu').removeClass('active');
-            $('body').removeClass('menu-active'); // If 'menu-active' class controls overflow, consider modifying or removing this class assignment
-            $('.menu').animate({
-                left: '-495px'
-            }, 300); // Speed up the closing animation
-            $('.sub-menu').removeClass('active');
-            $('.sub-menu').css({
-                right: '100%'  // Ensure sub-menus are reset
-            });
-            initialLoad = true;
-        } else {
-            // Open the menu
-            $('.menu').addClass('active');
-            $('body').addClass('menu-active'); // Check if this class adds `overflow: hidden` in your CSS
-            $('.menu').animate({
-                left: '0px'
-            }, initialLoad ? 300 : 0); // Faster opening after initial load
-            initialLoad = false;
-        }
-    });
-
-    // Close the main menu with a button
-    $('.close-menu').click(function () {
-        $('.menu').animate({
-            left: '-495px'
-        }, 300, function () {
-            $('.menu').removeClass('active');
-            $('body').removeClass('menu-active'); // Ensure this does not disable scrolling
-            initialLoad = true;
+        // Fade out the current content and fade in new content more quickly
+        previousActive.animate({ opacity: 0 }, 300, function() {
+            previousActive.removeClass('show active').css('display', 'none');
+            newActive.css({ 'display': 'block', 'opacity': '0' }).addClass('show active').animate({ opacity: 1 }, 300);
         });
     });
+});
 
-    // Toggle sub-menu
-    $('.with-arrow').click(function (e) {
+
+
+
+$(document).ready(function () {
+      let initialLoad = true;
+
+      // Initial state
+      $('.menu').css('left', '-495px');
+      $('.menu').removeClass('active');
+
+      // Toggle main menu visibility
+      $('.menu-toggle').click(function () {
+        if ($('.menu').hasClass('active')) {
+          // Close the menu
+          $('.menu').removeClass('active');
+          $('body').removeClass('menu-active'); // If 'menu-active' class controls overflow, consider modifying or removing this class assignment
+          $('.menu').animate({
+            left: '-495px'
+          }, 300); // Speed up the closing animation
+          $('.sub-menu').removeClass('active');
+          $('.sub-menu').css({
+            right: '100%'  // Ensure sub-menus are reset
+          });
+          initialLoad = true;
+        } else {
+          // Open the menu
+          $('.menu').addClass('active');
+          $('body').addClass('menu-active'); // Check if this class adds `overflow: hidden` in your CSS
+          $('.menu').animate({
+            left: '0px'
+          }, initialLoad ? 300 : 0); // Faster opening after initial load
+          initialLoad = false;
+        }
+      });
+
+      // Close the main menu with a button
+      $('.close-menu').click(function () {
+        $('.menu').animate({
+          left: '-495px'
+        }, 300, function () {
+          $('.menu').removeClass('active');
+          $('body').removeClass('menu-active'); // Ensure this does not disable scrolling
+          initialLoad = true;
+        });
+      });
+
+      // Toggle sub-menu
+      $('.with-arrow').click(function (e) {
         e.preventDefault();
         let subMenu = $(this).next('.sub-menu');
         if (subMenu.hasClass('active')) {
-            subMenu.css({
-                right: '90%'  // Adjust to ensure smooth hiding
-            }).animate({
-                right: '100%'  // Smooth transition for sub-menu
-            }, 300, function () {
-                subMenu.removeClass('active');
-            });
+          subMenu.css({
+            right: '90%'  // Adjust to ensure smooth hiding
+          }).animate({
+            right: '100%'  // Smooth transition for sub-menu
+          }, 300, function () {
+            subMenu.removeClass('active');
+          });
         } else {
-            $('.sub-menu').removeClass('active').css({
-                right: '100%'  // Reset other sub-menus
-            });
-            subMenu.css({
-                right: '100%'
-            }).animate({
-                right: '0'  // Smooth transition for sub-menu
-            }, 300).addClass('active');
+          $('.sub-menu').removeClass('active').css({
+            right: '100%'  // Reset other sub-menus
+          });
+          subMenu.css({
+            right: '100%'
+          }).animate({
+            right: '0'  // Smooth transition for sub-menu
+          }, 300).addClass('active');
         }
-    });
+      });
 
-    // Close sub-menu with a button
-    $('.close-submenu').click(function (e) {
+      // Close sub-menu with a button
+      $('.close-submenu').click(function (e) {
         e.preventDefault();
         let subMenu = $(this).closest('.sub-menu');
         subMenu.animate({
-            right: '100%'  // Smooth transition to hide sub-menu
+          right: '100%'  // Smooth transition to hide sub-menu
         }, 300, function () {
-            subMenu.removeClass('active');
+          subMenu.removeClass('active');
         });
-    });
+      });
 
-    // Close the menu and sub-menu if clicking outside of them
-    $(document).on('click', function (e) {
+      // Close the menu and sub-menu if clicking outside of them
+      $(document).on('click', function (e) {
         if (!$(e.target).closest('.menu').length && !$(e.target).closest('.menu-toggle').length) {
-            if ($('.menu').hasClass('active')) {
-                $('.menu').removeClass('active');
-                $('body').removeClass('menu-active'); // Ensure this does not disable scrolling
-                $('.menu').animate({
-                    left: '-495px'
-                }, 300);
-                $('.sub-menu').removeClass('active');
-                $('.sub-menu').animate({
-                    right: '100%'  // Smooth transition to hide sub-menu
-                }, 300);
-                initialLoad = true;
-            }
+          if ($('.menu').hasClass('active')) {
+            $('.menu').removeClass('active');
+            $('body').removeClass('menu-active'); // Ensure this does not disable scrolling
+            $('.menu').animate({
+              left: '-495px'
+            }, 300);
+            $('.sub-menu').removeClass('active');
+            $('.sub-menu').animate({
+              right: '100%'  // Smooth transition to hide sub-menu
+            }, 300);
+            initialLoad = true;
+          }
         }
-    });
+      });
 
-    // Update header background on scroll
-    window.addEventListener('scroll', function () {
+      // Update header background on scroll
+      window.addEventListener('scroll', function () {
         const header = document.querySelector('.header');
+        const logo = document.querySelector('.logo img');  // Ensure the selector targets your logo image correctly
         if (window.scrollY > 0) {
             header.classList.add('header-bg');
+            logo.src = 'assets/ezgif.com-webp-to-png-converter (1).png';  // Path to the scrolled logo
         } else {
             header.classList.remove('header-bg');
+            logo.src = 'assets/elite_flag_log.png';  // Path to the default logo
         }
     });
 });
+$(document).ready(function () {
+    const logo = document.querySelector('.logo img');  // Ensure this selector is accurate for your logo
+
+    // Function to update logo based on scroll
+    function updateLogoStyle() {
+        if (window.scrollY > 0) {
+            logo.classList.remove('logo-normal');
+            logo.classList.add('logo-scrolled');
+        } else {
+            logo.classList.add('logo-normal');
+            logo.classList.remove('logo-scrolled');
+        }
+    }
+
+    // Update logo style on scroll
+    window.addEventListener('scroll', updateLogoStyle);
+
+    // Set initial logo style based on current scroll position
+    updateLogoStyle();
+});
+
         </script>
 </body>
 </html>

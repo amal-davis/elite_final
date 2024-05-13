@@ -17,7 +17,9 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@9/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/f929174bda22c1821db22ab9760b082a?family=Baskerville" rel="stylesheet" type="text/css"/>    
+    <script src="https://unpkg.com/scrollreveal@4.0.0-beta.6"></script>
+
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 
@@ -29,6 +31,18 @@
     <!-- Hero Section -->
 
 
+    <div class="fixed-icons">
+        <a href="https://api.whatsapp.com/send?phone=917025306368" target="_blank" class="icon-link whatsapp-icon">
+            <!-- Replace `fa-whatsapp` with the appropriate class or image -->
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="#" class="icon-link question-icon" data-bs-toggle="modal" data-bs-target="#leadModal">
+            <!-- Replace `fa-question-circle` with the appropriate class or image -->
+            <i class="fa fa-question-circle" aria-hidden="true"></i>
+        </a>
+    </div>
+
+
     <div class="header">
         <div class="menu-toggle">
             <div class="hamburger"></div>
@@ -36,9 +50,9 @@
         </div>
         <div class="logo">
             <a href="index.html">
-                <img src="assets/ezgif.com-webp-to-png-converter (1).png" alt="Logo" class="img-fluid">
+                <!-- Initially set both classes; JS will adjust on load -->
+                <img src="assets/elite_flag_log.png" alt="Logo" class="img-fluid">
             </a>
-           
         </div>
         <div class="phone-icon" style="color: #fff;">
             <i class="fas fa-phone"></i>
@@ -152,8 +166,7 @@
 
     <div class="owl-carousel owl-theme owl-carousel-main">
         <div class="item">
-            <img src="assets/banner_1.png" alt="Gallery 1" class="carousel-image"> <!-- Image for the second slide -->
-
+            <img src="assets/banner_1.png" alt="Gallery 1" class="carousel-image">
             <div class="carousel-content">
                 <div class="carousel-content-left">
                     <h2>Elite Paradiza</h2>
@@ -169,54 +182,77 @@
                     </div>
                 </div>
                 <div class="carousel-content-right">
-                    <div class="price">
+                    <!-- <div class="price">
                         Starting from INR 2.17 Crore
+                    </div> -->
+                </div>
+                <!-- Contact details -->
+                <div class="carousel-contact">
+                    <div class="contact-icon">
+                        <i class="fa-sharp fa-solid fa-phone"></i>
                     </div>
-                    <button class="enquire-now mt-2">Enquire Now</button>
+                    <div class="contact-info font">
+                        <h3>Thiruvananthapuram</h3>
+                        <p>+91 920 749 6669</p>
+                        <hr>
+                        <h3>Thrissur</h3>
+                        <p>+91 123 456 7890</p>
+                    </div>
                 </div>
             </div>
         </div>
 
         <!-- Add additional slides with images -->
         <div class="item">
-            <img src="assets/banner_1.png" alt="Gallery 1" class="carousel-image"> <!-- Image for the second slide -->
+            <img src="assets/banner_1.png" alt="Gallery 1" class="carousel-image">
             <div class="carousel-content">
-                <!-- Similar content structure as the first slide -->
                 <div class="carousel-content-left">
-                    <h2>Another Project</h2>
+                    <h2>Elite Paradiza</h2>
                     <div class="location">
-                        <i class="fa fa-map-marker"></i> Location for Project
+                        <i class="fa fa-map-marker"></i> Kuttoor, Thrissur, Kerala
                     </div>
                 </div>
                 <div class="carousel-content-middle">
                     <div class="arrows">
                         <i class="fa fa-chevron-down arrow-fade-1"></i>
                         <i class="fa fa-chevron-down arrow-fade-2"></i>
-                        <i class="fa fa-chevron-down arrow-fade-2"></i>
+                        <i class="fa fa-chevron-down arrow-fade-3"></i>
                     </div>
                 </div>
                 <div class="carousel-content-right">
-                    <div class="price">
-                        Starting from another price
+                    <!-- <div class="price">
+                        Starting from INR 2.17 Crore
+                    </div> -->
+                </div>
+                <!-- Contact details -->
+                <div class="carousel-contact">
+                    <div class="contact-icon">
+                        <i class="fa-sharp fa-solid fa-phone"></i>
                     </div>
-                    <button class="enquire-now mt-2">Enquire Now</button>
+                    <div class="contact-info font">
+                        <h3>Thiruvananthapuram</h3>
+                        <p>+91 920 749 6669</p>
+                        <hr>
+                        <h3>Thrissur</h3>
+                        <p>+91 123 456 7890</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Container for the section -->
-    <div class="container mt-5"> <!-- Container with margin-top -->
+    <div class="container mt-5 "> <!-- Container with margin-top -->
         <div class="row justify-content-center"> <!-- Bootstrap row for layout -->
             <!-- Left side with two headings and a paragraph -->
-            <div class="col-lg-6  justify-content-center"> <!-- Takes majority of the width -->
+            <div class="col-lg-6 anim justify-content-center"> <!-- Takes majority of the width -->
                 <div class="w-100"> <!-- Full-width content -->
                     <div class="d-flex justify-content-between align-items-center"> <!-- Align button to the right -->
                         <div class="text-sections">
-                            <div class="row">
-                                <div class="col-md-12 pt-5">
-                                    <h2 class="top-heading font">BUILDING LIFESTYLE</h2> <!-- Top heading -->
-                                    <h3 class="bottom-heading">ELITE DEVELOPERS</h3> <!-- Bottom heading -->
+                            <div class="row ">
+                                <div class="col-md-12 pt-5 ">
+                                    <h5 class="top-heading font">Building Lifestyles</h5> <!-- Top heading -->
+                                    
                                 </div>
                                 <div class="">
                                     
@@ -228,50 +264,43 @@
 
                         </div>
                     </div>
-                    <p class="description mt-4">Elite Developers is dedicated to "building lifestyles" in the truest
-                        sense. For us, it goes beyond merely constructing structures; we craft experiences that elevate
-                        everyday living. This driving philosophy is ingesonate with discerning individuals. <br><br>
-                        We draw immense inspiration from our founder, T.R. Raghulal, whose visionary approach has
-                        revolutionized the business landscape of Kerala. His rained in our DNA, guiding us to create
-                        world-class, quality homes and communities that runwavering commitment to quality that
-                        transcend the ordinary is woven into the fabric of our brand. We leave no stone unturned in our
-                        pursuit of excellence, ensuring that every aspect of our developments reflects the highest
-                        standards of quality and craftsmanship. </p>
-                        <a href="philosophy.html" class="btn  btnsy mt-4">READ MORE</a>
+                    <p class="description mt-4">Elite Developers is dedicated to "building lifestyles" in the truest sense. For us, it goes beyond merely constructing structures; we craft experiences that elevate everyday living. This driving philosophy is ingrained in our DNA, guiding us to create world-class, quality homes and communities that resonate with discerning individuals. </p>
                     <!-- Paragraph -->
                 </div>
             </div>
 
             <!-- Right side with an image -->
-            <div class="col-lg-6 justify-content-center "> <!-- Smaller width for the image -->
+            <div class="col-lg-6 justify-content-center anima "> <!-- Smaller width for the image -->
                 <img src="assets/3.png" alt="Description of Image" class="img-fluid"> <!-- Responsive image -->
+                <a href="philosophy.html" class=" read-btns mt-4">READ MORE</a>
+
             </div>
         </div>
     </div>
     <div class="container mt-5">
         <div class="heading-container">
             <hr class="line">
-            <span class="heading-text font">FEATURED PROJECTS</span>
+            <span class="heading-text font">Featured Projects</span>
             <hr class="line2">
         </div>
 
-        <div class="project-text mt-5">
-            <p>
+        <div class=" mt-5">
+            <p class="project-text">
                 Elite developers focus on building Luxury Apartments, flats and villas. Our aim is to give luxury flats,
                 villas and apartments to our customers at international standards
             </p>
         </div>
     </div>
     <!-- Carousel container -->
-    <div class="container">
+    <div class="container mt-5 animas">
         <div class="owl-carousel owl-theme owl-carousel-custom">
             <!-- Slide 1 -->
             <div class="item" style="position: relative;">
                 <a href="project_page.html">
 
                 
-                <img src="assets/banner_1.png" class="d-block w-100" alt="Slide 1" style="filter: brightness(70%);">
-                <div class="carousel-caption" style="position: absolute; bottom: 10px; left: 10px;">
+                <img src="assets/banner_1.png" class="d-block w-100" alt="Slide 1" style="border-radius: 10px;">
+                <div class="carousel-caption" style="position: absolute; bottom: 20px; text-align: center;">
                     <h1 class="responsive-heading">ELITE SAMRUDDHI</h1>
                     <p class="text-white">KAZHAKOOTAM, TRIVANDRUM</p>
                 </a>
@@ -295,8 +324,8 @@
 
             <!-- Slide 2 -->
             <div class="item" style="position: relative;">
-                <img src="assets/banner_elite.jpeg" class="d-block w-100" alt="Slide 2" style="filter: brightness(70%);">
-                <div class="carousel-caption" style="position: absolute; bottom: 10px; left: 10px;">
+                <img src="assets/banner_elite.jpeg" class="d-block w-100" alt="Slide 2" style="border-radius: 10px;">
+                <div class="carousel-caption" style="position: absolute; bottom: 20px; text-align: center;">
                     <h1 class="responsive-heading">Another Title</h1>
                     <p class="text-white">Another Subtitle</p>
                 </div>
@@ -324,7 +353,7 @@
     <div class="container mt-5">
         <div class="heading-container">
             <hr class="line">
-            <span class="heading-text font">LOCATIONS</span>
+            <span class="heading-text font">Locations</span>
             <hr class="line2">
         </div>
         <div class="project-text mt-5">
@@ -334,73 +363,36 @@
     </div>
 
 
-    <div class="container mt-5">
-        <!-- Swiper Carousel -->
-        <div class="swiper">
-            <div class="swiper-wrapper"> <!-- Swiper wrapper containing slides -->
-                <div class="swiper-slide">
-                    <a href="locations.html" class="loc-link">
+    <div class="container mt-5 cinema">
+<div class="row justify-content-center">
+    <div class="col-lg-6 pt-3">
+        <a href="locations.html" class="loc-link">
 
                     
-                    <div class="image-container">
-                        <img src="assets/1.png" alt="Image 1" class="carousel-images">
+            <div class="image-container">
+                <img src="assets/Thrissur.png" alt="Image 1" class="location-image img-fluid" style="width: 540px; height: 380px;">
 
 
-                    </div>
-                    <h3 class="carousel-heading">THRISSUR</h3> <!-- Heading below image -->
-                </a>
-                </div> <!-- First slide -->
-                <!-- <div class="swiper-slide">
-                    <a href="locations.html" class="loc-link">
-
-                    
-                    <div class="image-container">
-                        <img src="assets/Frame 246.png" alt="Image 2" class="carousel-images">
-
-
-                    </div>
-                    <h3 class="carousel-heading">THRISSUR</h3> 
-                </a>
-                </div>  -->
-                <div class="swiper-slide">
-                    <a href="trivandram.html" class="loc-link">
-
-                   
-                    <div class="image-container">
-                        <img src="assets/2.png" alt="Image 3" class="carousel-images">
-
-
-                    </div>
-                    <h3 class="carousel-heading">THIRUVANANTHAPURAM</h3> <!-- Heading below image -->
-                </a>
-                </div> <!-- Third slide -->
-                <!-- <div class="swiper-slide">
-                    <a href="trivandram.html" class="loc-link">
-
-                    
-                    <div class="image-container">
-                        <img src="assets/gallery_1.png" alt="Image 4" class="carousel-images">
-
-                    </div>
-                    <h3 class="carousel-heading">THIRUVANANTHAPURAM</h3> 
-                </a>
-                </div>  -->
             </div>
+            
+        </a>
 
-            <!-- Custom Navigation Buttons -->
-            <div class="swiper-button-prev custom-prev"></div> <!-- Custom previous button -->
-            <div class="swiper-button-next custom-next"></div> <!-- Custom next button -->
-
-            <!-- Custom Pagination -->
-
-        </div>
     </div>
-    <div class="bottom-button-container"> <!-- Container for bottom button -->
-        <a class="bottom-button" href="residential.html">ALL LOCATIONS</a> <!-- Button with straight edges -->
+    <div class="col-lg-6 pt-3">
+        <a href="trivandram.html" class="loc-link">
+            <div class="image-container">
+                <img src="assets/Thiruvananthapuram.png" alt="image 2" class="location-image img-fluid" style="width: 540px; height: 380px;">
+            </div>
+        </a>
+    </div>
+</div>
+    </div>
+    <div class="bottom-button-container mt-5"> <!-- Container for bottom button -->
+        <a class="btnsy " href="residential.html">ALL LOCATIONS</a> <!-- Button with straight edges -->
     </div>
 
 
-    <div class="container-fluid py-5 vision-area mt-5" style="background-color: #606C38; color: #ffffff;">
+    <div class="container-fluid py-5 vision-area mt-5" style="background-color: #7ed957; color: #ffffff;">
         <div class="container">
             <div class="mission-text font">
                 <h2>We're helping hundreds of customers find their dream homes</h2>
@@ -427,7 +419,7 @@
             </div>
             <div class="heading-containers mt-5">
                 <hr class="lines">
-                <span class="heading-texts font">OUR VISION</span>
+                <span class="heading-texts font">Our Vision</span>
                 <hr class="lines2">
             </div>
             <div class="vision-paragraph" style="margin-top: 70px;">
@@ -437,55 +429,17 @@
             </div>
             <div class="row mt-5"> <!-- Margin-top for spacing -->
                 <div class="col-sm-12 d-flex justify-content-center">
-                    <a href="how_to_buy_house.html" class="btn view-btn">VIEW OUR BUYERS GUIDE</a> <!-- Button with Bootstrap style -->
+                    <a href="how_to_buy_house.html" class="btnsy ">BUYERS GUIDE</a> <!-- Button with Bootstrap style -->
                 </div>
             </div>
 
         </div>
     </div>
-    <div class="container text-center my-5"> <!-- Container with padding -->
-        <div class="row raw-log"> <!-- Bootstrap row -->
-            <!-- Each column contains an image/logo -->
-            <div class="col-sm-2 offset-sm-1 logo-sec pt-5"> <!-- First image with offset -->
-                <a href="">
-                    <img src="assets/scrl1 2.png" alt="Logo 1" class="img-fluid"> <!-- Responsive image -->
 
-                </a>
-            </div>
-
-            <div class="col-sm-2 logo-sec pt-5"> <!-- Second image -->
-                <a href="">
-                    <img src="assets/scrl2 2.png" alt="Logo 2" class="img-fluid"> <!-- Responsive image -->
-
-                </a>
-            </div>
-
-            <div class="col-sm-2 logo-sec pt-5"> <!-- Third image -->
-                <a href="#">
-                    <img src="assets/scr 2.png" alt="Logo 3" class="img-fluid"> <!-- Responsive image -->
-
-                </a>
-            </div>
-
-            <div class="col-sm-2 logo-sec pt-5"> <!-- Fourth image -->
-                <a href="">
-                    <img src="assets/scrl5 2.png" alt="Logo 4" class="img-fluid"> <!-- Responsive image -->
-
-                </a>
-            </div>
-
-            <div class="col-sm-2 logo-sec pt-5"> <!-- Fifth image -->
-                <a href="#">
-                    <img src="assets/scrl6 2.png" alt="Logo 5" class="img-fluid"> <!-- Responsive image -->
-
-                </a>
-            </div>
-        </div>
-    </div>
     <div class="container mt-5">
         <div class="heading-container mt-5">
             <hr class="line">
-            <span class="heading-text font">WHAT OUR CUSTOMERS SAYS</span>
+            <span class="heading-text font">What Our Customers Says</span>
             <hr class="line2">
         </div>
 
@@ -553,7 +507,7 @@
     <div class="container" style="margin-top: 60px;">
         <div class="heading-container">
             <hr class="line">
-            <span class="heading-text font">WHAT WE DO</span>
+            <span class="heading-text font">What We Do</span>
             <hr class="line2">
         </div>
         <div class="what-text mt-5">
@@ -563,12 +517,12 @@
     </div>
 
 
-    <div class="container mt-5">
+    <div class="container mt-5 cinema">
         <div class="row justify-content-between">
             <div class="col-lg-4 col-md-6 col-sm-12 text-center pt-5">
-                <a href="residential.html">
+                <a href="residential.html" class="loc-link">
                     <div class="image-what">
-                        <img src="assets/4.png" alt="what-we-do-image" class="img-fluid">
+                        <img src="assets/residential_image.png" alt="what-we-do-image" class="img-fluid">
                     </div>
                     <div class="what-heading mt-3">
                         <h4 class="text-center">RESIDENTIAL</h4>
@@ -577,9 +531,9 @@
 
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12 text-center pt-5">
-                <a href="commercial.html">
+                <a href="commercial.html" class="loc-link">
                     <div class="image-what">
-                        <img src="assets/5.png" alt="what-we-do-image" class="img-fluid">
+                        <img src="assets/commercial_image.png" alt="what-we-do-image" class="img-fluid">
                     </div>
                     <div class="what-heading mt-3">
                         <h4 class="text-center">COMMERCIAL</h4>
@@ -588,9 +542,9 @@
 
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12 text-center pt-5">
-                <a href="industrias.html">
+                <a href="industrias.html" class="loc-link">
                     <div class="image-what">
-                        <img src="assets/6.png" alt="what-we-do-image" class="img-fluid">
+                        <img src="assets/inddustrial_image.png" alt="what-we-do-image" class="img-fluid">
                     </div>
                     <div class="what-heading mt-3">
                         <h4 class="text-center">INDUSTRIAL</h4>
@@ -600,44 +554,11 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid py-5 mt-5 find-section" style="background-color: #F8F3E7;padding: 40px;">
-        <div class="container"> <!-- Outer container with padding and background color -->
-            <div class="row align-items-center"> <!-- Center the content vertically -->
-                <!-- Left Section with Text -->
-                <div class="col-lg-6 pt-5"> <!-- 6 out of 12 columns -->
-                    <div class="find-heading font">
-                        <h2>Finding your next home is just a click away.</h2> <!-- Main heading -->
 
-                    </div>
-                    <div class="fin-para mt-3">
-                        <p>
-                            Elite Developers is run by professionals with a passion for quality and offers you spacious
-                            luxury apartments
-                            and villa homes developed with an eye for great design employing the best resources. Check
-                            out the uber-luxurious projects
-                            such as Elite Insignia apartments... <br><br>
-                            We build apartments for residential and commercial aspects. Elite Insignia is one of our
-                            best residential projects in
-                            the heart of Thrissur. It can be easily connected with the important locations in Thrissur
-                            city.
-                        </p>
-                    </div>
-
-                    
-                </div>
-
-                <!-- Right Section with Image -->
-                <div class="col-lg-6 text-center pt-5"> <!-- 6 out of 12 columns, centered -->
-                    <img src="assets/Frame 291.png" alt="Room interior" class="img-fluid" style="max-width: 100%;" />
-                    <!-- Responsive image -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid py-5" style="background-color: #F0ECEC;">
+    <div class="container-fluid py-5 mt-5" style="background-color: #F0ECEC;">
         <div class="heading-container">
             <hr class="line">
-            <span class="heading-text font">MORE ABOUT ELITE</span>
+            <span class="heading-text font">More About Elite</span>
             <hr class="line2">
         </div>
         <div class="container my-card-container mt-5">
@@ -695,7 +616,7 @@
     <div class="container mt-5">
         <div class="heading-container ">
             <hr class="line">
-            <span class="heading-text font">SOCIAL MEDIA FEEDS</span>
+            <span class="heading-text font">Social Media Feeds</span>
             <hr class="line2">
         </div>
     </div>
@@ -703,7 +624,7 @@
         <div class="row justify-content-center"> <!-- Main responsive row centered -->
 
             <!-- Instagram section -->
-            <div class="col-lg-12 col-md-8 col-sm-12 pt-5 d-flex justify-content-center">
+            <div class="col-lg-4 col-md-8 col-sm-12 pt-5 d-flex justify-content-center">
                 <!-- Centered within the column -->
                 <blockquote class="instagram-media"
                     data-instgrm-permalink="https://www.instagram.com/elitedevelopersindia/" data-instgrm-version="13">
@@ -712,13 +633,22 @@
             </div>
 
             <!-- Facebook section -->
-            <div class="col-lg-12 col-md-8 col-sm-12 pt-5 d-flex justify-content-center">
+            <div class="col-lg-4 col-md-8 col-sm-12 pt-5 d-flex justify-content-center">
                 <!-- Centered within the column -->
                 <iframe
                     src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/Elitedevlp&tabs=timeline&width=340&height=500"
                     width="320" height="480" style="border:none;overflow:hidden;" frameborder="0"
                     allow="encrypted-media">
                 </iframe>
+            </div>
+            <div class="col-lg-4 col-md-8 col-sm-12 pt-5 d-flex justify-content-center">
+                <a class="twitter-timeline"
+                   data-width="320"
+                   data-height="480"
+                   href="https://twitter.com/eliterealtydev?ref_src=twsrc%5Etfw">
+                    Tweets by eliterealtydev
+                </a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
 
         </div>
@@ -729,100 +659,128 @@
         <div class="overlay"></div>
         <div class="container">
             <form class="newsletter-form">
+                <div class="text-section">
+                    <h2 class="newsletter-heading">Join Our Newsletter</h2>
+                    <p class="newsletter-text">Stay updated with our latest news and offers.</p>
+                </div>
                 <input type="email" placeholder="Your Email Id">
-                <button type="submit">Subscribe ➔</button>
+                <button type="submit" class="read-btnsy">Subscribe ➔</button>
             </form>
         </div>
     </div>
-    <footer class="footer  text-white py-5">
+    <footer class="footer  text-white" style="padding: 40px;">
         <div class="container">
-            <div class="row">
-                <!-- First Section -->
-                <div class="col-md-4">
-                    <!-- Logo and vertical line -->
-                    <div class="logo-section">
-                        <img src="assets/logo FOOD 2.png" alt="Logo" class="mb-3">
-                        <div class="vertical-line"></div>
-                        <h5 class=" title mt-3 mb-3"> <span>An Elite Foods <br><span>& Innovations
-                                </span><br><span>Group Enterprise</span> </span> </h5>
-                    </div>
-                    <!-- Heading -->
-
-                    <!-- Paragraph -->
-                    <br>
-                    <p class="address">The Elite Group has been in the real estate business since 1995 and has been part
-                        of numerous projects that have stood the test of time.</p>
-                    <br> <br>
-                    <div class="d-flex justify-content-between">
-                        <img src="assets/Frame 273.png" alt="Logo 1">
-                        <img src="assets/BAI LOG 2.png" alt="Logo 2">
-                        <img src="assets/Frame 274.png" alt="Logo 3">
-                    </div>
-                </div>
-
-                <div class="col-md-1"></div> <!-- Adjust the column size for the desired gap -->
-
-                <!-- Second Section -->
-                <div class="col-md-4">
-                    <!-- Second Section Content -->
-                    <br>
-                    <h5 class="mb-3 with-line">REACH US</h5>
-                    <br><br>
-                    <h6 class="with-line"> ADDRESS</h6>
-                    <p class="address">Elite Gardenia Hills, Near Reliance <br><span>Petrol Pump, Puzhakkal P.O.,</span>
-                        <br> Thrissur – 680 553 Kerala, India
-                    </p>
-                    <br>
-                    <h6 class="with-line">CONTACT US</h6>
-                    <p class="address">Mob: +91 99468 11111 <br><span>Tel: +91 487 2322120</span></p>
-                    <br>
-                    <h6 class="with-line">EMAIL</h6>
-                    <p>sales@elitehomesindia.co.in</p>
-                    <!-- Follow us icons -->
-
-                </div>
-
-
-
-
-                <!-- Third Section -->
-                <div class="col-md-2">
-                    <!-- Third Section Content -->
-                    <br>
-                    <h5 class="mb-3 with-line">PROJECTS</h5>
-                    <br><br><a href="" class="address text-white">Villas in Thrissur</a>
-                    <br><br><a href="" class="address text-white">Apartment in Tvm</a>
-                    <br><br><a href="" class="address text-white">Upcoming Projects</a>
-                    <br><br><a class="mb-3 text-white" href="">FAQs</a>
-                    <br><br><a class="mb-3 text-white" href="">Help & Support</a>
-                    <br>
-                    <!-- <div class="subscription-box mt-5">
-                        <form>
-                            <div class="input-group">
-                                <input type="text" placeholder="Enter your email to subscribe"
-                                    class="form-control subscription-input">
-                                <button type="submit" class="btn btn-danger" style="border-radius: 0px;"><i
-                                        class="fa-solid fa-arrow-right"></i></button>
-                            </div>
-                        </form>
-                    </div> -->
-                </div>
+          <div class="row ">
+            <!-- First Section -->
+           
+    
+    
+            <!-- Second Section -->
+            <div class="col-md-3 pt-5">
+              <!-- Second Section Content -->
+             
+              <div class="logo-section">
+                <img src="assets/logo FOOD 2.png" alt="Logo" class="mb-3">
+                <div class="vertical-line"></div>
+                <h5 class=" title mt-3 mb-3"> <span>An Elite Foods <br><span>& Innovations
+                    </span><br><span>Group Enterprise</span> </span> </h5>
+              </div>
+              <!-- Heading -->
+    
+              <!-- Paragraph -->
+              
+              
+              <h6 class="with-line"> ADDRESS</h6>
+              <p class="address">Elite Gardenia Hills, Near Reliance <br><span>Petrol Pump, Puzhakkal P.O.,</span>
+                <br> Thrissur – 680 553 Kerala, India
+              </p>
+              <br>
+              <h6 class="with-line">CONTACT US</h6>
+              <p class="address">Mob: +91 99468 11111 <br><span>Tel: +91 487 2322120</span></p>
+              <br>
+              <h6 class="with-line">EMAIL</h6>
+              <p>sales@elitehomesindia.co.in</p>
+    
+          
+          <div class="follow-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+              
+              
+              
+              
+              
+              
+              <!-- Follow us icons -->
+    
             </div>
-            <br><br><br>
-            <div class="follow-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
+    
+    
+    
+    
+            <!-- Third Section -->
+            <div class="col-md-3 pt-5">
+              <h5 class="mb-3 with-line">For More Information</h5>
+              <br><br><a href="index.html" class="address text-white">Home</a>
+              <br><br><a href="philosophy.html" class="address text-white">Philosphy</a>
+              <br><br><a href="home_loan_faq.html" class="address text-white">Home Loan FAQ</a>
+              <br><br><a class="mb-3 address text-white" href="contact_us.html">Contact Us</a>
+              <br><br><a class="mb-3 address text-white" href="">Privacy Policy</a>
+              
+              
             </div>
-
-
+            <div class="col-md-3 pt-5">
+              <h5 class="mb-3 with-line">Appartment In Thrissur</h5>
+              <br><br><a href="" class="address text-white">Villas in Patturailkal</a>
+              <br><br><a href="" class="address text-white">Apartment in kuttor</a>
+              <div class="d-flex mt-5 afliate-logo">
+                <img src="assets/Frame 273.png" alt="Logo 1">
+                <img src="assets/BAI LOG 2.png" alt="Logo 2">
+                <img src="assets/logo-tripadviser.webp" alt="Logo 3">
+              </div>
+            </div>
+            <div class="col-md-3 pt-5">
+              <h5 class="mb-3 with-line">Appartment In Trivandrum</h5>
+              <br><br><a href="" class="address text-white">Flat in Kazhakkoottam</a>
+              <br><br>
+    
+            </div>
+            
+          </div>
+          <br>         
+    
+    
+    
         </div>
-    </footer>
+      </footer>
 
 
 
-
+    <div class="modal fade" id="leadModal" tabindex="-1" aria-labelledby="leadModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="leadModalLabel">Get In Touch</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                
+                <div class="modal-body">
+                    <!-- Form elements here -->
+                    <form id="leadForm">
+                        <!-- Input fields for the form -->
+                        <input type="text" class="form-control mb-3" placeholder="Your Name" required>
+                        <input type="email" class="form-control mb-3" placeholder="Your Email" required>
+                        <input type="tel" class="form-control mb-3" placeholder="Your Phone Number" required>
+                        <textarea name="message" id="" placeholder="Message" class="form-control mb-3"></textarea>
+                        <button type="submit" class="btn read-btnsy">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -836,6 +794,44 @@
 
 
     <script>
+
+
+ScrollReveal().reveal('.anim', {
+        delay: 300,      // Delay in milliseconds until the animation starts
+        duration: 600,   // Duration of the animation
+        distance: '50px', // Distance element moves during the reveal
+        origin: 'left', // Direction from which the element appears
+        easing: 'ease-in-out', // CSS easing option for the animation
+        opacity: 0,      // Starting opacity for the animation
+        scale: 0.85,     // Starting scale for the animation
+    });
+    ScrollReveal().reveal('.anima', {
+        delay: 300,      // Delay in milliseconds until the animation starts
+        duration: 600,   // Duration of the animation
+        distance: '50px', // Distance element moves during the reveal
+        origin: 'right', // Direction from which the element appears
+        easing: 'ease-in-out', // CSS easing option for the animation
+        opacity: 0,      // Starting opacity for the animation
+        scale: 0.85,     // Starting scale for the animation
+    });
+    ScrollReveal().reveal('.animas', {
+        delay: 300,      // Delay in milliseconds until the animation starts
+        duration: 600,   // Duration of the animation
+        distance: '50px', // Distance element moves during the reveal
+        origin: 'bottom', // Direction from which the element appears
+        easing: 'ease-in-out', // CSS easing option for the animation
+        opacity: 0,      // Starting opacity for the animation
+        scale: 0.85,     // Starting scale for the animation
+    });
+    ScrollReveal().reveal('.cinema', {
+        delay: 300,      // Delay in milliseconds until the animation starts
+        duration: 600,   // Duration of the animation
+        distance: '50px', // Distance element moves during the reveal
+        origin: 'top', // Direction from which the element appears
+        easing: 'ease-in-out', // CSS easing option for the animation
+        opacity: 0,      // Starting opacity for the animation
+        scale: 0.85,     // Starting scale for the animation
+    });
 
 
 
@@ -967,111 +963,135 @@
 
 
 
+
         $(document).ready(function () {
-    let initialLoad = true;
+      let initialLoad = true;
 
-    // Initial state
-    $('.menu').css('left', '-495px');
-    $('.menu').removeClass('active');
+      // Initial state
+      $('.menu').css('left', '-495px');
+      $('.menu').removeClass('active');
 
-    // Toggle main menu visibility
-    $('.menu-toggle').click(function () {
+      // Toggle main menu visibility
+      $('.menu-toggle').click(function () {
         if ($('.menu').hasClass('active')) {
-            // Close the menu
-            $('.menu').removeClass('active');
-            $('body').removeClass('menu-active'); // If 'menu-active' class controls overflow, consider modifying or removing this class assignment
-            $('.menu').animate({
-                left: '-495px'
-            }, 300); // Speed up the closing animation
-            $('.sub-menu').removeClass('active');
-            $('.sub-menu').css({
-                right: '100%'  // Ensure sub-menus are reset
-            });
-            initialLoad = true;
-        } else {
-            // Open the menu
-            $('.menu').addClass('active');
-            $('body').addClass('menu-active'); // Check if this class adds `overflow: hidden` in your CSS
-            $('.menu').animate({
-                left: '0px'
-            }, initialLoad ? 300 : 0); // Faster opening after initial load
-            initialLoad = false;
-        }
-    });
-
-    // Close the main menu with a button
-    $('.close-menu').click(function () {
-        $('.menu').animate({
+          // Close the menu
+          $('.menu').removeClass('active');
+          $('body').removeClass('menu-active'); // If 'menu-active' class controls overflow, consider modifying or removing this class assignment
+          $('.menu').animate({
             left: '-495px'
-        }, 300, function () {
-            $('.menu').removeClass('active');
-            $('body').removeClass('menu-active'); // Ensure this does not disable scrolling
-            initialLoad = true;
-        });
-    });
+          }, 300); // Speed up the closing animation
+          $('.sub-menu').removeClass('active');
+          $('.sub-menu').css({
+            right: '100%'  // Ensure sub-menus are reset
+          });
+          initialLoad = true;
+        } else {
+          // Open the menu
+          $('.menu').addClass('active');
+          $('body').addClass('menu-active'); // Check if this class adds `overflow: hidden` in your CSS
+          $('.menu').animate({
+            left: '0px'
+          }, initialLoad ? 300 : 0); // Faster opening after initial load
+          initialLoad = false;
+        }
+      });
 
-    // Toggle sub-menu
-    $('.with-arrow').click(function (e) {
+      // Close the main menu with a button
+      $('.close-menu').click(function () {
+        $('.menu').animate({
+          left: '-495px'
+        }, 300, function () {
+          $('.menu').removeClass('active');
+          $('body').removeClass('menu-active'); // Ensure this does not disable scrolling
+          initialLoad = true;
+        });
+      });
+
+      // Toggle sub-menu
+      $('.with-arrow').click(function (e) {
         e.preventDefault();
         let subMenu = $(this).next('.sub-menu');
         if (subMenu.hasClass('active')) {
-            subMenu.css({
-                right: '90%'  // Adjust to ensure smooth hiding
-            }).animate({
-                right: '100%'  // Smooth transition for sub-menu
-            }, 300, function () {
-                subMenu.removeClass('active');
-            });
+          subMenu.css({
+            right: '90%'  // Adjust to ensure smooth hiding
+          }).animate({
+            right: '100%'  // Smooth transition for sub-menu
+          }, 300, function () {
+            subMenu.removeClass('active');
+          });
         } else {
-            $('.sub-menu').removeClass('active').css({
-                right: '100%'  // Reset other sub-menus
-            });
-            subMenu.css({
-                right: '100%'
-            }).animate({
-                right: '0'  // Smooth transition for sub-menu
-            }, 300).addClass('active');
+          $('.sub-menu').removeClass('active').css({
+            right: '100%'  // Reset other sub-menus
+          });
+          subMenu.css({
+            right: '100%'
+          }).animate({
+            right: '0'  // Smooth transition for sub-menu
+          }, 300).addClass('active');
         }
-    });
+      });
 
-    // Close sub-menu with a button
-    $('.close-submenu').click(function (e) {
+      // Close sub-menu with a button
+      $('.close-submenu').click(function (e) {
         e.preventDefault();
         let subMenu = $(this).closest('.sub-menu');
         subMenu.animate({
-            right: '100%'  // Smooth transition to hide sub-menu
+          right: '100%'  // Smooth transition to hide sub-menu
         }, 300, function () {
-            subMenu.removeClass('active');
+          subMenu.removeClass('active');
         });
-    });
+      });
 
-    // Close the menu and sub-menu if clicking outside of them
-    $(document).on('click', function (e) {
+      // Close the menu and sub-menu if clicking outside of them
+      $(document).on('click', function (e) {
         if (!$(e.target).closest('.menu').length && !$(e.target).closest('.menu-toggle').length) {
-            if ($('.menu').hasClass('active')) {
-                $('.menu').removeClass('active');
-                $('body').removeClass('menu-active'); // Ensure this does not disable scrolling
-                $('.menu').animate({
-                    left: '-495px'
-                }, 300);
-                $('.sub-menu').removeClass('active');
-                $('.sub-menu').animate({
-                    right: '100%'  // Smooth transition to hide sub-menu
-                }, 300);
-                initialLoad = true;
-            }
+          if ($('.menu').hasClass('active')) {
+            $('.menu').removeClass('active');
+            $('body').removeClass('menu-active'); // Ensure this does not disable scrolling
+            $('.menu').animate({
+              left: '-495px'
+            }, 300);
+            $('.sub-menu').removeClass('active');
+            $('.sub-menu').animate({
+              right: '100%'  // Smooth transition to hide sub-menu
+            }, 300);
+            initialLoad = true;
+          }
         }
-    });
+      });
 
-    // Update header background on scroll
-    window.addEventListener('scroll', function () {
+      // Update header background on scroll
+      window.addEventListener('scroll', function () {
         const header = document.querySelector('.header');
+        const logo = document.querySelector('.logo img');  // Ensure the selector targets your logo image correctly
         if (window.scrollY > 0) {
             header.classList.add('header-bg');
+            logo.src = 'assets/ezgif.com-webp-to-png-converter (1).png';  // Path to the scrolled logo
         } else {
             header.classList.remove('header-bg');
+            logo.src = 'assets/elite_flag_log.png';  // Path to the default logo
         }
     });
+});
+$(document).ready(function () {
+    const logo = document.querySelector('.logo img');  // Ensure this selector is accurate for your logo
+
+    // Function to update logo based on scroll
+    function updateLogoStyle() {
+        if (window.scrollY > 0) {
+            logo.classList.remove('logo-normal');
+            logo.classList.add('logo-scrolled');
+        } else {
+            logo.classList.add('logo-normal');
+            logo.classList.remove('logo-scrolled');
+        }
+    }
+
+    // Update logo style on scroll
+    window.addEventListener('scroll', updateLogoStyle);
+
+    // Set initial logo style based on current scroll position
+    updateLogoStyle();
 });
 
         // Open the chat window when WhatsApp icon is clicked

@@ -4,8 +4,7 @@ body {
 }
 
 .font {
-    font-family: 'Marcellus SC', serif;
-    font-weight: 600;
+    font-family: "Baskerville";
 }
 
 body.menu-active {
@@ -19,7 +18,51 @@ display: block;
 opacity: 1;
 } */
 
-.menu-overlay {
+.fixed-icons {
+    position: fixed;
+    right: 0;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Space between icons */
+    z-index: 1000; /* High z-index to keep it above other content */
+  }
+  
+  .icon-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #4CAF50; /* Adjust the color as needed */
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 20%;
+    font-size: 24px; /* Adjust this based on the size of the icons */
+    text-decoration: none; /* Removes underline from links */
+  }
+  
+  .question-icon {
+    background: #007bff; /* Bootstrap primary blue */
+  }
+  .icon-link {
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .btn-close {
+    margin-left: auto; /* Pushes the close button to the far right */
+  }
+  
+
+  .menu-overlay {
     display: none;
     position: fixed;
     top: 0;
@@ -32,7 +75,9 @@ opacity: 1;
     opacity: 0;
     transition: opacity 0.5s ease;
 }
-
+.body-no-scroll {
+overflow: hidden;
+}
 
 
 
@@ -76,8 +121,20 @@ opacity: 1;
     background-color: #fff;
 }
 
-.logo img {
-    height: 40px;
+.logo-normal {
+    transition: all 0.3s ease;
+    opacity: 1.0;  /* Full visibility */
+    transform: scale(1.1);  /* Slightly larger than the scrolled state */
+    height: 150px;  /* Adjusted height for normal logo */
+    width: auto;  /* Maintain aspect ratio */
+    margin-top: 35px;
+}
+
+.logo-scrolled {
+    transition: all 0.3s ease;
+    
+    transform: scale(0.9);  /* Slightly smaller */
+    height: 40px;  /* Adjusted height for normal logo */
     width: 138px;
 }
 
@@ -86,27 +143,25 @@ opacity: 1;
 }
 
 .menu {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: -495px;
-    /* Initial position */
-    width: 495px;
-    height: 100vh;
-    background-color: rgba(59, 59, 59, 0.7);
-    z-index: 1000;
-    border-top-right-radius: 30px;
-    padding: 20px;
-    backdrop-filter: blur(5px);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    transition: left 0.12s ease;
-    /* Increased transition duration */
+display: none;
+position: fixed;
+top: 0;
+left: -495px; /* Original position */
+width: 495px;
+height: 100vh;
+background-color: rgba(59, 59, 59, 0.7);
+z-index: 1000;
+border-top-right-radius: 30px;
+padding: 20px;
+backdrop-filter: blur(5px);
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+transition: left 0.13s ease; /* Adjusted for smoother and faster transition */
 }
 
 .menu.active {
     display: block;
     left: 0;
-    transition: left 0.12s ease;
+    
 }
 
 .menu-header {
@@ -210,7 +265,6 @@ opacity: 1;
     right: 0; 
 }
 
-
 .sub-menu .menu-link {
     font-size: 20px;
     margin-left: 0;
@@ -303,6 +357,14 @@ a:hover {
     .connect-with-us h4 {
         font-size: 12px;
     }
+    .logo-normal {
+        height: 80px;  /* Smaller size for tablets */
+        transform: scale(1.0);  /* Adjust scale */
+    }
+    .logo-scrolled {
+        height: 30px;  /* Smaller size for tablets */
+        width: 104px;  /* Adjust width proportionally */
+    }
 }
 
 @media (max-width: 576px) {
@@ -310,13 +372,22 @@ a:hover {
         padding: 7px;
     } */
 
-    .logo img {
+    /* .logo img {
         height: 25px;
         width: 78px;
-    }
+    } */
 
     .phone-icon {
         font-size: 14px;
+    }
+    .logo-normal {
+        height: 100px;  /* Smaller size for smartphones */
+        transform: scale(0.9);  /* Adjust scale */
+        margin-top: -20px;
+    }
+    .logo-scrolled {
+        height: 34px;  /* Smaller size for smartphones */
+        width: 98px;  /* Adjust width proportionally */
     }
 }
 
@@ -371,13 +442,12 @@ a:hover {
 
 /* Heading within the header overlay */
 .header-overlay h1 {
-    font-size: 32px;
+    font-size: 34px;
     /* Font size for the heading */
-    text-transform: uppercase;
     /* Uppercase text */
     text-align: center;
     /* Center the text */
-    font-weight: 600
+    font-weight: 300
 }
 
 /* Responsive adjustments */
@@ -393,7 +463,7 @@ a:hover {
     }
 
     .header-overlay h1 {
-        font-size: 20px;
+        font-size: 24px;
         /* Adjusted font size */
     }
 }
@@ -466,6 +536,9 @@ text-decoration: none;
 color: #3f0303;
 transition: all 0.3s ease;
 }
+.blog-read-more:hover{
+    color: #3f0303;
+}
 
 .blog-read-more i {
 margin-left: 5px;
@@ -496,298 +569,384 @@ position: relative;
 }
 
 .social-share {
-text-align: right; /* Aligns the icons to the right */
-padding-top: 10px; /* Adds some space above the icons */
+    display: flex; /* Ensures flexbox layout */
+    align-items: center; /* Vertically aligns items in the middle */
+    justify-content: flex-end; /* Aligns items to the right */
+    padding-top: 10px; /* Keeps your existing padding */
 }
 
 .social-share a {
-color: #b59900; /* Set icon color */
-margin-left: 10px; /* Space between icons */
+    display: flex; /* Enables flexbox properties inside the link */
+    justify-content: center; /* Horizontally centers the icon inside the link */
+    align-items: center; /* Vertically centers the icon inside the link */
+    width: 30px; /* Diameter of the circle */
+    height: 30px; /* Diameter of the circle */
+    border-radius: 50%; /* Makes the link circular */
+    color: #b59900; /* Icon color */
+    background-color: #f0f0f0; /* Background color of the circle */
+    margin-left: 10px; /* Space between each icon */
+    text-decoration: none; /* Removes underline from the icon */
 }
 
 .social-share a:hover {
-color: #8b7601; /* Color on hover */
+    color: #8b7601; /* Changes icon color on hover */
+    background-color: #dcdcdc; /* Changes background on hover */
 }
+
 @media (max-width: 767px) {
-.social-share {
-    text-align: center;
-    padding-top: 10px;
+    .social-share {
+        justify-content: center; /* Centers icons on smaller screens */
+    }
 }
-}
+
 .footer {
-background: #0C0C0C;
-width: 100%;
-/* Dark background color */
-}
+    background: #0C0C0C;
+   
+    /* Dark background color */
+  }
 
-.logo-section {
-display: flex;
-align-items: center;
-}
+  .logo-section {
+    display: flex;
+    align-items: center;
+  }
 
-.logo-section img {
-margin-bottom: 10px; /* Margin between logo and vertical line */
-}
+  .logo-section img {
+    margin-bottom: 10px;
+    /* Margin between logo and vertical line */
+  }
 
-.vertical-line {
-border-left: 1px solid #fff; /* Vertical line */
-height: 80px; /* Adjust height as needed */
-margin-left: 15px; /* Adjust margin as needed */
-}
-.footer h5 {
-color: #fff; /* Heading color */
-}
-.title{
-font-family: Poppins;
-font-size: 18px;
-font-weight: 400;
-line-height: 27px;
-text-align: left;
-margin-left: 20px;
-gap: 0px;
-opacity: 0px;
+  .vertical-line {
+    border-left: 1px solid #fff;
+    /* Vertical line */
+    height: 80px;
+    /* Adjust height as needed */
+    margin-left: 15px;
+    /* Adjust margin as needed */
+  }
 
-}
-.p{
-font-family: Poppins;
-font-size: 16px;
-font-weight: 300;
-line-height: 24px;
-letter-spacing: 0.02em;
-text-align: left;
+  .footer h5 {
+    color: #fff;
+    /* Heading color */
+  }
 
-}
+  .title {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    margin-left: 20px;
+    
 
+  }
 
-
-
-.address{
-font-size: 16px;
-font-weight: 300;
-line-height: 24px;
-letter-spacing: 0.02em;
-text-align: left;
-
-}
-.h5{
-font-size: 24px;
-font-weight: 500;
-line-height: 36px;
-letter-spacing: 0.02em;
-text-align: left;
-
-}
-.h6
-{
-font-size: 20px;
-font-weight: 500;
-line-height: 30px;
-text-align: left;
-
-}
-.with-line {
-position: relative;
-display: inline-block;
-}
-
-.with-line::after {
-content: '';
-position: absolute;
-bottom: -5px;
-left: 0;
-width: 100%;
-height: 2px;
-background-color: rgb(238, 229, 229); /* Adjust as needed */
-}
-
-
-
-
-.subscription-input {
-border-right: none;
-border-radius: 5px 0 0 5px;
-border: 1px solid #F0483E;
-width: 100%;
-
-gap: 0px;
-border: 1px 0px 0px 0px;
-opacity: 0px;
-background-color: #0C0C0C;
-
-}
-.subscription-input::placeholder {
-color: #ffffff; /* Gray color for placeholder text */
-opacity: 1; /* Ensures full opacity */
-font-size: 10px; /* Adjust this value as needed */
-}
-
-
-.subscription-box button {
-border-left: none;
-border-radius: 0 5px 5px 0;
-
-}
-
-.subscription-box button:hover {
-background-color: red; /* Change button background color on hover */
-color: white; /* Change button text color on hover */
-margin-left: 150px;
-}
-
-@media (max-width: 768px) {
-.title {
+  .p {
+    font-family: Poppins;
     font-size: 16px;
+    font-weight: 300;
     line-height: 24px;
-    margin-left: 5px;
-}
-.p {
-    font-size: 14px;
-    line-height: 20px;
-}
-.address,
-.h5,
-.h6 {
-    font-size: 14px;
-    line-height: 20px;
+    letter-spacing: 0.02em;
+    text-align: left;
+
+  }
+
+
+
+
+  .address {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    
+
+  }
+  .address.text-white {
+    color: #ffffff; /* Sets the initial color of the link */
+    text-decoration: none; /* Removes underline from the link */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition for hover effects */
 }
 
-.subscription-input {
-    width: 70%; /* Adjust as needed */
-    max-width: 300px; /* Set maximum width for smaller screens */
-    border-radius: 0px;
+.address.text-white:hover, .address.text-white:focus {
+    color: #cccccc; /* Changes the color on hover */
+    text-decoration: underline; /* Adds an underline on hover */
 }
-.subscription-box button {
-    margin-left: 0;
-    width: 30%; /* Adjust as needed */
-    max-width: 100px; /* Set maximum width for smaller screens */
+.address.text-white::before {
+  content: '\2192';  /* Unicode for right arrow "→" */
+  color: #0ECA6D;    /* Adjust the color to fit your design */
+  margin-right: 5px; /* Space between the icon and the text */
+  display: inline-block; /* Ensures the pseudo-element behaves as an inline element */
 }
-}
-.follow-icons {
-display: flex;
-justify-content: center; /* Center the icons horizontally */
-margin-top: 30px; /* Adjust margin as needed */
-color: #f8f2f2;
+
+
+  .h5 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: 0.02em;
+    text-align: left;
+
+  }
+
+  .h6 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    text-align: left;
+
+  }
+
+  .with-line {
+    position: relative;
+    display: inline-block;
+  }
+
+  .with-line::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(238, 229, 229);
+    
+  }
+
+
+
+
+  
+
+  @media (max-width: 768px) {
+    .title {
+      font-size: 16px;
+      line-height: 24px;
+      margin-left: 5px;
+    }
+
+    .p {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    .address,
+    .h5,
+    .h6 {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    .subscription-input {
+      width: 70%;
+      /* Adjust as needed */
+      max-width: 300px;
+      /* Set maximum width for smaller screens */
+      border-radius: 0px;
+    }
+
+    .subscription-box button {
+      margin-left: 0;
+      width: 30%;
+      /* Adjust as needed */
+      max-width: 100px;
+      /* Set maximum width for smaller screens */
+    }
+  }
+
+  .follow-icons {
+    display: flex;
+    
+    margin-top: 30px; /* Adjust margin as needed */
+    color: #f8f2f2;
+    flex-wrap: nowrap; /* Prevents icons from wrapping to the next line */
 }
 
 .follow-icons a {
-margin-right: 10px; /* Adjust margin between icons */
-color: #d8cece;
+    margin-right: 10px; /* Adjust margin between icons */
+    color: #111; /* Icon color - change if needed */
+    background-color: #fff; /* Background color of the circle */
+    border-radius: 50%; /* Makes the background circle */
+    width: 40px; /* Width of the circle */
+    height: 40px; /* Height of the circle */
+    display: flex; /* Enables the use of flexbox properties */
+    justify-content: center; /* Centers the icon horizontally */
+    align-items: center; /* Centers the icon vertically */
+    text-decoration: none; /* Removes underline from the icon */
+}
+
+.follow-icons a:last-child {
+    margin-right: 0; /* Removes margin for the last icon to maintain symmetry */
+}
+
+/* Ensure the icons do not stretch */
+.follow-icons a i {
+    width: auto; /* Width of the icon itself */
+}
+.afliate-logo{
+  display: flex; /* Ensures that the container uses flexbox */
+  justify-content: center; /* Centers the logos horizontally */
+  align-items: center; /* Aligns the logos vertically in the center */
+  gap: 20px; /* Adjust the gap size as needed between the logos */
+  margin-top: 3rem;
 }
 
 /* Media query for responsiveness */
 @media (max-width: 768px) {
-.follow-icons {
-    margin-left: 0;
-    justify-content: center;
-}
-}
-/* Responsive styles for smaller screens (tablet view) */
-@media (max-width: 768px) {
-.footer .row {
-    flex-direction: column; /* Stack vertically */
-    gap: 20px; /* Space between sections */
+    .follow-icons {
+        justify-content: center;
+        flex-wrap: nowrap; /* Ensures icons do not wrap to the next line on small screens */
+    }
+    .follow-icons a {
+        margin-bottom: 0; /* Ensures icons stay in line horizontally */
+    }
 }
 
-.footer .col-md-4, .footer .col-md-2 {
-    width: 100%; /* Full width on smaller screens */
-    padding: 20px 0; /* Padding for sections */
-}
 
-.p, .address, .footer h5 {
-    font-size: 14px; /* Smaller font size */
-    line-height: 20px; /* Adjusted line height */
-}
 
-/* Adjust subscription box for smaller screens */
-.subscription-box {
-    flex-direction: column; /* Stack vertically */
-    align-items: stretch; /* Stretch to full width */
-}
+  /* Responsive styles for smaller screens (tablet view) */
+  @media (max-width: 768px) {
+    .footer .row {
+      flex-direction: column;
+      /* Stack vertically */
+      gap: 20px;
+      /* Space between sections */
+    }
 
-.subscription-input {
-    width: 100%; /* Full width */
-}
+    .footer .col-md-4,
+    .footer .col-md-2 {
+      width: 100%;
+      /* Full width on smaller screens */
+      padding: 20px 0;
+      /* Padding for sections */
+    }
 
-.subscription-box button {
-    width: 100%; /* Full width */
-}
+    .p,
+    .address,
+    .footer h5 {
+      font-size: 14px;
+      /* Smaller font size */
+      line-height: 20px;
+      /* Adjusted line height */
+    }
 
-/* Adjust follow icons */
-.follow-icons {
-    justify-content: center; /* Center icons */
-    flex-wrap: wrap; /* Allow icons to wrap */
-}
+    /* Adjust subscription box for smaller screens */
+    .subscription-box {
+      flex-direction: column;
+      /* Stack vertically */
+      align-items: stretch;
+      /* Stretch to full width */
+    }
 
-.follow-icons a {
-    margin-right: 10px; /* Adjust spacing */
-    margin-bottom: 10px; /* Space for wrapping */
-}
-}
-@media (min-width: 769px) and (max-width: 1024px) {
-.footer {
-    padding: 30px 15px; /* Adjust padding for smaller screens */
-}
+    .subscription-input {
+      width: 100%;
+      /* Full width */
+    }
 
-.footer .row {
-    flex-direction: column; /* Stack sections vertically */
-    gap: 15px; /* Space between sections */
-}
+    .subscription-box button {
+      width: 100%;
+      /* Full width */
+    }
 
-.footer .col-md-4,
-.footer .col-md-2 {
-    width: 100%; /* Full width for each section */
-    padding: 10px 0; /* Adjust padding */
-}
+    /* Adjust follow icons */
+    .follow-icons {
+      justify-content: center;
+      /* Center icons */
+      flex-wrap: wrap;
+      /* Allow icons to wrap */
+    }
 
-/* Adjust font sizes */
-.footer h5,
-.footer h6 {
-    font-size: 18px; /* Smaller font size */
-    line-height: 24px; /* Adjusted line height */
-}
+    .follow-icons a {
+      margin-right: 10px;
+      /* Adjust spacing */
+      margin-bottom: 10px;
+      /* Space for wrapping */
+    }
+  }
 
-.address, 
-.p {
-    font-size: 14px; /* Smaller font size */
-    line-height: 22px; /* Adjusted line height */
-}
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .footer {
+      padding: 30px 15px;
+      /* Adjust padding for smaller screens */
+    }
 
-/* Adjust subscription box layout */
+    .footer .row {
+      flex-direction: column;
+      /* Stack sections vertically */
+      gap: 15px;
+      /* Space between sections */
+    }
 
-/* Adjust follow icons */
-.follow-icons {
-    justify-content: center; /* Center icons */
-    margin-top: 20px; /* Margin above icons */
-}
+    .footer .col-md-4,
+    .footer .col-md-2 {
+      width: 100%;
+      /* Full width for each section */
+      padding: 10px 0;
+      /* Adjust padding */
+    }
 
-.follow-icons a {
-    margin-right: 10px; /* Space between icons */
-    margin-bottom: 10px; /* Add space for wrapping */
-}
-}
-@media (min-width: 769px) and (max-width: 1024px) {
-.footer .row {
-    flex-direction: column; /* Stack vertically */
-    gap: 20px; /* Space between sections */
-}
+    /* Adjust font sizes */
+    .footer h5,
+    .footer h6 {
+      font-size: 18px;
+      /* Smaller font size */
+      line-height: 24px;
+      /* Adjusted line height */
+    }
 
-/* Ensure sections take up full width */
-.footer .col-md-4,
-.footer .col-md-2 {
-    width: 100%; /* Full width */
-    padding: 20px; /* Padding for each section */
-}
-}
-@media (max-width: 576px) {
-.footer {
-    padding: 20px; /* Padding for the entire footer on mobile screens */
-}
+    .address,
+    .p {
+      font-size: 14px;
+      /* Smaller font size */
+      line-height: 22px;
+      /* Adjusted line height */
+    }
 
-/* Adjust padding for inner elements to maintain spacing */
-.footer .row {
-    gap: 10px; /* Adjust gap between sections */
-}
-}
+    /* Adjust subscription box layout */
+
+    /* Adjust follow icons */
+    .follow-icons {
+      justify-content: center;
+      /* Center icons */
+      margin-top: 20px;
+      /* Margin above icons */
+    }
+
+    .follow-icons a {
+      margin-right: 10px;
+      /* Space between icons */
+      margin-bottom: 10px;
+      /* Add space for wrapping */
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .footer .row {
+      flex-direction: column;
+      /* Stack vertically */
+      gap: 20px;
+      /* Space between sections */
+    }
+
+    /* Ensure sections take up full width */
+    .footer .col-md-4,
+    .footer .col-md-2 {
+      width: 100%;
+      /* Full width */
+      padding: 20px;
+      /* Padding for each section */
+    }
+  }
+
+  @media (max-width: 576px) {
+    .footer {
+      padding: 20px;
+      /* Padding for the entire footer on mobile screens */
+    }
+
+    /* Adjust padding for inner elements to maintain spacing */
+    .footer .row {
+      gap: 10px;
+      /* Adjust gap between sections */
+    }
+  }
 .form-control{
 border-radius: 0px;
 }
@@ -795,68 +954,87 @@ a{
 text-decoration: none;
 }
 .newsletter-signup {
-    background-image: url(assets/footer_background.png); /* Add your image URL here */
+    background-image: url(assets/footer_background.png);
     background-size: cover;
     background-position: center;
     position: relative;
     color: white;
-    padding: 70px 0;
-}
-
-.overlay {
+    padding: 90px 0;
+  }
+  
+  .overlay {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background: linear-gradient(to top, rgb(12, 12, 12) 0%, rgba(12, 12, 12, 0.7) 100%);
-    /* Gradient from black at bottom to transparent at top */
-}
-
-.container {
+  }
+  
+  .container {
     position: relative;
-    z-index: 2; /* Ensures content is above the overlay */
-}
-
-.newsletter-form {
-    max-width: 600px;
-    margin: auto;
+    z-index: 2;
+  }
+  
+  .newsletter-form {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-}
-
-.newsletter-form input[type="email"] {
+    justify-content: space-between;
+    max-width: 900px; /* Adjust based on the width needed */
+    margin: auto;
+  }
+  
+  .newsletter-form .text-section {
+    margin-right: 20px; /* Space between text and email field */
+  }
+  
+  .newsletter-heading {
+    margin-bottom: 5px; /* Spacing between heading and text */
+    font-size: 20px; /* Adjust size as needed */
+  }
+  
+  .newsletter-text {
+    margin-bottom: 10px; /* Spacing between text and input on mobile */
+    font-size: 16px; /* Adjust size as needed */
+  }
+  
+  .newsletter-form input[type="email"] {
     flex-grow: 1;
     margin-right: 10px;
     padding: 10px;
     border: none;
+  }
+  
+  @media (max-width: 768px) {
+      .newsletter-form {
+          flex-direction: column;
+      }
+  
+      .newsletter-form .text-section,
+      .newsletter-form input[type="email"],
+      .newsletter-form button {
+          width: 100%;
+      }
+  
+      .newsletter-form input[type="email"],
+      .newsletter-form button {
+          margin-top: 10px;
+      }
+  }
+  .read-btns {
+    display: inline-block; /* Allows setting width and vertical alignment */
+    padding: 10px 30px; /* Top and bottom padding + horizontal padding */
+    background-color: #f0483e; /* Transparent background */
+    color: #fff; /* Text color */
+    border: 2px solid #f0483e; /* Solid border with a distinct color, example uses 'orange-red' */
+    border-radius: 25px; /* Gives a cylindrical shape */
+    text-align: center; /* Centers the text inside the button */
+    text-decoration: none; /* Removes underline from the link */
+    
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
 }
 
-.newsletter-form button {
-    padding: 10px 20px;
-    background-color: #606C38; /* Bootstrap's btn-warning color */
-    border: none;
-    color: white;
+.read-btns:hover {
+    background-color: #f0483e; /* Changes background on hover */
+    color: white; /* Changes text color on hover */
 }
-
-.newsletter-form button:hover {
-    background-color: #283618; /* Darker shade for hover */
-}
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-        .newsletter-form {
-            flex-direction: column; /* Stack vertically on smaller screens */
-        }
-
-        .newsletter-form input[type="email"],
-        .newsletter-form button {
-            width: 100%; /* Full width for small devices */
-            margin-top: 10px;
-            margin-right: 0; /* Remove right margin on mobile */
-        }
-
-        .newsletter-form input[type="email"] {
-            margin-top: 0; /* No top margin for the first item */
-        }
-    }

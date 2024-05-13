@@ -17,13 +17,13 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
+        <link href="https://db.onlinewebfonts.com/c/f929174bda22c1821db22ab9760b082a?family=Baskerville" rel="stylesheet" type="text/css"/>    <script src="https://unpkg.com/scrollreveal@4.0.0-beta.6"></script>
 
 
         <link rel="stylesheet" href="residential.css" type="text/css">
          <style>
 .font {
-    font-family: 'Marcellus SC', serif;
+    font-family: "Baskerville";
     
 }
 .heading-container {
@@ -70,6 +70,16 @@
     </style>
 </head>
 <body>
+    <div class="fixed-icons">
+        <a href="https://api.whatsapp.com/send?phone=917025306368" target="_blank" class="icon-link whatsapp-icon">
+            <!-- Replace `fa-whatsapp` with the appropriate class or image -->
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="#" class="icon-link question-icon" data-bs-toggle="modal" data-bs-target="#leadModal">
+            <!-- Replace `fa-question-circle` with the appropriate class or image -->
+            <i class="fa fa-question-circle" aria-hidden="true"></i>
+        </a>
+    </div>
     <div class="header">
         <div class="menu-toggle">
             <div class="hamburger"></div>
@@ -77,9 +87,9 @@
         </div>
         <div class="logo">
             <a href="index.html">
-                <img src="assets/ezgif.com-webp-to-png-converter (1).png" alt="Logo" class="img-fluid">
+                <!-- Initially set both classes; JS will adjust on load -->
+                <img src="assets/elite_flag_log.png" alt="Logo" class="img-fluid">
             </a>
-           
         </div>
         <div class="phone-icon" style="color: #fff;">
             <i class="fas fa-phone"></i>
@@ -245,7 +255,7 @@
 
             <!-- Content area for project images and headings -->
             <div class="col-md-9 content">
-                <h3 class="top-heading font">INDUSTRIAL</h3>
+                <h3 class="top-heading font">Industrial</h3>
 
                 <div class="mt-5">
                     <p class="description mt-4">Elite Developers, one of Kerala's leading Real Estate Developers, is
@@ -261,14 +271,46 @@
                         
                     <div class="row mt-5">
                         <div class="col-md-6 col-sm-12 mb-4">
-                            <a href="project_page.html">
-                                <img src="assets/banner_1.png" alt="Sobha Aranya" class="img-fluid image-container">
-
-                                <div class="text-section mt-2">
-                                    <h1 class="font">Elite Samruddhi</h1>
-                                
+                            <div class="card mb-4">
+                                <div class="status-label"
+                                  style="position: absolute; top: -5px; left: 50%; transform: translateX(-50%); background: white; padding: 5px 10px; border-radius: 10px; font-weight: bold;">
+                                  COMPLETED <!-- Example status text -->
                                 </div>
-                            </a>
+                                <img src="assets/samrudhi_image.png" class="card-img-top" alt="Image 1">
+                                <div class="card-body">
+                                  <h5 class="card-title">Elite Samruddhi</h5>
+                                  <p class="card-text"><i class="fas fa-map-marker-alt"></i> Kazhakkoottam, Kerala 680551</p>
+                      
+                                  <div class="row">
+                                    <div class="col">
+                                      <h6>Area Range</h6>
+                                      <p class="card-texts">2,854 - 1,210 Sq.Ft</p>
+                                    </div>
+                                    <div class="col ">
+                                      <h6>Apartment Type</h6>
+                                      <p class="card-texts">4,3 & 2 BHK</p>
+                                    </div>
+                                  </div>
+                                  <hr>
+                                  <h6>K-RERA</h6>
+                                  <p class="card-texts">K-RERA/PRJ/ERN/050/2021</p>
+                                  <div class="d-flex justify">
+                                    <button class="btn btn-dark property-btn"
+                                      style="background-color: white; color: black; ">BROCHURE</button>
+                                      <a class="btn btn-dark property-btn"
+                                      style="background: var(--Button-Bl-1, #242660); margin-left: 12px ;   " href="project_page.html">VIEW
+                                      PROJECT</a>
+                                    <button class="btn  btn-md property-btn-small" style="margin-left: 12px; background-color: #25D366; color: #fff;">
+                                      <!-- Small button with WhatsApp icon -->
+                                      <i class="fab fa-whatsapp"></i>
+                                    </button>
+                                    <button class="btn btn-light btn-md property-btn-small" style="margin-left: 12px;">
+                                      <!-- Small button with telephone icon -->
+                                      <i class="fas fa-phone"></i>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
                             
                         </div>
                         <!-- <div class="col-md-6 col-sm-12 mb-4">
@@ -283,7 +325,7 @@
                     </div>
                   
                     <div class="heading-section mb-4 mt-5">
-                        <h3 class="top-heading font">REACH US</h3>
+                        <h3 class="top-heading font">Reach Us</h3>
                     </div>
                     <div class="row">
                         <!-- Full name field -->
@@ -300,7 +342,7 @@
                         </div>
                         <!-- Enquire button -->
                         <div class="col-md-3 pt-3">
-                            <button class="btn sbmit-btn">Enquire</button>
+                            <button class="btn read-btns">Enquire</button>
                         </div>
                     </div>
                 </div>
@@ -311,96 +353,125 @@
         <div class="overlay"></div>
         <div class="container">
             <form class="newsletter-form">
+                <div class="text-sections">
+                    <h2 class="newsletter-heading">Join Our Newsletter</h2>
+                    <p class="newsletter-text">Stay updated with our latest news and offers.</p>
+                </div>
                 <input type="email" placeholder="Your Email Id">
-                <button type="submit">Subscribe ➔</button>
+                <button type="submit" class="read-btns">Subscribe ➔</button>
             </form>
         </div>
     </div>
-    <footer class="footer  text-white py-5">
+    <footer class="footer  text-white" style="padding: 40px;">
         <div class="container">
-            <div class="row">
-                <!-- First Section -->
-                <div class="col-md-4">
-                    <!-- Logo and vertical line -->
-                    <div class="logo-section">
-                        <img src="assets/logo FOOD 2.png" alt="Logo" class="mb-3">
-                        <div class="vertical-line"></div>
-                        <h5 class=" title mt-3 mb-3"> <span>An Elite Foods <br><span>& Innovations
-                                </span><br><span>Group Enterprise</span> </span> </h5>
-                    </div>
-                    <!-- Heading -->
-
-                    <!-- Paragraph -->
-                    <br>
-                    <p class="address">The Elite Group has been in the real estate business since 1995 and has been part
-                        of numerous projects that have stood the test of time.</p>
-                    <br> <br>
-                    <div class="d-flex justify-content-between">
-                        <img src="assets/Frame 273.png" alt="Logo 1">
-                        <img src="assets/BAI LOG 2.png" alt="Logo 2">
-                        <img src="assets/Frame 274.png" alt="Logo 3">
-                    </div>
-                </div>
-
-                <div class="col-md-1"></div> <!-- Adjust the column size for the desired gap -->
-
-                <!-- Second Section -->
-                <div class="col-md-4">
-                    <!-- Second Section Content -->
-                    <br>
-                    <h5 class="mb-3 with-line">REACH US</h5>
-                    <br><br>
-                    <h6 class="with-line"> ADDRESS</h6>
-                    <p class="address">Elite Gardenia Hills, Near Reliance <br><span>Petrol Pump, Puzhakkal P.O.,</span>
-                        <br> Thrissur – 680 553 Kerala, India
-                    </p>
-                    <br>
-                    <h6 class="with-line">CONTACT US</h6>
-                    <p class="address">Mob: +91 99468 11111 <br><span>Tel: +91 487 2322120</span></p>
-                    <br>
-                    <h6 class="with-line">EMAIL</h6>
-                    <p>sales@elitehomesindia.co.in</p>
-                    <!-- Follow us icons -->
-
-                </div>
-
-
-
-
-                <!-- Third Section -->
-                <div class="col-md-2">
-                    <!-- Third Section Content -->
-                    <br>
-                    <h5 class="mb-3 with-line">PROJECTS</h5>
-                    <br><br><a href="" class="address text-white">Villas in Thrissur</a>
-                    <br><br><a href="" class="address text-white">Apartment in Tvm</a>
-                    <br><br><a href="" class="address text-white">Upcoming Projects</a>
-                    <br><br><a class="mb-3 text-white" href="">FAQs</a>
-                    <br><br><a class="mb-3 text-white" href="">Help & Support</a>
-                    <br>
-                    <!-- <div class="subscription-box mt-5">
-                        <form>
-                            <div class="input-group">
-                                <input type="text" placeholder="Enter your email to subscribe"
-                                    class="form-control subscription-input">
-                                <button type="submit" class="btn btn-danger" style="border-radius: 0px;"><i
-                                        class="fa-solid fa-arrow-right"></i></button>
-                            </div>
-                        </form>
-                    </div> -->
-                </div>
+          <div class="row ">
+            <!-- First Section -->
+           
+    
+    
+            <!-- Second Section -->
+            <div class="col-md-3 pt-5">
+              <!-- Second Section Content -->
+             
+              <div class="logo-section">
+                <img src="assets/logo FOOD 2.png" alt="Logo" class="mb-3">
+                <div class="vertical-line"></div>
+                <h5 class=" title mt-3 mb-3"> <span>An Elite Foods <br><span>& Innovations
+                    </span><br><span>Group Enterprise</span> </span> </h5>
+              </div>
+              <!-- Heading -->
+    
+              <!-- Paragraph -->
+              
+              
+              <h6 class="with-line"> ADDRESS</h6>
+              <p class="address">Elite Gardenia Hills, Near Reliance <br><span>Petrol Pump, Puzhakkal P.O.,</span>
+                <br> Thrissur – 680 553 Kerala, India
+              </p>
+              <br>
+              <h6 class="with-line">CONTACT US</h6>
+              <p class="address">Mob: +91 99468 11111 <br><span>Tel: +91 487 2322120</span></p>
+              <br>
+              <h6 class="with-line">EMAIL</h6>
+              <p>sales@elitehomesindia.co.in</p>
+    
+          
+          <div class="follow-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+              
+              
+              
+              
+              
+              
+              <!-- Follow us icons -->
+    
             </div>
-            <br><br><br>
-            <div class="follow-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
+    
+    
+    
+    
+            <!-- Third Section -->
+            <div class="col-md-3 pt-5">
+              <h5 class="mb-3 with-line">For More Information</h5>
+              <br><br><a href="index.html" class="address text-white">Home</a>
+              <br><br><a href="philosophy.html" class="address text-white">Philosphy</a>
+              <br><br><a href="home_loan_faq.html" class="address text-white">Home Loan FAQ</a>
+              <br><br><a class="mb-3 address text-white" href="contact_us.html">Contact Us</a>
+              <br><br><a class="mb-3 address text-white" href="">Privacy Policy</a>
+              
+              
             </div>
-
-
+            <div class="col-md-3 pt-5">
+              <h5 class="mb-3 with-line">Appartment In Thrissur</h5>
+              <br><br><a href="" class="address text-white">Villas in Patturailkal</a>
+              <br><br><a href="" class="address text-white">Apartment in kuttor</a>
+              <div class="d-flex mt-5 afliate-logo">
+                <img src="assets/Frame 273.png" alt="Logo 1">
+                <img src="assets/BAI LOG 2.png" alt="Logo 2">
+                <img src="assets/logo-tripadviser.webp" alt="Logo 3">
+              </div>
+            </div>
+            <div class="col-md-3 pt-5">
+              <h5 class="mb-3 with-line">Appartment In Trivandrum</h5>
+              <br><br><a href="" class="address text-white">Flat in Kazhakkoottam</a>
+              <br><br>
+    
+            </div>
+            
+          </div>
+          <br>         
+    
+    
+    
         </div>
-    </footer>
+      </footer>
+    <div class="modal fade" id="leadModal" tabindex="-1" aria-labelledby="leadModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="leadModalLabel">Get In Touch</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                
+                <div class="modal-body">
+                    <!-- Form elements here -->
+                    <form id="leadForm">
+                        <!-- Input fields for the form -->
+                        <input type="text" class="form-control mb-3" placeholder="Your Name" required>
+                        <input type="email" class="form-control mb-3" placeholder="Your Email" required>
+                        <input type="tel" class="form-control mb-3" placeholder="Your Phone Number" required>
+                        <textarea name="message" id="" placeholder="Message" class="form-control mb-3"></textarea>
+                        <button type="submit" class="btn read-btns">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -444,111 +515,135 @@
 
 
 
+        
         $(document).ready(function () {
-    let initialLoad = true;
+      let initialLoad = true;
 
-    // Initial state
-    $('.menu').css('left', '-495px');
-    $('.menu').removeClass('active');
+      // Initial state
+      $('.menu').css('left', '-495px');
+      $('.menu').removeClass('active');
 
-    // Toggle main menu visibility
-    $('.menu-toggle').click(function () {
+      // Toggle main menu visibility
+      $('.menu-toggle').click(function () {
         if ($('.menu').hasClass('active')) {
-            // Close the menu
-            $('.menu').removeClass('active');
-            $('body').removeClass('menu-active'); // If 'menu-active' class controls overflow, consider modifying or removing this class assignment
-            $('.menu').animate({
-                left: '-495px'
-            }, 300); // Speed up the closing animation
-            $('.sub-menu').removeClass('active');
-            $('.sub-menu').css({
-                right: '100%'  // Ensure sub-menus are reset
-            });
-            initialLoad = true;
-        } else {
-            // Open the menu
-            $('.menu').addClass('active');
-            $('body').addClass('menu-active'); // Check if this class adds `overflow: hidden` in your CSS
-            $('.menu').animate({
-                left: '0px'
-            }, initialLoad ? 300 : 0); // Faster opening after initial load
-            initialLoad = false;
-        }
-    });
-
-    // Close the main menu with a button
-    $('.close-menu').click(function () {
-        $('.menu').animate({
+          // Close the menu
+          $('.menu').removeClass('active');
+          $('body').removeClass('menu-active'); // If 'menu-active' class controls overflow, consider modifying or removing this class assignment
+          $('.menu').animate({
             left: '-495px'
-        }, 300, function () {
-            $('.menu').removeClass('active');
-            $('body').removeClass('menu-active'); // Ensure this does not disable scrolling
-            initialLoad = true;
-        });
-    });
+          }, 300); // Speed up the closing animation
+          $('.sub-menu').removeClass('active');
+          $('.sub-menu').css({
+            right: '100%'  // Ensure sub-menus are reset
+          });
+          initialLoad = true;
+        } else {
+          // Open the menu
+          $('.menu').addClass('active');
+          $('body').addClass('menu-active'); // Check if this class adds `overflow: hidden` in your CSS
+          $('.menu').animate({
+            left: '0px'
+          }, initialLoad ? 300 : 0); // Faster opening after initial load
+          initialLoad = false;
+        }
+      });
 
-    // Toggle sub-menu
-    $('.with-arrow').click(function (e) {
+      // Close the main menu with a button
+      $('.close-menu').click(function () {
+        $('.menu').animate({
+          left: '-495px'
+        }, 300, function () {
+          $('.menu').removeClass('active');
+          $('body').removeClass('menu-active'); // Ensure this does not disable scrolling
+          initialLoad = true;
+        });
+      });
+
+      // Toggle sub-menu
+      $('.with-arrow').click(function (e) {
         e.preventDefault();
         let subMenu = $(this).next('.sub-menu');
         if (subMenu.hasClass('active')) {
-            subMenu.css({
-                right: '90%'  // Adjust to ensure smooth hiding
-            }).animate({
-                right: '100%'  // Smooth transition for sub-menu
-            }, 300, function () {
-                subMenu.removeClass('active');
-            });
+          subMenu.css({
+            right: '90%'  // Adjust to ensure smooth hiding
+          }).animate({
+            right: '100%'  // Smooth transition for sub-menu
+          }, 300, function () {
+            subMenu.removeClass('active');
+          });
         } else {
-            $('.sub-menu').removeClass('active').css({
-                right: '100%'  // Reset other sub-menus
-            });
-            subMenu.css({
-                right: '100%'
-            }).animate({
-                right: '0'  // Smooth transition for sub-menu
-            }, 300).addClass('active');
+          $('.sub-menu').removeClass('active').css({
+            right: '100%'  // Reset other sub-menus
+          });
+          subMenu.css({
+            right: '100%'
+          }).animate({
+            right: '0'  // Smooth transition for sub-menu
+          }, 300).addClass('active');
         }
-    });
+      });
 
-    // Close sub-menu with a button
-    $('.close-submenu').click(function (e) {
+      // Close sub-menu with a button
+      $('.close-submenu').click(function (e) {
         e.preventDefault();
         let subMenu = $(this).closest('.sub-menu');
         subMenu.animate({
-            right: '100%'  // Smooth transition to hide sub-menu
+          right: '100%'  // Smooth transition to hide sub-menu
         }, 300, function () {
-            subMenu.removeClass('active');
+          subMenu.removeClass('active');
         });
-    });
+      });
 
-    // Close the menu and sub-menu if clicking outside of them
-    $(document).on('click', function (e) {
+      // Close the menu and sub-menu if clicking outside of them
+      $(document).on('click', function (e) {
         if (!$(e.target).closest('.menu').length && !$(e.target).closest('.menu-toggle').length) {
-            if ($('.menu').hasClass('active')) {
-                $('.menu').removeClass('active');
-                $('body').removeClass('menu-active'); // Ensure this does not disable scrolling
-                $('.menu').animate({
-                    left: '-495px'
-                }, 300);
-                $('.sub-menu').removeClass('active');
-                $('.sub-menu').animate({
-                    right: '100%'  // Smooth transition to hide sub-menu
-                }, 300);
-                initialLoad = true;
-            }
+          if ($('.menu').hasClass('active')) {
+            $('.menu').removeClass('active');
+            $('body').removeClass('menu-active'); // Ensure this does not disable scrolling
+            $('.menu').animate({
+              left: '-495px'
+            }, 300);
+            $('.sub-menu').removeClass('active');
+            $('.sub-menu').animate({
+              right: '100%'  // Smooth transition to hide sub-menu
+            }, 300);
+            initialLoad = true;
+          }
         }
-    });
+      });
 
-    // Update header background on scroll
-    window.addEventListener('scroll', function () {
+      // Update header background on scroll
+      window.addEventListener('scroll', function () {
         const header = document.querySelector('.header');
+        const logo = document.querySelector('.logo img');  // Ensure the selector targets your logo image correctly
         if (window.scrollY > 0) {
             header.classList.add('header-bg');
+            logo.src = 'assets/ezgif.com-webp-to-png-converter (1).png';  // Path to the scrolled logo
         } else {
             header.classList.remove('header-bg');
+            logo.src = 'assets/elite_flag_log.png';  // Path to the default logo
         }
     });
+});
+$(document).ready(function () {
+    const logo = document.querySelector('.logo img');  // Ensure this selector is accurate for your logo
+
+    // Function to update logo based on scroll
+    function updateLogoStyle() {
+        if (window.scrollY > 0) {
+            logo.classList.remove('logo-normal');
+            logo.classList.add('logo-scrolled');
+        } else {
+            logo.classList.add('logo-normal');
+            logo.classList.remove('logo-scrolled');
+        }
+    }
+
+    // Update logo style on scroll
+    window.addEventListener('scroll', updateLogoStyle);
+
+    // Set initial logo style based on current scroll position
+    updateLogoStyle();
 });
 </script>
 
