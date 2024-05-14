@@ -242,7 +242,7 @@ opacity: 1;
     border-top-right-radius: 30px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    transition: right 0.3s ease-in-out;
+    transition: right 0.3s ease-in-out; /* Ensure same transition speed */
 }
 
 .sub-menu.active {
