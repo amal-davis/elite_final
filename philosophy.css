@@ -363,8 +363,8 @@ a:hover {
         transform: scale(1.0);  /* Adjust scale */
     }
     .logo-scrolled {
-        height: 30px;  /* Smaller size for tablets */
-        width: 104px;  /* Adjust width proportionally */
+        height: 34px;  /* Smaller size for tablets */
+        width: 98px;  /* Adjust width proportionally */
     }
 }
 
