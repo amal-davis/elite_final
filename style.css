@@ -4,6 +4,11 @@ body {
     font-family: 'Poppins';
 
 }
+html, body {
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    width: 100%; /* Ensure width is 100% */
+    box-sizing: border-box; /* Ensure consistent box-sizing */
+  }
 
 .font {
     font-family: "Libre Baskerville", serif;
@@ -499,40 +504,25 @@ a:hover {
 .carousel-contact {
     position: absolute;
     bottom: 40px;
-    right: 0px;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    color: white;
-    padding: 15px;
-    border-radius: 5px;
+    right: 20px;
     z-index: 10;
-    width: 200px; /* Adjust width as necessary */
 }
 
-.contact-icon {
-    font-size: 30px; /* Adjust icon size */
-    text-align: center;
+.btn-know-more {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50px; /* Makes the button cylindrical */
+    padding: 10px 20px; /* Adjust padding as necessary */
+    font-size: 16px; /* Adjust font size as necessary */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
 }
 
-.contact-info h3 {
-    font-size: 16px; /* Adjust heading size */
-    margin-top: 10px;
-    margin-bottom: 5px;
+.btn-know-more:hover {
+    background-color: white;
+    color: black; /* Change text color on hover */
 }
-
-.contact-info p {
-    font-size: 14px; /* Adjust text size */
-    margin-top: 0;
-    margin-bottom: 10px;
-}
-
-.contact-info hr {
-    border: 0;
-    height: 1px;
-    background-color: #ccc; /* Light grey line */
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
 
 /* Animation keyframes */
 @keyframes fadeInOut {
@@ -553,10 +543,7 @@ a:hover {
         overflow-x: hidden;
     }
 
-    .carousel-contact {
-       display: none;
-        /* Reduced padding for smaller screens */
-    }
+    
     
 }
 
@@ -681,161 +668,228 @@ a:hover {
         /* Adjusted border radius */
     }
 }
-
-/* Top heading with uppercase text and bold font */
-.top-heading {
-   
-    /* Bold text */
-    color: #737373;
-    /* Uppercase text */
-    font-size: 34px;
-    /* Default font size for large screens */
+.mobile-carousel {
+    display: none !important;
 }
-
-/* Bottom heading with bold red text */
-.bottom-heading {
-    color: #f0483e;
-    /* Red color */
-    font-weight: bold;
-    /* Bold text */
-    text-transform: uppercase;
-    /* Uppercase text */
-    font-size: 1.5em;
-    /* Default font size for large screens */
-}
-
-/* Responsive font size for smaller screens */
-@media (max-width: 768px) {
-
-    /* For tablets and smaller devices */
-    .top-heading {
-        font-size: 1.5em;
-        /* Adjusted font size */
-    }
-
-    .bottom-heading {
-        font-size: 1.2em;
-        /* Adjusted font size */
-    }
-}
-
-@media (max-width: 576px) {
-
-    /* For mobile devices */
-    .top-heading {
-        font-size: 1.2em;
-        /* Further reduced font size */
-    }
-
-    .bottom-heading {
-        font-size: 1em;
-        /* Further reduced font size */
-    }
-}
-
-/* Paragraph description */
-.description {
-    font-size: 20px; 
-    /* Default font size */
-    
-    /* Line height for readability */
-    text-align: justify;
-    max-width: 663px;
-    
-    font-weight: 300;
-}
-
-.read-btns {
-    display: inline-block; /* Allows setting width and vertical alignment */
-    padding: 10px 30px; /* Top and bottom padding + horizontal padding */
-    background-color: transparent; /* Transparent background */
-    color: black; /* Text color */
-    border: 2px solid #f0483e; /* Solid border with a distinct color, example uses 'orange-red' */
-    border-radius: 25px; /* Gives a cylindrical shape */
-    text-align: center; /* Centers the text inside the button */
-    text-decoration: none; /* Removes underline from the link */
-    
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
-}
-
-.read-btns:hover {
-    background-color: #f0483e; /* Changes background on hover */
-    color: white; /* Changes text color on hover */
-}
-
-
-@media (max-width: 576px) {
-
-    /* Mobile devices */
-    .description {
-        font-size: 16px;
-        /* Further smaller font size */
-        /* max-width: 350px; */
-        text-align: justify;
-        /* Smaller maximum width */
-    }
-}
-
-.btnsy {
-    text-transform: uppercase;
-    /* Uppercase text */
-    padding: 10px 20px;
-    /* Padding for medium-to-large screens */
-    width: 180px;
-    /* Fixed width for larger screens */
-    border-radius: 20px;
-    /* Rounded corners */
-    background-color: #f0483e;
-    /* Red color */
-    color: #ffffff;
-    /* White text */
-    border: none;
-    /* No border */
-    text-align: center;
-    /* Center text within the button */
-    transition: all 0.3s;
-    /* Smooth hover effect */
-}
-.btnsy {
-    position: relative;
-    overflow: hidden; /* Ensures the pseudo-element does not spill outside the button */
-  }
-  .btnsy::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%; /* Start from the left */
+.carousel-image-mobile {
     width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.2); /* Light overlay */
-    transition: all 0.3s ease-in-out;
-  }
-  .btnsy:hover::after {
-    left: 0; /* Cover the button on hover */
-  }
+    /* Full width */
+    height: 400px;
+    /* Adjust height as necessary */
+    object-fit: cover;
+    /* Ensure images maintain proper aspect ratio */
+    border-radius: 5px;
+    /* Optional: add border radius */
+}
 
-/* Responsive padding for smaller screens */
 @media (max-width: 768px) {
+    /* Hide desktop carousel and show mobile carousel on smaller screens */
+    .desktop-carousel {
+        display: none !important;
+    }
 
-    /* For tablets and smaller devices */
-    .btnsy {
-        padding: 8px 15px;
-        /* Reduce padding */
-        width: 150px;
-        /* Reduce width */
+    .mobile-carousel {
+        display: block !important;
+    }
+
+    .mobile-carousel-content {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        color: white;
+        border-radius: 5px;
+    }
+
+    .mobile-carousel-content-left h2,
+    .mobile-carousel-content-left .location {
+        margin: 0;
+    }
+
+    .mobile-carousel-content-right .btn-know-more {
+        background-color: transparent;
+        color: white;
+        border: 2px solid white;
+        border-radius: 50px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .mobile-carousel-content-right .btn-know-more:hover {
+        background-color: white;
+        color: black;
     }
 }
-
 @media (max-width: 576px) {
+    .mobile-carousel-content {
+        bottom: 10px;
+        padding: 8px;
+    }
 
-    /* For mobile devices */
-    .btnsy {
-        padding: 6px 10px;
-        /* Further reduce padding */
-        width: 120px;
-        /* Smaller button width */
+    .mobile-carousel-content-left h2 {
+        font-size: 1em;
+    }
+
+    .mobile-carousel-content-left .location {
+        font-size: 0.8em;
+    }
+
+    .mobile-carousel-content-right .btn-know-more {
+        padding: 8px 15px;
+        font-size: 14px;
     }
 }
+/* Top heading with uppercase text and bold font */
+.custom-section {
+    background-color: #ede9e2; /* Example background color */
+    padding: 120px 15px;
+  }
+  
+  .custom-section .image-container {
+    margin-bottom: 20px;
+  }
+
+  .custom-section .image-container img {
+    
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .custom-section .content-container {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .custom-section .content-container h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+  }
+
+  .custom-section .content-container p {
+    font-size: 20px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .custom-section .btn-custom {
+    background-color: transparent;
+    border: 2px solid #77c15f;
+    color: #77c15f;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+    margin-top: 10px;
+  }
+
+  .custom-section .btn-custom:hover {
+    background-color: #77c15f;
+    color: white;
+  }
+
+  /* Media queries for responsiveness */
+  @media (min-width: 768px) {
+    .custom-section {
+      padding: 60px 15px;
+    }
+
+    .custom-section .image-container {
+      flex: 1 1 40%;
+      margin-bottom: 0;
+      text-align: right;
+      padding-right: 15px;
+    }
+
+    .custom-section .content-container {
+      flex: 1 1 60%;
+      padding-left: 30px;
+      text-align: left;
+    }
+
+    
+    
+  }
+
+  @media (min-width: 992px) {
+    .custom-section {
+      padding: 120px 15px;
+    }
+
+    .custom-section .image-container {
+      flex: 1 1 40%;
+    }
+
+    .custom-section .content-container {
+      flex: 1 1 60%;
+    }
+  }
+  .locations-section {
+    padding: 60px 0;
+    
+  }
+  
+  .locations-section h2 {
+    font-size:34px;
+    margin-bottom: 20px;
+  }
+  
+  .locations-section p {
+    font-size:20px;
+    margin-bottom: 40px;
+  }
+  
+  .locations-section .btn-custom {
+    border: 2px solid #77c15f;
+    color: #77c15f;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+    margin: 0 10px;
+    min-width: 150px;
+  }
+  
+  .locations-section .btn-custom:first-child {
+    background-color: #77c15f;
+    color: white;
+  }
+  
+  .locations-section .btn-custom:hover {
+    background-color: #77c15f;
+    color: white;
+  }
+  @media (max-width: 576px) {
+    .locations-section h2 {
+      font-size: 30px;
+    }
+    
+    .locations-section p {
+      font-size: 18px;
+    }
+    .custom-section .content-container h2{
+        font-size: 30px;
+    }
+    .custom-section .content-container p {
+        max-width: 800px;
+        padding: 0;
+        font-size: 18px;
+      }
+    
+    .locations-section .btn-custom {
+      padding: 8px 15px;
+      font-size: 0.9rem;
+
+    }
+    
+  }
 
 .heading-container {
     display: flex;
@@ -844,34 +898,14 @@ a:hover {
 
 }
 
-.line {
-    flex-grow: 1;
-    /* Lines will fill up the space */
-    border: none;
-    height: 1px;
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.75), rgba(255, 255, 255, 0));
-    /* Gradient line */
-    margin: 0 10px;
-    /* Spacing around the text */
-}
 
-.line2 {
-    flex-grow: 1;
-    /* Lines will fill up the space */
-    border: none;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(255, 255, 255, 0));
-    /* Gradient line */
-    margin: 0 10px;
-    /* Spacing around the text */
-}
 
 .heading-text {
     white-space: nowrap;
     padding: 0 10px;
     /* Spacing around the text */
     text-transform: initial;
-    color: #737373;
+    color: #000;
     /* Text color */
     font-size: 34px;
     /* Adjust the font size as needed */
@@ -879,544 +913,418 @@ a:hover {
     /* Adjust font weight as needed */
 }
 
-.heading-containers {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
 
-}
 @media (max-width: 767px) {
     .heading-text {
-        font-size: 24px; /* Even smaller font size for mobile */
+        font-size: 30px; /* Even smaller font size for mobile */
     }
 }
 
-.lines {
-    flex-grow: 1;
-    /* Lines will fill up the space */
+
+
+
+
+
+.project-sections {
+    position: relative;
+}
+
+.project-slider .item img {
+    width: 100%;
+    height: auto;
+}
+
+.project-slider .item {
+    border-radius: 10px;
+    background: #fff;
+}
+
+.customPrevBtn, .customNextBtn {
+    background-color: #77c15f;
     border: none;
-    height: 1px;
-    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
-    /* Gradient line */
-    margin: 0 10px;
-    /* Spacing around the text */
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
 }
 
-.lines2 {
-    flex-grow: 1;
-    /* Lines will fill up the space */
-    border: none;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
-
-    /* Gradient line */
-    margin: 0 10px;
-    /* Spacing around the text */
+.customPrevBtn:before, .customNextBtn:before {
+    content: '';
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 5px;
 }
 
-.heading-texts {
-    white-space: nowrap;
-    padding: 0 10px;
-    /* Spacing around the text */
-
-    color: #fff;
-    /* Text color */
-    font-size: 34px;
-    /* Adjust the font size as needed */
-    
-    /* Adjust font weight as needed */
+.customPrevBtn:before {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
 }
-@media (max-width: 767px) {
-    .heading-texts {
-        font-size: 24px; /* Even smaller font size for mobile */
+
+.customNextBtn:before {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+@media (min-width: 769px) {
+    .customPrevBtn {
+        position: absolute;
+        top: 40%;
+        left: -45px; /* Adjust as needed */
+        transform: translateY(-50%);
+    }
+
+    .customNextBtn {
+        position: absolute;
+        top: 40%;
+        right: -45px; /* Adjust as needed */
+        transform: translateY(-50%);
     }
 }
 
+@media (max-width: 768px) {
+    .custom-nav-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
 
-.project-text  {
-    
-    font-size: 20px;
-    font-weight: 300;
-    text-align: center;
-}
-
-
-
-@media (max-width: 576px) {
-
-    /* For mobile devices */
-    .project-text p {
-        font-size: 16px;
-        text-align: center;
-        /* Further reduced font size */
+    .customPrevBtn, .customNextBtn {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        transform: none;
     }
 }
 
-
-@media screen and (orientation: landscape) {
-    .carousel img {
-        height: 100vh;
-    }
-}
+  .card-title {
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 30px;
+          text-align: left;
+        }
+      
+        .card-text {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          text-align: left;
+        }
+      
+        .h6 {
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 21px;
+          text-align: left;
+        }
+      
+        .card-texts {
+          font-size: 14px;
+          font-weight: 300;
+          line-height: 21px;
+          text-align: left;
+        }
+      
+        .card {
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+      
+        /* Responsive styles for tablet screens (iPad Air, iPad Mini, etc.) */
+        @media (max-width: 992px) {
+          .col-md-4 {
+            flex: 0 0 50%;
+            max-width: 50%;
+          }
+      
+          .card-title {
+            font-size: 18px;
+          }
+      
+          .card-text {
+            font-size: 14px;
+          }
+      
+      
+          .h6 {
+            font-size: 12px;
+          }
+      
+          .card-texts {
+            font-size: 12px;
+          }
+        }
+      
+        /* Responsive styles for smaller tablets (like iPad Mini) */
+        @media (max-width: 768px) {
+          .col-md-4 {
+            flex: 0 0 100%;
+            max-width: 100%;
+          }
+      
+          .card-title {
+            font-size: 16px;
+          }
+      
+          .card-text {
+            font-size: 12px;
+          }
+      
+          .h6 {
+            font-size: 10px;
+          }
+      
+          .card-texts {
+            font-size: 10px;
+          }
+        }
+        @media (max-width: 768px) {
+          .property-btn {
+            padding: 6px 12px; /* Smaller padding for smaller screens */
+            font-size: 0.8rem; /* Smaller font size */
+          }
+      
+          .property-btn-small {
+            padding: 4px 8px; /* Further reduced padding for smaller screens */
+            font-size: 0.7rem; /* Further reduced font size */
+          }
+        }
+        @media (max-width: 1024px) { /* iPad Pro screen width */
+          .property-btn {
+            padding: 8px 16px; /* Adjust padding */
+            font-size: 10px; /* Decrease font size */
+          }
+      
+          .property-btn-small {
+            padding: 4px 10px; /* Decrease padding for smaller buttons */
+            font-size: 10px; /* Decrease font size */
+          }
+      
+          .card-body {
+            padding: 20px; /* Adjust card body padding */
+          }
+      
+          .status-label {
+            font-size: 0.8rem; /* Adjust status label font size */
+            padding: 4px 8px; /* Adjust padding for status label */
+          }
+        }
 
 /* Styling for Swiper Slides */
-.swiper-slide img {
-    width: 85%;
-    /* Full-width image */
-    height: auto;
-    /* Maintains aspect ratio */
-}
 
-/* Zoom-in effect for carousel images */
-.image-container {
-    overflow: hidden;
-    /* Prevents image from overflowing on zoom */
-}
 
-.carousel-images {
-    width: 100%;
-    /* Full-width image */
-    height: auto;
-    /* Maintains aspect ratio */
-    transition: transform 0.3s ease-in-out;
-    /* Smooth transition for zoom */
-}
-
-.carousel-images:hover {
-    transform: scale(1.1);
-    /* Zoom-in effect */
-}
-
-/* Styling for carousel heading */
-.carousel-heading {
+.quote-section {
+    position: relative;
     text-align: center;
-    /* Center the heading */
-    margin-top: 10px;
-    /* Margin above the heading */
-    font-size: 1.2em;
-    /* Adjust font size as needed */
-    font-weight: bold;
-    /* Bold text */
-}
-.carousel-heading:hover{
-    color: #000;
-}
-.loc-link:hover{
-    color: #000;
-}
-
-/* Custom styling for navigation buttons */
-.swiper-button-prev.custom-prev,
-.swiper-button-next.custom-next {
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Semi-transparent background */
-    padding: 10px;
-    /* Ensures space within the circle */
-    border-radius: 50%;
-    /* Circular shape */
-    width: 40px;
-    /* Equal width and height */
-    height: 40px;
-    /* Equal width and height */
+    color: #77c15f; /* Match the text color */
+    padding: 60px 15px;
+    background: url(assets/bg_image.png) no-repeat center center;
+    background-size: cover;
+    height: 300px; /* Adjust height as needed */
     display: flex;
-    /* Centering content */
+    flex-direction: column;
     justify-content: center;
-    /* Centering icon */
     align-items: center;
-    /* Centering icon */
+  }
+  
+  .quote-section h2 {
+    font-style: italic;
+    color: #77c15f; /* Match the text color */
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+
+  .quote-section .btn-custom {
+    background-color: transparent;
+    border: 2px solid #000; /* Black border */
+    color: #77c15f; /* Match the text color */
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .quote-section .btn-custom:hover {
+    background-color: #77c15f; /* Match the text color */
     color: white;
-    /* Icon color */
-}
+  }
 
-.swiper-button-prev.custom-prev:after,
-.swiper-button-next.custom-next:after {
-    font-size: 20px;
-    /* Size of the icon */
-}
 
-/* Custom styling for pagination */
-.swiper-pagination {
+
+  .custom-carousel .owl-nav button.owl-prev, 
+.custom-carousel .owl-nav button.owl-next {
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    border: none;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
     position: absolute;
-    bottom: 10px;
-    /* Position at the bottom */
-
-    text-align: center;
-    /* Centered pagination */
-
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
 }
 
-.swiper-pagination-bullet {
-    background-color: grey;
-    /* Default color for inactive bullets */
-    opacity: 0.7;
-    /* Slight transparency */
+.custom-carousel .owl-nav button.owl-prev {
+    left: -50px;
 }
 
-.swiper-pagination-bullet-active {
-    background-color: #333;
-    /* Darker grey for active bullets */
+.custom-carousel .owl-nav button.owl-next {
+    right: -50px;
 }
 
-/* Styling for the bottom button container */
-.bottom-button-container {
-    text-align: center;
-    /* Center the button */
-    padding-top: 20px;
-    /* Add space above the button */
-}
-
-
-.mission-text h2 {
+/* Style adjustments for smaller screens */
+@media (max-width: 767.98px) {
+    .custom-carousel .owl-nav button.owl-prev,
+    .custom-carousel .owl-nav button.owl-next {
+        top: auto;
+        bottom: -25px;
+        transform: translateY(0);
+        left: 50%;
+        transform: translateX(-50%);
+    }
     
-    font-size: 34px;
-    line-height: 54px;
-    text-align: center;
+    .custom-carousel .owl-nav button.owl-prev {
+        left: calc(50% - 60px);
+    }
     
-}
-
-/* Media query for smaller screens */
-@media only screen and (max-width: 600px) {
-    .mission-text h2 {
-        font-size: 24px;
-        /* Smaller font size */
-        line-height: 36px;
-        /* Adjusted line height */
+    .custom-carousel .owl-nav button.owl-next {
+        left: calc(50% + 20px);
     }
 }
 
-/* Media query for medium screens */
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-    .mission-text h2 {
-        font-size: 30px;
-        /* Medium font size */
-        line-height: 45px;
-        /* Adjusted line height */
-    }
-}
-
-.section {
+.carousel-slide {
     display: flex;
-    /* Using flexbox for horizontal layout */
-    justify-content: space-around;
-    /* Distribute evenly */
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel-slide .text {
     padding: 20px;
-    /* Padding for spacing */
-}
-
-.part {
     text-align: center;
-    /* Center the text */
-}
-.btnsys {
-    text-transform: uppercase;
-    /* Uppercase text */
-    padding: 10px 20px;
-    /* Padding for medium-to-large screens */
-    width: 160px;
-    /* Fixed width for larger screens */
-    border-radius: 20px;
-    /* Rounded corners */
-    background-color: #f0483e;
-    /* Red color */
-    color: #ffffff;
-    /* White text */
-    border: none;
-    /* No border */
-    text-align: center;
-    /* Center text within the button */
-    transition: all 0.3s;
-    /* Smooth hover effect */
 }
 
-.part h2 {
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 48px;
-    letter-spacing: 2%;
-}
-
-.part p {
-    font-weight: 400;
+.text {
     font-size: 20px;
-    line-height: 36px;
+    font-style: italic;
 }
 
-/* Media query for smaller screens */
-@media only screen and (max-width: 600px) {
-    .part h2 {
-        font-size: 24px;
-        /* Smaller font size for heading */
-        line-height: 30px;
-        /* Adjusted line height */
-        letter-spacing: 1%;
-        /* Reduced letter spacing */
-    }
-
-    .part p {
-        font-size: 19px;
-        /* Smaller font size for paragraph */
-        line-height: 24px;
-        /* Adjusted line height */
-    }
-}
-
-/* Media query for medium screens */
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-    .part h2 {
-        font-size: 28px;
-        /* Medium font size for heading */
-        line-height: 42px;
-        /* Adjusted line height */
-        letter-spacing: 1.5%;
-        /* Reduced letter spacing */
-    }
-
-    .part p {
-        font-size: 20px;
-        /* Medium font size for paragraph */
-        line-height: 30px;
-        /* Adjusted line height */
-    }
-}
-
-
-.divider {
-    border-left: 2px solid #fff;
-    /* 2px solid black border */
-    height: 60px;
-    /* Adjust based on section height */
-    align-self: center;
-    /* Align in the center */
-}
-
-@media only screen and (max-width: 600px) {
-
-    /* Media query for responsive layout */
-    .section {
-        flex-direction: column;
-        /* Stack vertically */
-        align-items: center;
-        /* Center content */
-    }
-
-    .divider {
-        display: none;
-        /* Hide the divider in the vertical layout */
-    }
-}
-
-.vision-paragraph p {
-    font-weight: 200;
-    font-size: 20px;
-    line-height: 36px;
-    text-align: center;
-
-}
-
-/* Media query for smaller screens */
-@media only screen and (max-width: 600px) {
-    .vision-paragraph p {
-        font-size: 20px;
-        /* Smaller font size */
-        line-height: 28px;
-        /* Adjusted line height */
-    }
-}
-
-/* Media query for medium screens */
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-    .vision-paragraph p {
-        font-size: 24px;
-        /* Medium font size */
-        line-height: 32px;
-        /* Corresponding line height */
-    }
-}
-
-.view-btn {
-    background-color: #F0483E;
-    color: #ffffff;
-    margin: 0 auto;
-}
-
-.cust-para p {
-    font-weight: 400;
-    font-size: 18px;
-    /* line-height: 26px; */
-    text-align: center;
-}
-
-/* Media query for smaller screens */
-@media only screen and (max-width: 600px) {
-    .cust-para p {
-        font-size: 20px;
-        /* Smaller font size for smaller screens */
-        line-height: 27px;
-        /* Adjusted line height */
-        margin-top: 10px;
-        /* Reduce margin-top */
-    }
-}
-
-/* Media query for medium screens */
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-    .cust-para p {
-        font-size: 20px;
-        /* Medium font size */
-        line-height: 30px;
-        /* Corresponding line height */
-        margin-top: 15px;
-        /* Adjusted margin-top */
-    }
-}
-
-.owle {
-    text-align: center;
-}
-
-iframe {
-    max-width: 100%;
-    /* Ensure iframe is responsive */
-}
-
-/* styles.css */
-.carousel-navigation {
-    text-align: center;
-    /* Center the navigation buttons */
-    margin-top: 20px;
-    /* Add space between carousel and buttons */
-}
-
-.custom-nav-btn {
-    background-color: #f0483e;
-    /* Dark background for contrast */
-    color: white;
-    /* White text for visibility */
-    border: none;
-    /* No border for clean look */
-    padding: 10px 20px;
-    /* Padding for button */
-    cursor: pointer;
-    /* Pointer cursor on hover */
-    transition: all 0.3s;
-    /* Smooth transition on hover */
-}
-
-.custom-nav-btn:hover {
-    background-color: #555;
-    /* Lighter background on hover */
-    color: #fff;
-}
-
-.what-text p {
-    font-weight: 400;
-    font-size: 20px;
-    /* line-height: 36px; */
-    text-align: center;
-}
-
-@media only screen and (max-width: 600px) {
-    .what-text p {
+@media(max-width: 567px) {
+    .text {
         font-size: 18px;
-        /* Smaller font size for smaller screens */
-        line-height: 27px;
-        /* Adjusted line height */
-        margin-top: 10px;
-        /* Reduce margin-top */
+        font-style: italic;
     }
 }
 
-/* Media query for medium screens */
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-    .what-text p {
-        font-size: 20px;
-        /* Medium font size */
-        line-height: 30px;
-        /* Corresponding line height */
-        margin-top: 15px;
-        /* Adjusted margin-top */
-    }
+.carousel-slide .video {
+    text-align: center;
+    width: 100%;
 }
 
-.image-what {
+.carousel-slide .video iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+}
+
+ 
+
+
+
+  .services-section {
+    padding: 60px 15px;
+    text-align: center;
+  }
+  
+  .services-section h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+  }
+  
+  .services-section p {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .services-section .service {
+    margin-bottom: 30px;
+  }
+  
+  .services-section .service .circle-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
     overflow: hidden;
-    /* Ensures that the image doesn't overflow its container */
-    cursor: pointer;
-}
-
-.image-what img {
-    transition: transform 0.5s ease;
-    /* Smooth transition for the zoom effect */
-}
-
-.image-what:hover img {
-    transform: scale(1.2);
-    /* Scale up the image to create the zoom effect */
-}
-
-.find-heading h2 {
-    font-weight: 600;
-    font-size: 36px;
-    line-height: 54px;
-    text-align: justify;
-}
-
-/* Responsive adjustment for smaller screens */
-@media (max-width: 768px) {
-
-    /* For tablets and smaller devices */
-    .find-heading h2 {
-        font-size: 30px;
-        /* Smaller font size */
-        line-height: 45px;
-        /* Adjusted line height */
+    margin: 0 auto 15px; /* Center the circle and add bottom margin */
+  }
+  
+  .services-section .service .circle-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .services-section .service h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 991px) {
+    .services-section {
+      padding: 40px 15px;
     }
-}
-
-@media (max-width: 576px) {
-
-    /* For mobile devices */
-    .find-heading h2 {
-        font-size: 24px;
-        /* Further reduced font size */
-        line-height: 36px;
-        /* Adjusted line height */
+  
+    .services-section h2 {
+      font-size: 2rem;
     }
-
-    .custom-section {
-        width: 100%;
+  
+    .services-section p {
+      font-size: 18px;
+      margin-bottom: 30px;
     }
-}
-
-.fin-para p {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 30px;
-    text-align: justify;
-}
-
-/* Responsive adjustment for smaller screens */
-@media (max-width: 768px) {
-
-    /* For tablets and smaller devices */
-    .fin-para p {
-        font-size: 18px;
-        /* Adjust font size for smaller screens */
-        line-height: 28px;
-        /* Adjust line height */
+  
+    .services-section .service .circle-img {
+      width: 250px;
+      height: 250px;
     }
-}
-
-@media (max-width: 576px) {
-
-    /* For mobile devices */
-    .fin-para p {
-        font-size: 16px;
-        /* Further reduced font size */
-        line-height: 26px;
-        /* Adjusted line height */
+  
+    .services-section .service h3 {
+      font-size: 30px;
     }
-}
+  }
+  
+  @media (max-width: 767px) {
+    .services-section .row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .services-section .service {
+      width: 100%;
+    }
+  
+    .services-section .service .circle-img {
+      width: 200px;
+      height: 200px;
+    }
+  
+    .services-section .service h3 {
+      font-size: 1rem;
+    }
+  }
+
+
+
 
 .read-btn {
     background-color: #F0483E;
@@ -1494,429 +1402,265 @@ iframe {
         /* Further reduced padding for mobile */
     }
 }
-
-.footer {
-    background: #0C0C0C;
-   
-    /* Dark background color */
+.owl-dots {
+    display: block !important;
   }
 
-  .logo-section {
-    display: flex;
-    align-items: center;
-  }
-
-  .logo-section img {
-    margin-bottom: 10px;
-    /* Margin between logo and vertical line */
-  }
-
-  .vertical-line {
-    border-left: 1px solid #fff;
-    /* Vertical line */
-    height: 80px;
-    /* Adjust height as needed */
-    margin-left: 15px;
-    /* Adjust margin as needed */
-  }
-
-  .footer h5 {
-    color: #fff;
-    /* Heading color */
-  }
-
-  .title {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 27px;
-    margin-left: 20px;
-    
-
-  }
-
-  .p {
-    font-family: Poppins;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 24px;
-    letter-spacing: 0.02em;
-    text-align: left;
-
-  }
-
-
-
-
-  .address {
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 24px;
-    letter-spacing: 0.02em;
-    
-
-  }
-  .address.text-white {
-    color: #ffffff; /* Sets the initial color of the link */
-    text-decoration: none; /* Removes underline from the link */
-    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition for hover effects */
+  .footer {
+    background: url(assets/footer_background.png) no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    position: relative; /* Added to position the overlay correctly */
+    color: white; /* Ensure text remains visible */
 }
 
-.address.text-white:hover, .address.text-white:focus {
-    color: #cccccc; /* Changes the color on hover */
-    text-decoration: underline; /* Adds an underline on hover */
-}
-.address.text-white::before {
-  content: '\2192';  /* Unicode for right arrow "→" */
-  color: #0ECA6D;    /* Adjust the color to fit your design */
-  margin-right: 5px; /* Space between the icon and the text */
-  display: inline-block; /* Ensures the pseudo-element behaves as an inline element */
-}
-
-
-  .h5 {
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 36px;
-    letter-spacing: 0.02em;
-    text-align: left;
-
-  }
-
-  .h6 {
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 30px;
-    text-align: left;
-
-  }
-
-  .with-line {
-    position: relative;
-    display: inline-block;
-  }
-
-  .with-line::after {
+.footer::before {
     content: '';
     position: absolute;
-    bottom: -5px;
+    top: 0;
     left: 0;
     width: 100%;
-    height: 2px;
-    background-color: rgb(238, 229, 229);
-    
-  }
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85); /* Adjust the last value to control the brightness */
+    z-index: 1; /* Ensure the overlay is above the background image */
+}
 
+.footer .container {
+    position: relative;
+    z-index: 2; /* Ensure the content is above the overlay */
+}
+.footer-link {
+    display: block;
+    color: #fff;
+   
+}
 
-
-
-  
-
-  @media (max-width: 768px) {
-    .title {
-      font-size: 16px;
-      line-height: 24px;
-      margin-left: 5px;
-    }
-
-    .p {
-      font-size: 14px;
-      line-height: 20px;
-    }
-
-    .address,
-    .h5,
-    .h6 {
-      font-size: 14px;
-      line-height: 20px;
-    }
-
-    .subscription-input {
-      width: 70%;
-      /* Adjust as needed */
-      max-width: 300px;
-      /* Set maximum width for smaller screens */
-      border-radius: 0px;
-    }
-
-    .subscription-box button {
-      margin-left: 0;
-      width: 30%;
-      /* Adjust as needed */
-      max-width: 100px;
-      /* Set maximum width for smaller screens */
-    }
-  }
-
-  .follow-icons {
+.logo-section {
     display: flex;
+    align-items: center;
+}
+
+.logo-section img {
+    margin-bottom: 10px; /* Margin between logo and vertical line */
+}
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-media span {
+    color: #77c15f;
+    font-size: 1.5em;
+    margin-right: 20px;
+}
+
+.social-media-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #77c15f;
+    border-radius: 50%;
+    color: #77c15f;
+    font-size: 1.5em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.social-media-icon:hover {
+    background-color: #77c15f;
+    color: #333;
+}
+
+@media (max-width: 600px) {
+    .social-media {
+        flex-direction: column;
+    }
+
+    .social-media span {
+        margin-bottom: 10px;
+    }
+}
+.d-flex {
     
-    margin-top: 30px; /* Adjust margin as needed */
-    color: #f8f2f2;
-    flex-wrap: nowrap; /* Prevents icons from wrapping to the next line */
+    justify-content: space-between;
 }
-
-.follow-icons a {
-    margin-right: 10px; /* Adjust margin between icons */
-    color: #111; /* Icon color - change if needed */
-    background-color: #fff; /* Background color of the circle */
-    border-radius: 50%; /* Makes the background circle */
-    width: 40px; /* Width of the circle */
-    height: 40px; /* Height of the circle */
-    display: flex; /* Enables the use of flexbox properties */
-    justify-content: center; /* Centers the icon horizontally */
-    align-items: center; /* Centers the icon vertically */
-    text-decoration: none; /* Removes underline from the icon */
+.d-flex img {
+    margin: 0 2px; /* Adjust the gap between images */
+    padding: 5px; /* Optional: add padding inside the border */
+    border-radius: 5px; /* Optional: add rounded corners */
 }
-
-.follow-icons a:last-child {
-    margin-right: 0; /* Removes margin for the last icon to maintain symmetry */
-}
-
-/* Ensure the icons do not stretch */
-.follow-icons a i {
-    width: auto; /* Width of the icon itself */
-}
-.afliate-logo{
-  display: flex; /* Ensures that the container uses flexbox */
-  justify-content: center; /* Centers the logos horizontally */
-  align-items: center; /* Aligns the logos vertically in the center */
-  gap: 20px; /* Adjust the gap size as needed between the logos */
-  margin-top: 3rem;
-}
-
-/* Media query for responsiveness */
-@media (max-width: 768px) {
-    .follow-icons {
-        justify-content: center;
-        flex-wrap: nowrap; /* Ensures icons do not wrap to the next line on small screens */
-    }
-    .follow-icons a {
-        margin-bottom: 0; /* Ensures icons stay in line horizontally */
-    }
-}
-
-
-
-  /* Responsive styles for smaller screens (tablet view) */
-  @media (max-width: 768px) {
-    .footer .row {
-      flex-direction: column;
-      /* Stack vertically */
-      gap: 20px;
-      /* Space between sections */
-    }
-
-    .footer .col-md-4,
-    .footer .col-md-2 {
-      width: 100%;
-      /* Full width on smaller screens */
-      padding: 20px 0;
-      /* Padding for sections */
-    }
-
-    .p,
-    .address,
-    .footer h5 {
-      font-size: 14px;
-      /* Smaller font size */
-      line-height: 20px;
-      /* Adjusted line height */
-    }
-
-    /* Adjust subscription box for smaller screens */
-    .subscription-box {
-      flex-direction: column;
-      /* Stack vertically */
-      align-items: stretch;
-      /* Stretch to full width */
-    }
-
-    .subscription-input {
-      width: 100%;
-      /* Full width */
-    }
-
-    .subscription-box button {
-      width: 100%;
-      /* Full width */
-    }
-
-    /* Adjust follow icons */
-    .follow-icons {
-      justify-content: center;
-      /* Center icons */
-      flex-wrap: wrap;
-      /* Allow icons to wrap */
-    }
-
-    .follow-icons a {
-      margin-right: 10px;
-      /* Adjust spacing */
-      margin-bottom: 10px;
-      /* Space for wrapping */
-    }
-  }
-
-  @media (min-width: 769px) and (max-width: 1024px) {
-    .footer {
-      padding: 30px 15px;
-      /* Adjust padding for smaller screens */
-    }
-
-    .footer .row {
-      flex-direction: column;
-      /* Stack sections vertically */
-      gap: 15px;
-      /* Space between sections */
-    }
-
-    .footer .col-md-4,
-    .footer .col-md-2 {
-      width: 100%;
-      /* Full width for each section */
-      padding: 10px 0;
-      /* Adjust padding */
-    }
-
-    /* Adjust font sizes */
-    .footer h5,
-    .footer h6 {
-      font-size: 18px;
-      /* Smaller font size */
-      line-height: 24px;
-      /* Adjusted line height */
-    }
-
-    .address,
-    .p {
-      font-size: 14px;
-      /* Smaller font size */
-      line-height: 22px;
-      /* Adjusted line height */
-    }
-
-    /* Adjust subscription box layout */
-
-    /* Adjust follow icons */
-    .follow-icons {
-      justify-content: center;
-      /* Center icons */
-      margin-top: 20px;
-      /* Margin above icons */
-    }
-
-    .follow-icons a {
-      margin-right: 10px;
-      /* Space between icons */
-      margin-bottom: 10px;
-      /* Add space for wrapping */
-    }
-  }
-
-  @media (min-width: 769px) and (max-width: 1024px) {
-    .footer .row {
-      flex-direction: column;
-      /* Stack vertically */
-      gap: 20px;
-      /* Space between sections */
-    }
-
-    /* Ensure sections take up full width */
-    .footer .col-md-4,
-    .footer .col-md-2 {
-      width: 100%;
-      /* Full width */
-      padding: 20px;
-      /* Padding for each section */
-    }
-  }
-
-  @media (max-width: 576px) {
-    .footer {
-      padding: 20px;
-      /* Padding for the entire footer on mobile screens */
-    }
-
-    /* Adjust padding for inner elements to maintain spacing */
-    .footer .row {
-      gap: 10px;
-      /* Adjust gap between sections */
-    }
-  }
-.form-control{
-border-radius: 0px;
-}
+.footer .bottom-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #444;
+            padding-top: 10px;
+            margin-top: 20px;
+        }
+        .footer .bottom-section a {
+            color: #fff;
+            margin-left: 15px;
+        }
+        .footer .bottom-section a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 767px) {
+            .footer .bottom-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .margin_section{
+              margin-top: 30px !important;
+            }
+            .footer .bottom-section a {
+                margin-left: 0;
+                margin-top: 5px;
+            }
+            
+        }
+        @media (max-width: 767px) {
+            .footer .bottom-section {
+                flex-direction: column;
+                text-align: center;
+            }
+        
+            .margin_section {
+                margin-top: 30px !important;
+            }
+        
+            .footer .bottom-section a {
+                margin-left: 0;
+                margin-top: 5px;
+            }
+        }
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .d-flex {
+                justify-content: center; /* Center align images in tab view */
+            }
+        }
+        
+        @media (min-width: 768px) and (max-width: 1200px) {
+            .footer .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        
+            .footer .row {
+                width: 100%;
+            }
+        
+            .footer .col-md-4, .footer .col-md-2, .footer .col-md-1 {
+                width: 100%;
+                max-width: 100%;
+            }
+        
+            .logo-section, .social-media, .d-flex {
+                align-items: center;
+                text-align: center;
+            }
+        
+            .social-media {
+                margin-top: 20px;
+            }
+        
+            .social-media-icon {
+                margin-bottom: 10px;
+            }
+        
+            .footer .bottom-section {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        
+            .footer .bottom-section a {
+                margin-left: 0;
+                margin-top: 5px;
+            }
+        }
 a{
 text-decoration: none;
 }
 .newsletter-signup {
-    background-image: url(assets/footer_background.png);
-    background-size: cover;
-    background-position: center;
     position: relative;
     color: white;
     padding: 90px 0;
-  }
-  
-  .overlay {
+}
+
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background: linear-gradient(to top, rgb(12, 12, 12) 0%, rgba(12, 12, 12, 0.7) 100%);
-  }
-  
-  .container {
+}
+
+.container {
     position: relative;
     z-index: 2;
-  }
-  
-  .newsletter-form {
+}
+
+.newsletter-form {
     display: flex;
     align-items: center;
     justify-content: space-between;
     max-width: 900px; /* Adjust based on the width needed */
     margin: auto;
-  }
-  
-  .newsletter-form .text-section {
-    margin-right: 20px; /* Space between text and email field */
-  }
-  
-  .newsletter-heading {
+}
+
+
+.subscribe-btn {
+    background-color: transparent;
+    border: 2px solid #77c15f; /* Change to desired color */
+    color: #77c15f; /* Change to desired color */
+    border-radius: 30px; /* Adjust to make the button cylindrical */
+    /* padding: 10px 20px; */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.subscribe-btn:hover {
+    background-color: #77c15f; /* Change to desired hover color */
+    color: #333; /* Change to desired text color on hover */
+}
+
+
+.newsletter-form .text-section {
+    margin-bottom: 20px; /* Space between text and email field on mobile */
+}
+
+.newsletter-heading {
     margin-bottom: 5px; /* Spacing between heading and text */
     font-size: 20px; /* Adjust size as needed */
-  }
-  
-  .newsletter-text {
+}
+
+.newsletter-text {
     margin-bottom: 10px; /* Spacing between text and input on mobile */
     font-size: 16px; /* Adjust size as needed */
-  }
-  
-  .newsletter-form input[type="email"] {
-    flex-grow: 1;
-    margin-right: 10px;
-    padding: 10px;
-    border: none;
-  }
-  
-  @media (max-width: 768px) {
-      .newsletter-form {
-          flex-direction: column;
-      }
-  
-      .newsletter-form .text-section,
-      .newsletter-form input[type="email"],
-      .newsletter-form button {
-          width: 100%;
-      }
-  
-      .newsletter-form input[type="email"],
-      .newsletter-form button {
-          margin-top: 10px;
-      }
-  }
+}
+
+@media (max-width: 768px) {
+    .newsletter-form {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .newsletter-form .text-section,
+    .newsletter-form input[type="email"],
+    .newsletter-form button {
+        width: 100%;
+    }
+
+    .newsletter-form input[type="email"],
+    .newsletter-form button {
+        margin-top: 10px;
+    }
+}
+
 .form-control {
     border-radius: 0px;
 }
@@ -1924,6 +1668,7 @@ text-decoration: none;
 a {
     text-decoration: none;
 }
+
 
 .whatsapp-icon {
     
@@ -2256,3 +2001,51 @@ a:hover{
     background-color: #f0483e; /* Changes background on hover */
     color: white; /* Changes text color on hover */
 }
+.contact-section {
+    background-color: #77c15f; /* Adjust to match the design background color */
+    padding: 50px 0;
+  }
+  .form-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .card-titles {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 20px;
+  }
+  
+  .form-group input,
+  .form-group select {
+    border-radius: 30px;
+    border: 1px solid #77c15f;
+    padding: 10px 15px;
+  }
+  .form-group {
+    margin-bottom: 15px; /* Adds space between the input fields */
+  }
+  
+  .btn-primary {
+    background-color: #77c15f;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+  }
+  
+  .text-italic {
+    font-style: italic;
+    color: white;
+    font-size: 44px;
+    text-align: center;
+  }
+  
+  .home-image {
+    width: 400px;
+    height: auto;
+    margin-top: 20px;
+  }
