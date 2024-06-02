@@ -2183,9 +2183,9 @@ a:hover{
 .read-btnsy {
     display: inline-block; /* Allows setting width and vertical alignment */
     padding: 10px 30px; /* Top and bottom padding + horizontal padding */
-    background-color: #f0483e; /* Transparent background */
+    background-color: #4b8e3f; /* Transparent background */
     color: #fff; /* Text color */
-    border: 2px solid #f0483e; /* Solid border with a distinct color, example uses 'orange-red' */
+    border: 2px solid #4b8e3f; /* Solid border with a distinct color, example uses 'orange-red' */
     border-radius: 25px; /* Gives a cylindrical shape */
     text-align: center; /* Centers the text inside the button */
     text-decoration: none; /* Removes underline from the link */
@@ -2194,7 +2194,7 @@ a:hover{
 }
 
 .read-btnsy:hover {
-    background-color: #f0483e; /* Changes background on hover */
+    background-color: #4b8e3f; /* Changes background on hover */
     color: white; /* Changes text color on hover */
 }
 .contact-section {
