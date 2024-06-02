@@ -881,6 +881,15 @@ a:hover {
     
   
   }
+  @media (max-width:400px){
+    .custom-section .image-container img {
+    
+        width: 400px;
+        height: 300px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+  }
   .locations-section {
     padding: 60px 0;
     
@@ -1560,7 +1569,7 @@ a:hover {
     cursor: pointer;
     margin-right: 5px;
     color: white;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .captcha-code {
@@ -2255,7 +2264,7 @@ a:hover{
 /* Media query for iPad Air (820px width) */
 @media only screen and (max-width: 840px) {
     .form-card {
-      padding: 10px; /* Adjust the padding as needed */
+      padding: 0px; /* Adjust the padding as needed */
     }
   }
   
