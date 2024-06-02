@@ -495,7 +495,120 @@ ul.list-unstyled li:last-child {
 .custom-select-icon::-ms-expand {
     display: none; /* Hides the default dropdown icon in IE */
 }
+.custom-select-wrapper {
+        position: relative;
+        display: inline-block;
+        width: 200px;
+    }
 
+    .custom-select-display {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border: 1px solid #ccc;
+        padding: 5px 10px;
+        cursor: pointer;
+        border-radius: 25px;
+        height: 40px;
+    }
+
+    .custom-select-display::after {
+        content: '▼'; /* down arrow */
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background: green;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 12px;
+        line-height: 1;
+        margin-left: 10px;
+    }
+
+    .custom-options {
+        display: none;
+        position: absolute;
+        background: white;
+        border: 1px solid #ccc;
+        width: 100%;
+        max-height: 150px;
+        overflow-y: auto;
+        z-index: 1;
+    }
+
+    .custom-options div {
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .custom-options div:hover {
+        background: #f1f1f1;
+    }
+    .accordion-button {
+            border-radius: 20px; /* Make all corners curvy */
+            background-color: #fff; /* Background color */
+            color: #4CAF50; /* Text color */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+            border: 2px solid #4CAF50; /* Remove any default borders */
+            margin-bottom: 10px; /* Space between buttons */
+        }
+
+        .accordion-button:after {
+            display: none; /* Hide default icon */
+        }
+
+        .accordion-button.collapsed {
+            background-color: #fff;
+            color: #4CAF50;
+        }
+        .accordion-button:not(.collapsed) {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            background-color: #fff; /* Background color when expanded */
+            color: #4CAF50;
+        }
+
+        .accordion-button:focus {
+            box-shadow: none; /* Remove the default focus shadow */
+        }
+
+
+        .accordion-button .icon-circle {
+            width: 30px;
+            height: 30px;
+            background-color: #4CAF50; /* Background color of the icon */
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff; /* Icon color */
+            font-size: 16px;
+        }
+
+        .accordion-item {
+            border: none; /* Remove the border of accordion item */
+        }
+
+        .accordion-body {
+            border: none; /* Remove all borders */
+            border-radius: 0 0 20px 20px; /* Curved bottom corners */
+            box-shadow: none; /* Remove shadow */
+            padding: 1rem; /* Add some padding to the body content */
+        }
+
+        @media (max-width: 768px) {
+            .row {
+                flex-direction: column;
+            }
+        }
   </style>
 </head>
 <body>
@@ -714,6 +827,68 @@ ul.list-unstyled li:last-child {
       </div>
 </div>
 
+<div class="custom-select-wrapper">
+  <div class="custom-select-display">Select Country</div>
+  <div class="custom-options">
+      <div data-value="us">United States</div>
+      <div data-value="ca">Canada</div>
+      <div data-value="uk">United Kingdom</div>
+  </div>
+</div>
+<div class="container mt-5">
+  <div class="row">
+      <div class="col-md-6">
+          <h2>Location Map</h2>
+          <div class="map-container mt-5">
+            <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15781.37712742144!2d76.8562698!3d8.5628552!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bfa586b89c7f%3A0x7e0be0b29cf55497!2sElite%20Developers-%20Samrudhi%20Apartments%20in%20Trivandrum!5e0!3m2!1sen!2sin!4v1714986076616!5m2!1sen!2sin"
+            width="550" height="550" style="border:0;" allowfullscreen="" loading="lazy" class="map-frame">
+          </iframe>
+          </div>
+          
+      </div>
+      <div class="col-md-6">
+          <h2>Location Highlights</h2>
+          <div class="accordion mt-5" id="locationHighlightsAccordion">
+              <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="border-radius: 20px;">
+                          EDUCATIONAL INSTITUTIONS
+                          <div class="icon-circle">
+                              <i class="fas fa-chevron-down"></i>
+                          </div>
+                      </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#locationHighlightsAccordion">
+                      <div class="accordion-body">
+                          <!-- Content for EDUCATIONAL INSTITUTIONS -->
+                          Content goes here.
+                      </div>
+                  </div>
+              </div>
+              <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="border-radius: 20px;">
+                          PUBLIC OFFICES
+                          <div class="icon-circle">
+                              <i class="fas fa-chevron-down"></i>
+                          </div>
+                      </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#locationHighlightsAccordion">
+                      <div class="accordion-body">
+                          <!-- Content for PUBLIC OFFICES -->
+                          Content goes here.
+                      </div>
+                  </div>
+              </div>
+              <!-- Add more accordion items as needed -->
+          </div>
+      </div>
+  </div>
+</div>
+
+
   <footer class="footer bg-dark text-white py-5">
     <div class="container">
         <div class="row">
@@ -800,7 +975,47 @@ ul.list-unstyled li:last-child {
             }
         });
     });
+    const customSelectWrapper = document.querySelector('.custom-select-wrapper');
+    const customSelectDisplay = document.querySelector('.custom-select-display');
+    const customOptions = document.querySelector('.custom-options');
+    let selected = false;
 
+    customSelectDisplay.addEventListener('click', () => {
+        if (!selected) {
+            customOptions.style.display = customOptions.style.display === 'block' ? 'none' : 'block';
+        }
+    });
+
+    customOptions.addEventListener('click', (e) => {
+        const value = e.target.getAttribute('data-value');
+        const text = e.target.textContent;
+        customSelectDisplay.textContent = text;
+        customSelectDisplay.appendChild(document.createElement('span')).textContent = '▼';
+        customOptions.style.display = 'none';
+        selected = true; // Set selected to true to disable further interaction
+
+        // Save the selection (for example, to local storage)
+        localStorage.setItem('selectedCountry', value);
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!customSelectWrapper.contains(e.target)) {
+            customOptions.style.display = 'none';
+        }
+    });
+
+    // Load the saved selection on page load
+    document.addEventListener('DOMContentLoaded', () => {
+        const savedCountry = localStorage.getItem('selectedCountry');
+        if (savedCountry) {
+            const selectedOption = document.querySelector(`.custom-options div[data-value="${savedCountry}"]`);
+            if (selectedOption) {
+                customSelectDisplay.textContent = selectedOption.textContent;
+                customSelectDisplay.appendChild(document.createElement('span')).textContent = '▼';
+                selected = true;
+            }
+        }
+    });
     </script>
 </body>
 </html>

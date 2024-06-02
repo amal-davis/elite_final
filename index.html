@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@9/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
@@ -39,6 +38,17 @@
             <i class="fa fa-question-circle" aria-hidden="true"></i>
         </a>
     </div>
+    <div class="bottom-fixed-icons">
+      <a href="tel:1234567890" class="call-link">
+          <i class="fa fa-phone" aria-hidden="true"></i> Call
+      </a>
+      <a href="#" class="enquire-link" data-bs-toggle="modal" data-bs-target="#leadModal">
+          <i class="fa fa-envelope" aria-hidden="true"></i> Enquire
+      </a>
+      <a href="https://api.whatsapp.com/send?phone=917025306368" target="_blank" class="whatsapp-link">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+      </a>
+  </div>
 
 
     <div class="header">
@@ -53,7 +63,7 @@
             </a>
         </div>
         <div class="phone-icon" style="color: #fff;">
-            <i class="fas fa-phone"></i>
+            <!-- <i class="fas fa-phone"></i> -->
         </div>
         <div class="menu">
             <!-- Menu items will go here -->
@@ -215,56 +225,56 @@
 
     <!-- Container for the section -->
     <section class="custom-section container-fluid">
-        <div class="container-fluid">
+        <div class="container">
           <div class="row align-items-center">
             <div class="col-md-4 image-container animas">
-              <img src="assets/3.png" alt="Circular Image" class="img-fluid">
+              <img src="assets/elite_top_image.jpg" alt="Circular Image" class="img-fluid">
             </div>
             <div class="col-md-8 content-container animas">
               <h2 class="font">Building Lifestyles</h2>
               <p>
                 Elite Developers is dedicated to "building lifestyles" in the truest sense. For us, it goes beyond merely constructing structures. We craft experiences that elevate everyday living. This driving philosophy is ingrained in our DNA, guiding us to create world-class, quality homes and communities that resonate with discerning individuals.
               </p>
-              <button class="btn btn-custom">READ MORE</button>
+              <a class="btn btn-custom" href="philosophy.html">READ MORE</a>
             </div>
           </div>
         </div>
       </section>
     <div class="container project-sections mt-5">
-    <h2 class="mb-5 font anim">Featured Projects</h2>
+    <h2 class="mb-5 pro_heading anim">Featured Projects</h2>
     <div class="owl-carousel owl-theme project-slider">
       <div class="item">
-        <div class="card mb-4">
+        <div class="card mb-4" style="border-radius: 15px;">
           <div class="status-label"
             style="position: absolute; top: -5px; left: 50%; transform: translateX(-50%); background: white; padding: 5px 10px; border-radius: 10px; font-weight: bold;">
             COMPLETED <!-- Example status text -->
           </div>
-          <img src="assets/samrudhi_image.png" class="card-img-top" alt="Image 1">
+          <img src="assets/samrudhi_image.png" class="card-img-top" alt="Image 1" style="border-top-left-radius: 15px; border-top-right-radius: 15px;">
           <div class="card-body">
             <h5 class="card-title">Elite Samruddhi</h5>
             <p class="card-text"><i class="fas fa-map-marker-alt"></i> Kazhakkoottam, Kerala 680551</p>
 
             <div class="row">
               <div class="col">
-                <h6>Area Range</h6>
+                <h6 class="small_h">Area Range</h6>
                 <p class="card-texts">2,854 - 1,210 Sq.Ft</p>
               </div>
               <div class="col ">
-                <h6>Apartment Type</h6>
+                <h6 class="small_h">Apartment Type</h6>
                 <p class="card-texts">4,3 & 2 BHK</p>
               </div>
             </div>
             <hr>
-            <h6>K-RERA</h6>
+            <h6 class="small_h">K-RERA</h6>
             <p class="card-texts">K-RERA/PRJ/ERN/050/2021</p>
-            <div class="d-flex justify">
-              <button class="btn btn-dark property-btn"style="background-color: white; color: black; ">BROCHURE</button>
-                <a class="btn btn-dark property-btn"style="background: var(--Button-Bl-1, #242660); margin-left: 12px;" href="project_page.html">VIEW PROJECT</a>
-              <button class="btn  btn-md property-btn-small" style="margin-left: 12px; background-color: #25D366; color: #fff;">
+            <div class="d-flex justify content-buttons">
+              <button class="btn btn-customs">BROCHURE</button>
+              <a class="btn btn-customse" href="project_page.html">VIEW PROJECT</a>
+              <button class="btn btn-md property-btn-small whatsapp-btn">
                 <!-- Small button with WhatsApp icon -->
                 <i class="fab fa-whatsapp"></i>
               </button>
-              <button class="btn btn-light btn-md property-btn-small" style="margin-left: 12px;">
+              <button class="btn btn-light btn-md property-btn-small phone-btn">
                 <!-- Small button with telephone icon -->
                 <i class="fas fa-phone"></i>
               </button>
@@ -273,40 +283,37 @@
         </div>
       </div>
       <div class="item">
-        <div class="card mb-4">
+        <div class="card mb-4" style="border-radius: 15px;">
           <div class="status-label"
             style="position: absolute; top: -5px; left: 50%; transform: translateX(-50%); background: white; padding: 5px 10px; border-radius: 10px; font-weight: bold;">
             ONGOING <!-- Example status text -->
           </div>
-          <img src="assets/Frame 245.png" class="card-img-top" alt="Image 1">
+          <img src="assets/Frame 245.png" class="card-img-top" alt="Image 1" style="border-top-left-radius: 15px; border-top-right-radius: 15px;">
           <div class="card-body">
             <h5 class="card-title">Elite Insignia</h5>
             <p class="card-text"><i class="fas fa-map-marker-alt"></i> Adat, Thrissur, Kerala</p>
 
             <div class="row">
               <div class="col">
-                <h6>Area Range</h6>
+                <h6 class="small_h">Area Range</h6>
                 <p class="card-texts">2,854 - 1,210 Sq.Ft</p>
               </div>
               <div class="col ">
-                <h6>Apartment Type</h6>
+                <h6 class="small_h">Apartment Type</h6>
                 <p class="card-texts">4,3 & 2 BHK</p>
               </div>
             </div>
             <hr>
-            <h6>K-RERA</h6>
+            <h6 class="small_h">K-RERA</h6>
             <p class="card-texts">K-RERA/PRJ/ERN/050/2021</p>
-            <div class="d-flex justify">
-              <button class="btn btn-dark property-btn"
-                style="background-color: white; color: black; ">BROCHURE</button>
-              <button class="btn btn-dark property-btn"
-                style="background: var(--Button-Bl-1, #242660); margin-left: 12px ;   ">VIEW
-                PROJECT</button>
-              <button class="btn  btn-md property-btn-small" style="margin-left: 12px; background-color: #25D366; color: #fff;">
+            <div class="d-flex justify content-buttons">
+              <button class="btn btn-customs">BROCHURE</button>
+              <button class="btn btn-customse">VIEW PROJECT</button>
+              <button class="btn btn-md property-btn-small whatsapp-btn">
                 <!-- Small button with WhatsApp icon -->
                 <i class="fab fa-whatsapp"></i>
               </button>
-              <button class="btn btn-light btn-md property-btn-small" style="margin-left: 12px;">
+              <button class="btn btn-light btn-md property-btn-small phone-btn">
                 <!-- Small button with telephone icon -->
                 <i class="fas fa-phone"></i>
               </button>
@@ -315,40 +322,37 @@
         </div>
       </div>
       <div class="item">
-        <div class="card mb-4">
+        <div class="card mb-4" style="border-radius: 15px;">
           <div class="status-label"
             style="position: absolute; top: -5px; left: 50%; transform: translateX(-50%); background: white; padding: 5px 10px; border-radius: 10px; font-weight: bold;">
             ONGOING <!-- Example status text -->
           </div>
-          <img src="assets/Frame 246.png" class="card-img-top" alt="Image 1">
+          <img src="assets/Frame 246.png" class="card-img-top" alt="Image 1" style="border-top-left-radius: 15px; border-top-right-radius: 15px;">
           <div class="card-body">
             <h5 class="card-title">Elite Paradiza</h5>
             <p class="card-text"><i class="fas fa-map-marker-alt"></i> Kuttoor,Thrissur, Kerala</p>
 
             <div class="row">
               <div class="col">
-                <h6>Area Range</h6>
+                <h6 class="small_h">Area Range</h6>
                 <p class="card-texts">2,854 - 1,210 Sq.Ft</p>
               </div>
               <div class="col ">
-                <h6>Apartment Type</h6>
+                <h6 class="small_h">Apartment Type</h6>
                 <p class="card-texts">4,3 & 2 BHK</p>
               </div>
             </div>
             <hr>
-            <h6>K-RERA</h6>
+            <h6 class="small_h">K-RERA</h6>
             <p class="card-texts">K-RERA/PRJ/ERN/050/2021</p>
-            <div class="d-flex justify">
-              <button class="btn btn-dark property-btn"
-                style="background-color: white; color: black; ">BROCHURE</button>
-              <button class="btn btn-dark property-btn"
-                style="background: var(--Button-Bl-1, #242660); margin-left: 12px ;   ">VIEW
-                PROJECT</button>
-              <button class="btn  btn-md property-btn-small" style="margin-left: 12px; background-color: #25D366; color: #fff;">
+            <div class="d-flex justify content-buttons">
+              <button class="btn btn-customs">BROCHURE</button>
+              <button class="btn btn-customse">VIEW PROJECT</button>
+              <button class="btn btn-md property-btn-small whatsapp-btn">
                 <!-- Small button with WhatsApp icon -->
                 <i class="fab fa-whatsapp"></i>
               </button>
-              <button class="btn btn-light btn-md property-btn-small" style="margin-left: 12px;">
+              <button class="btn btn-light btn-md property-btn-small phone-btn">
                 <!-- Small button with telephone icon -->
                 <i class="fas fa-phone"></i>
               </button>
@@ -357,40 +361,37 @@
         </div>
       </div>
       <div class="item">
-        <div class="card mb-4">
+        <div class="card mb-4" style="border-radius: 15px;">
           <div class="status-label"
             style="position: absolute; top: -5px; left: 50%; transform: translateX(-50%); background: white; padding: 5px 10px; border-radius: 10px; font-weight: bold;">
             COMPLETED <!-- Example status text -->
           </div>
-          <img src="assets/Frame 247.png" class="card-img-top" alt="Image 1">
+          <img src="assets/Frame 247.png" class="card-img-top" alt="Image 1" style="border-top-left-radius: 15px; border-top-right-radius: 15px;">
           <div class="card-body">
             <h5 class="card-title">Elite La Pristine</h5>
             <p class="card-text"><i class="fas fa-map-marker-alt"></i> Adatt, Kerala 680551</p>
 
             <div class="row">
               <div class="col">
-                <h6>Area Range</h6>
+                <h6 class="small_h">Area Range</h6>
                 <p class="card-texts">2,854 - 1,210 Sq.Ft</p>
               </div>
               <div class="col ">
-                <h6>Apartment Type</h6>
+                <h6 class="small_h">Apartment Type</h6>
                 <p class="card-texts">4,3 & 2 BHK</p>
               </div>
             </div>
             <hr>
-            <h6>K-RERA</h6>
+            <h6 class="small_h">K-RERA</h6>
             <p class="card-texts">K-RERA/PRJ/ERN/050/2021</p>
-            <div class="d-flex justify">
-              <button class="btn btn-dark property-btn"
-                style="background-color: white; color: black; ">BROCHURE</button>
-              <button class="btn btn-dark property-btn"
-                style="background: var(--Button-Bl-1, #242660); margin-left: 12px ;   ">VIEW
-                PROJECT</button>
-              <button class="btn  btn-md property-btn-small" style="margin-left: 12px; background-color: #25D366; color: #fff;">
+            <div class="d-flex justify content-buttons">
+              <button class="btn btn-customs">BROCHURE</button>
+              <button class="btn btn-customse">VIEW PROJECT</button>
+              <button class="btn btn-md property-btn-small whatsapp-btn">
                 <!-- Small button with WhatsApp icon -->
                 <i class="fab fa-whatsapp"></i>
               </button>
-              <button class="btn btn-light btn-md property-btn-small" style="margin-left: 12px;">
+              <button class="btn btn-light btn-md property-btn-small phone-btn">
                 <!-- Small button with telephone icon -->
                 <i class="fas fa-phone"></i>
               </button>
@@ -401,8 +402,8 @@
       <!-- Add more items as needed -->
     </div>
     <div class="custom-nav-buttons">
-        <button class="customPrevBtn"></button>
-        <button class="customNextBtn"></button>
+        <button class="customPrevBtn nav-button"></button>
+        <button class="customNextBtn nav-button"></button>
     </div>
   </div>
 
@@ -412,60 +413,62 @@
           <h2 class="font anim">Locations</h2>
           <p class="mt-3">We carefully select locations that provide excellent connectivity, outstanding financial returns, and a pleasant neighbourhood experience.Each land is carefully vetted by our team of professionals so that you can invest worry free.</p>
           <div>
-            <a class="btn btn-custom mt-3 animas">ALL LOCATIONS</a>
-            <a class="btn btn-custom mt-3 animas">THRISSUR</a>
-            <a class="btn btn-custom mt-3 animas">TRIVANDRUM</a>
+            <a class="btn btn-custom mt-3 animas" href="residential.html">ALL LOCATIONS</a>
+            <a class="btn btn-custom mt-3 animas" href="locations.html">THRISSUR</a>
+            <a class="btn btn-custom mt-3 animas" href="trivandram.html">TRIVANDRUM</a>
           </div>
         </div>
       </section>
 
 
       <section class="quote-section mt-5">
-        <h2>"We're helping hundreds of customers find their dream homes"</h2>
-        <button class="btn btn-custom">HOME BUYERS GUIDE</button>
+        <h2>"We're helping hundreds of customers <br> find their dream homes"</h2>
+        <a class="btn btn-custom" href="home_loan_faq.html">HOME BUYERS GUIDE</a>
       </section>
 
-      <div class="container-fluid py-5" style="background-color: #77c15f;">
-        <div class="container mt-5">
-          <div class="owl-carousel owl-theme custom-carousel">
-              <div class="carousel-slide">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="text">
-                      <p>"The satisfaction of customers is paramount for Elite Developers, a real estate developer who has a strong reputation for delivering quality projects on time”</p>
-                      <p>- Mr. K.S. Prasad & Family</p>
-                  </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="video">
-                      <iframe src="https://www.youtube.com/embed/f6Zuv0KrEUc?si=1pYSs5SS_Yw7HZ6N" frameborder="0" allowfullscreen style="border-radius: 20px;"></iframe>
-                  </div>
+      <div class="container-fluid py-5 second-carousel" style="background-color: #77c15f;">
+        <div class="container mt-5 position-relative">
+          <div class="owl-carousel owl-theme custom-carousel-2">
+            <div class="carousel-slide">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="text">
+                    <p>"The satisfaction of customers is paramount for Elite Developers, a real estate developer who has a strong reputation for delivering quality projects on time”</p>
+                    <p style="font-weight: 700;">- Mr. K.S. Prasad & Family</p>
                   </div>
                 </div>
-    
-                 
-              </div>
-              <div class="carousel-slide">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="text">
-                      <p>"The satisfaction of customers is paramount for Elite Developers, a real estate developer who has a strong reputation for delivering quality projects on time”</p>
-                      <p>- Mr. K.S. Prasad & Family</p>
-                  </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="video">
-                      <iframe src="https://www.youtube.com/embed/f6Zuv0KrEUc?si=1pYSs5SS_Yw7HZ6N" frameborder="0" allowfullscreen style="border-radius: 20px;"></iframe>
-                  </div>
+                <div class="col-md-6">
+                  <div class="video">
+                    <iframe src="https://www.youtube.com/embed/f6Zuv0KrEUc?si=1pYSs5SS_Yw7HZ6N" frameborder="0" allowfullscreen style="border-radius: 20px;"></iframe>
                   </div>
                 </div>
-    
-                 
               </div>
-              <!-- Add more slides as needed -->
+            </div>
+            <div class="carousel-slide">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="text">
+                    <p>"The satisfaction of customers is paramount for Elite Developers, a real estate developer who has a strong reputation for delivering quality projects on time”</p>
+                    <p style="font-weight: 700;">- Mr. K.S. Prasad & Family</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="video">
+                    <iframe src="https://www.youtube.com/embed/f6Zuv0KrEUc?si=1pYSs5SS_Yw7HZ6N" frameborder="0" allowfullscreen style="border-radius: 20px;"></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Add more slides as needed -->
           </div>
-      </div> 
+          <div class="custom-nav-buttons-2">
+            <button class="customPrevBtn-2 nav-button"></button>
+            <button class="customNextBtn-2 nav-button"></button>
+          </div>
+        </div>
       </div>
+      
+ 
 
 
       <section class="services-section">
@@ -475,21 +478,21 @@
           <div class="row">
             <div class="col-md-4 service animas">
               <div class="circle-img">
-                <img src="assets/residential_image.png" alt="Residential" class="img-fluid">
+                <img src="assets/residential_image.jpg" alt="Residential" class="img-fluid">
               </div>
-              <h3>Residential</h3>
+              <h3 class="text-center">Residential</h3>
             </div>
             <div class="col-md-4 service animas">
               <div class="circle-img">
-                <img src="assets/commercial_image.png" alt="Commercial & Office" class="img-fluid">
+                <img src="assets/commercial_image.jpg" alt="Commercial & Office" class="img-fluid">
               </div>
-              <h3>Commercial & Office</h3>
+              <h3 class="text-center">Commercial & Office</h3>
             </div>
             <div class="col-md-4 service animas">
               <div class="circle-img">
-                <img src="assets/inddustrial_image.png" alt="Factory & Industrial" class="img-fluid">
+                <img src="assets/industrial_image.jpg" alt="Factory & Industrial" class="img-fluid">
               </div>
-              <h3>Factory & Industrial</h3>
+              <h3 class="text-center">Factory & Industrial</h3>
             </div>
           </div>
         </div>
@@ -504,7 +507,7 @@
               <!-- Card 1 -->
               <div class="col-md-4 pt-5 animas">
                 <div class="my-card card h-100" style="border-radius: 15px;">
-                  <img class="my-card-img" src="assets/media_center.png" alt="Media Centre" style="border-top-left-radius:15px ; border-top-right-radius: 15px;">
+                  <img class="my-card-img" src="assets/news_events.jpg.png" alt="Media Centre" style="border-top-left-radius:15px ; border-top-right-radius: 15px;">
                   <div class="my-card-body">
                     <h5 class="my-card-title">MEDIA CENTRE</h5>
                     <p class="my-card-text">A one touch source for news from the media lens. Get access to our brand assets – newsletters, press kit, and more.</p>
@@ -517,7 +520,7 @@
               </div>
               <div class="col-md-4 pt-5 animas">
                 <div class="my-card card h-100" style="border-radius: 15px;">
-                  <img class="my-card-img" src="assets/previlaghe_img.png" alt="Media Centre" style="border-top-left-radius:15px ; border-top-right-radius: 15px;">
+                  <img class="my-card-img" src="assets/elite_previlage.jpg.png" alt="Media Centre" style="border-top-left-radius:15px ; border-top-right-radius: 15px;">
                   <div class="my-card-body">
                     <h5 class="my-card-title">ELITE PRIVILEGE</h5>
                     <p class="my-card-text">A one-of-a-kind rewards programme, ELITE Privilege is feature loaded. Welcome your friends and relatives to the ELITE family and get rewarded too.
@@ -532,7 +535,7 @@
               </div>
               <div class="col-md-4 pt-5 animas">
                 <div class="my-card card h-100" style="border-radius: 15px;">
-                  <img class="my-card-img" src="assets/blog_img.png" alt="Media Centre" style="border-top-left-radius:15px ; border-top-right-radius: 15px;">
+                  <img class="my-card-img" src="assets/blog.jpg.png" alt="Media Centre" style="border-top-left-radius:15px ; border-top-right-radius: 15px;">
                   <div class="my-card-body">
                     <h5 class="my-card-title">ELITE BLOG</h5>
                     <p class="my-card-text">Get latest insights from the construction sector and in-depth views on real estate investment avenues, and more from our thought leaders.
@@ -551,47 +554,10 @@
           </div>
           
     </div>
-    <div class="container mt-5">
-        <div class="heading-container ">
-            <span class="heading-text font">Social Media Feeds</span>
-        </div>
-    </div>
-    <div class="container" style="margin-top: 70px;">
-        <div class="row justify-content-center"> <!-- Main responsive row centered -->
-
-            <!-- Instagram section -->
-            <div class="col-lg-4 col-md-8 col-sm-12 pt-5 d-flex justify-content-center animas">
-                <!-- Centered within the column -->
-                <blockquote class="instagram-media"
-                    data-instgrm-permalink="https://www.instagram.com/elitedevelopersindia/" data-instgrm-version="13">
-                </blockquote>
-                <script async src="//www.instagram.com/embed.js"></script>
-            </div>
-
-            <!-- Facebook section -->
-            <div class="col-lg-4 col-md-8 col-sm-12 pt-5 d-flex justify-content-center animas">
-                <!-- Centered within the column -->
-                <iframe
-                    src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/Elitedevlp&tabs=timeline&width=340&height=500"
-                    width="320" height="480" style="border:none;overflow:hidden;" frameborder="0"
-                    allow="encrypted-media">
-                </iframe>
-            </div>
-            <div class="col-lg-4 col-md-8 col-sm-12 pt-5 d-flex justify-content-center animas">
-                <a class="twitter-timeline"
-                   data-width="320"
-                   data-height="480"
-                   href="https://twitter.com/eliterealtydev?ref_src=twsrc%5Etfw">
-                    Tweets by eliterealtydev
-                </a>
-                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </div>
-
-        </div>
-    </div>
 
 
-    <div class="contact-section mt-5">
+
+    <div class="contact-section">
       <div class="container">
           <div class="row">
               <!-- Left Section: Form -->
@@ -606,22 +572,26 @@
                               <div class="form-group">
                                   <input type="email" class="form-control" placeholder="EMAIL">
                               </div>
-                              <div class="form-group position-relative">
-                                <select class="form-control custom-select-icon">
-                                    <option>COUNTRY</option>
-                                    <option>Country 1</option>
-                                    <option>Country 2</option>
-                                    <option>Country 3</option>
-                                </select>
+                              <div class="form-group">
+                                <div class="custom-select-wrapper">
+                                    <select class="custom-select">
+                                        <option>COUNTRY</option>
+                                        <option>Country 1</option>
+                                        <option>Country 2</option>
+                                        <option>Country 3</option>
+                                    </select>
+                                </div>
                             </div>
                               <div class="form-group">
                                   <input type="text" class="form-control" placeholder="MOBILE NO.">
                               </div>
-                              <div class="form-group d-flex align-items-center">
-                                <div class="g-recaptcha" data-sitekey="6LeaWo0oAAAAAFwUZumj1tuXGu80q9yXLjxePcYD" data-callback="recaptchaCallback"><div style="width: 304px; height: 78px;"><div><iframe title="reCAPTCHA" width="304" height="78" role="presentation" name="a-yj8zl5refk7s" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="https://www.google.com/recaptcha/api2/anchor?ar=2&amp;k=6LeaWo0oAAAAAFwUZumj1tuXGu80q9yXLjxePcYD&amp;co=aHR0cHM6Ly9rdXJ1dmFpc2xhbmRyZXNvcnQuY29tOjQ0Mw..&amp;hl=en&amp;v=8k85QBI-qzxmenDv318AZH30&amp;size=normal&amp;cb=6oexsqxonr31"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div>
-                              </div>
-                              <div class="text-center">
-                                <button type="submit" class="btn subscribe-btn btn-block">SUBMIT</button>
+                                <div class="form-group captcha-wrapper">
+                                    <div class="captcha-circle" id="refreshCaptcha">↻</div>
+                                    <div class="captcha-code" id="captchaCode">iF79d</div>
+                                    <input type="text" class="form-control captcha-input" id="captchaInput" placeholder="ENTER CAPTCHA">
+                                </div>
+                              <div class="text-center mt-3">
+                                <button type="submit" class="btn btn-submit">SUBMIT</button>
     
                               </div>
                           </form>
@@ -630,7 +600,7 @@
               </div>
               <div class="col-md-6 d-flex flex-column justify-content-center align-items-center pt-5">
                 <p class="text-italic">Take a step closer to owning your dream home!</p>
-                <img src="assets/home_vector.png" alt="Home Image" class="home-image img-fluid">
+                <img src="assets/home_icon.svg" alt="Home Image" class="home-image img-fluid">
             </div>
           </div>
           </div>
@@ -638,29 +608,14 @@
 
 
     <footer class="footer text-white py-5">
-        <div class="newsletter-signup mt-5">
-            <div class="container">
-                <form class="newsletter-form row">
-                    <div class="col-md-6 text-section">
-                        <h2 class="newsletter-heading">Join Our Newsletter</h2>
-                        <p class="newsletter-text">Stay updated with our latest news and offers.</p>
-                    </div>
-                    <div class="col-md-4 mb-2">
-                        <input type="email" class="form-control" placeholder="Your Email Id">
-                    </div>
-                    <div class="col-md-2">
-                        <button type="submit" class="btn subscribe-btn w-100">Subscribe</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="container">
+       
+        <div class="container" style="margin-top: 90px;">
             <div class="row">
                 <!-- First Section -->
                 <div class="col-md-4 pt-5">
                     <!-- Logo and vertical line -->
                     <div class="logo-section">
-                        <img src="assets/logo FOOD 2.png" alt="Logo" class="mb-3">
+                        <img src="assets/elite_parent_logo.png" alt="Logo" class="mb-3 img-fluid" style="width: 120px;">
                         <div class="vertical-line"></div>
                        &nbsp; &nbsp; <h6 class=" title mt-3 mb-3"> <span>An Elite Foods <br><span>& Innovations </span><br><span>Group Enterprise</span> </span> </h6>
                     </div>
@@ -679,12 +634,12 @@
     <!-- Second Section Content -->
     <h5 class="mb-3 with-line" style="color: #77c15f;">MORE INFORMATION</h5>
     <br><a class="footer-link" style="cursor: pointer;"><span style="color: #77c15f;">></span> News & Events</a> <br>
-    <a class="footer-link" style="cursor: pointer;"><span style="color: #77c15f;">></span>Best Builder in Thrissur</a><br>
-    <a class="footer-link" style="cursor: pointer;"><span style="color: #77c15f;">></span>Best Builder in Trivandrum</a><br>
+    <a class="footer-link" style="cursor: pointer;"><span style="color: #77c15f;">></span> Best Builder in Thrissur</a><br>
+    <a class="footer-link" style="cursor: pointer;"><span style="color: #77c15f;">></span> Best Builder in Trivandrum</a><br>
     <br><h5 class="mb-3 with-line" style="color: #77c15f;">PROJECT DETAILS</h5>
-    <a class="footer-link" style="cursor: pointer;"><span style="color: #77c15f;">></span>Flats in Thrissur</a><br>
-    <a class="footer-link" style="cursor: pointer;"><span style="color: #77c15f;">></span>Flats in Trivandrum</a><br>
-    <a class="footer-link" style="cursor: pointer;"><span style="color: #77c15f;">></span>All Location</a><br>
+    <a class="footer-link" style="cursor: pointer;"><span style="color: #77c15f;">></span> Flats in Thrissur</a><br>
+    <a class="footer-link" style="cursor: pointer;"><span style="color: #77c15f;">></span> Flats in Trivandrum</a><br>
+    <a class="footer-link" style="cursor: pointer;"><span style="color: #77c15f;">></span> All Location</a><br>
 </div>
                     <div class="col-md-2 pt-5">
                         <h5 style="color: #77c15f;">Get Social</h5>
@@ -704,9 +659,9 @@
                             </a>
                        
                        <div class="d-flex justify-content-between" style="margin-top: 120px;">
-                            <img src="assets/Frame 273.png" alt="Logo 1" class="img-fluid">
-                            <img src="assets/BAI LOG 2.png" alt="Logo 2" class="img-fluid">
-                            <img src="assets/logo-tripadviser.webp" alt="Logo 3" class="img-fluid">
+                            <img src="assets/certification1.png" alt="Logo 1" class="img-fluid" style="width: 100px; height: 100px;">
+                            <img src="assets/certification2.png" alt="Logo 2" class="img-fluid" style="width: 100px; height: 100px;">
+                            <img src="assets/certfications3.webp" alt="Logo 3" class="img-fluid" style="width: 100px; height: 100px;">
                         </div>
                     </div>
                     </div>
@@ -724,7 +679,7 @@
                   </div>
                     </div>
                     </footer>
-    <div class="modal fade" id="leadModal" tabindex="-1" aria-labelledby="leadModalLabel" aria-hidden="true">
+    <div class="modal fade" id="leadModal" tabindex="-1" aria-labelledby="leadModalLabel" aria-hidden="true" style="margin-top: 120px;">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -759,6 +714,9 @@
 
 
     <script>
+
+
+
 
 
 ScrollReveal().reveal('.anim', {
@@ -808,7 +766,7 @@ ScrollReveal().reveal('.anim', {
     loop: true,
     margin: 10,
     nav: false,
-    dots: true, // Enable dots
+    dots: false, // Enable dots
     responsive: {
       0: {
         items: 1,
@@ -821,7 +779,8 @@ ScrollReveal().reveal('.anim', {
       1000: {
         items: 3,
         dots: true
-      }
+      },
+      
     }
   });
 
@@ -835,31 +794,37 @@ ScrollReveal().reveal('.anim', {
     owlProjectSlider.trigger('prev.owl.carousel');
   });
 
-  var customCarousel = $(".custom-carousel").owlCarousel({
-    items: 1,
-    loop: true,
-    nav: true,
-    navText: ["<", ">"],
-    dots: true, // Enable dots
-    responsive: {
-      0: {
+  var customCarousel2 = $(".custom-carousel-2").owlCarousel({
         items: 1,
-        dots: true
-      },
-      600: {
-        items: 1,
-        dots: true
-      },
-      1000: {
-        items: 1,
-        dots: true
-      }
-    }
-  });
+        loop: true,
+        nav: false,
+        dots: true,
+        responsive: {
+            0: {
+                items: 1,
+                dots: true
+            },
+            600: {
+                items: 1,
+                dots: true
+            },
+            1000: {
+                items: 1,
+                dots: true
+            }
+        }
+    });
 
-  console.log("Carousels initialized");
+    $(".second-carousel .customNextBtn-2").click(function() {
+        customCarousel2.trigger('next.owl.carousel');
+    });
+
+    $(".second-carousel .customPrevBtn-2").click(function() {
+        customCarousel2.trigger('prev.owl.carousel');
+    });
+
+    console.log("Second carousel initialized");
 });
-
 
 
 
@@ -882,6 +847,7 @@ $(document).ready(function() {
         autoplayTimeout: 3000,
         autoplayHoverPause: false,
         dots: false,
+        nav:false,
         animateOut: 'fadeOut',
         responsive: {
             0: {
@@ -906,7 +872,8 @@ $(document).ready(function() {
         autoplay: true,
         autoplayTimeout: 3000,
         autoplayHoverPause: false,
-        dots: true, // You can enable dots if you want indicators on mobile
+        dots: false, // You can enable dots if you want indicators on mobile
+        nav:false,
         responsive: {
             0: {
                 items: 1
@@ -1079,7 +1046,39 @@ $(document).ready(function() {
             window.location.href = "https://wa.me/1234567890"; // Redirect to a specific number
         }
 
+        const captchaCodeElement = document.getElementById('captchaCode');
+    const refreshCaptchaElement = document.getElementById('refreshCaptcha');
+    const captchaInputElement = document.getElementById('captchaInput');
+    const submitBtnElement = document.getElementById('submitBtn');
 
+    function generateCaptcha() {
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        let captcha = '';
+        for (let i = 0; i < 5; i++) {
+            captcha += characters.charAt(Math.floor(Math.random() * characters.length));
+        }
+        return captcha;
+    }
+
+    function refreshCaptcha() {
+        const newCaptcha = generateCaptcha();
+        captchaCodeElement.textContent = newCaptcha;
+    }
+
+    refreshCaptchaElement.addEventListener('click', refreshCaptcha);
+
+    submitBtnElement.addEventListener('click', () => {
+        const enteredCaptcha = captchaInputElement.value;
+        const generatedCaptcha = captchaCodeElement.textContent;
+        if (enteredCaptcha === generatedCaptcha) {
+            alert('Captcha matched! Form submitted.');
+        } else {
+            alert('Captcha did not match. Please try again.');
+        }
+    });
+
+    // Initial captcha load
+    refreshCaptcha();
     </script>
 </body>
 
