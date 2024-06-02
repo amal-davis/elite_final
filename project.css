@@ -987,17 +987,35 @@ ul.list-unstyled li:last-child {
 }
 
 .captcha-circle {
-  width: 45px; /* Fixed width */
-  height: 45px; /* Fixed height */
+  width: 45px;
+  height: 45px;
   background-color: #4b8e3f;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  margin-right: 5px;
+  margin-right: 10px; /* Increased margin to avoid squishing */
   color: white;
-  font-size: 20px;
+  font-size: 20px; /* Adjusted font size for better visibility */
+  padding: 5px; /* Optional: Add padding if needed */
+}
+
+/* Ensure responsiveness */
+@media (max-width: 768px) {
+  .captcha-circle {
+      width: 40px;
+      height: 40px;
+      font-size: 18px; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .captcha-circle {
+      width: 35px;
+      height: 35px;
+      font-size: 16px; /* Adjust font size for even smaller screens */
+  }
 }
 
 .captcha-code {
