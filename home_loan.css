@@ -145,7 +145,6 @@ overflow: hidden;
 }
 
 .logo-normal {
-  transition: all 0.3s ease;
   opacity: 1.0;
   transform: scale(1.1);
   height: 150px;
@@ -154,11 +153,10 @@ overflow: hidden;
 }
 
 .logo-scrolled {
-  transition: all 0.3s ease;
   transform: scale(0.9);
-  height: 40px;
-  width: 138px;
+ 
 }
+
 
 .phone-icon {
   font-size: 24px;
@@ -368,10 +366,10 @@ a:hover {
       transform: scale(1.0);
   }
 
-  .logo-scrolled {
-      height: 30px;
-      width: 104px;
-  }
+  /* .logo-scrolled {
+      height: 43.48px;
+      width: 172.5px;
+  } */
 }
 
 @media (max-width: 576px) {
@@ -380,17 +378,23 @@ a:hover {
   }
 
   .logo-normal {
-      height: 100px;
+      height: 130px;
       transform: scale(0.9);
-      margin-top: -20px;
+      margin-top: -10px;
   }
 
-  .logo-scrolled {
-      height: 34px;
-      width: 98px;
-  }
+  /* .logo-scrolled {
+      height: 43.48px;
+      width: 172.5px;
+  } */
 }
 
+/* Hero Section Styles */
+
+
+.buttons {
+  margin-bottom: 10px;
+}
 /* Container for the image section */
 .image-section {
     position: relative;
@@ -573,6 +577,7 @@ a:hover {
 .fonts{
 font-weight: 700;
 font-size: 20px;
+color: #77c15f;
 }
 .accordion-body{
   font-size: 20px;
@@ -599,8 +604,6 @@ font-size: 20px;
   width: 100%;
   position: relative; /* Added to position the overlay correctly */
   color: white; /* Ensure text remains visible */
-  padding: 50px;
-  
 }
 
 .footer::before {
@@ -625,7 +628,6 @@ font-size: 20px;
   
  
 }
-
 .logo-section {
   display: flex;
   align-items: center;
@@ -679,7 +681,7 @@ font-size: 20px;
   justify-content: space-between;
 }
 .d-flex img {
-  
+  margin: 0 2px; /* Adjust the gap between images */
   padding: 5px; /* Optional: add padding inside the border */
   border-radius: 5px; /* Optional: add rounded corners */
 }
@@ -776,6 +778,8 @@ font-size: 20px;
 a{
 text-decoration: none;
 }
+
+
 
   .read-btns {
     display: inline-block; /* Allows setting width and vertical alignment */

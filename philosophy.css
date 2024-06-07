@@ -149,7 +149,6 @@ overflow: hidden;
 }
 
 .logo-normal {
-    transition: all 0.3s ease;
     opacity: 1.0;
     transform: scale(1.1);
     height: 150px;
@@ -158,11 +157,10 @@ overflow: hidden;
 }
 
 .logo-scrolled {
-    transition: all 0.3s ease;
     transform: scale(0.9);
-    height: 40px;
-    width: 138px;
+   
 }
+
 
 .phone-icon {
     font-size: 24px;
@@ -372,10 +370,10 @@ a:hover {
         transform: scale(1.0);
     }
 
-    .logo-scrolled {
-        height: 30px;
-        width: 104px;
-    }
+    /* .logo-scrolled {
+        height: 43.48px;
+        width: 172.5px;
+    } */
 }
 
 @media (max-width: 576px) {
@@ -384,17 +382,16 @@ a:hover {
     }
 
     .logo-normal {
-        height: 100px;
+        height: 130px;
         transform: scale(0.9);
-        margin-top: -20px;
+        margin-top: -10px;
     }
 
-    .logo-scrolled {
-        height: 34px;
-        width: 98px;
-    }
+    /* .logo-scrolled {
+        height: 43.48px;
+        width: 172.5px;
+    } */
 }
-/* Hero Section Styles */
 
 
 .buttons {
@@ -497,9 +494,9 @@ a:hover {
 .read-btns {
     display: inline-block; /* Allows setting width and vertical alignment */
     padding: 10px 30px; /* Top and bottom padding + horizontal padding */
-    background-color: #f0483e; /* Transparent background */
+    background-color: #4b8e3f; /* Transparent background */
     color: #fff; /* Text color */
-    border: 2px solid #f0483e; /* Solid border with a distinct color, example uses 'orange-red' */
+    border: 2px solid #4b8e3f; /* Solid border with a distinct color, example uses 'orange-red' */
     border-radius: 25px; /* Gives a cylindrical shape */
     text-align: center; /* Centers the text inside the button */
     text-decoration: none; /* Removes underline from the link */
@@ -891,11 +888,9 @@ right:inherit;
         width: 100%;
         position: relative; /* Added to position the overlay correctly */
         color: white; /* Ensure text remains visible */
-        padding: 50px;
-        
-    }
-    
-    .footer::before {
+      }
+      
+      .footer::before {
         content: '';
         position: absolute;
         top: 0;
@@ -904,42 +899,41 @@ right:inherit;
         height: 100%;
         background: rgba(0, 0, 0, 0.85); /* Adjust the last value to control the brightness */
         z-index: 1; /* Ensure the overlay is above the background image */
-    }
-    
-    .footer .container {
+      }
+      
+      .footer .container {
         position: relative;
         z-index: 2; /* Ensure the content is above the overlay */
-    }
-    .footer-link {
+      }
+      .footer-link {
         display: block;
         color: #fff;
         line-height: 1.49998125em;
         
        
-    }
-    
-    .logo-section {
+      }
+      .logo-section {
         display: flex;
         align-items: center;
-    }
-    
-    .logo-section img {
+      }
+      
+      .logo-section img {
         margin-bottom: 10px; /* Margin between logo and vertical line */
-    }
-    .social-media {
+      }
+      .social-media {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 20px;
-    }
-    
-    .social-media span {
+      }
+      
+      .social-media span {
         color: #77c15f;
         font-size: 1.5em;
         margin-right: 20px;
-    }
-    
-    .social-media-icon {
+      }
+      
+      .social-media-icon {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -950,32 +944,32 @@ right:inherit;
         color: #77c15f;
         font-size: 1.5em;
         transition: background-color 0.3s, color 0.3s;
-    }
-    
-    .social-media-icon:hover {
+      }
+      
+      .social-media-icon:hover {
         background-color: #77c15f;
         color: #333;
-    }
-    
-    @media (max-width: 600px) {
+      }
+      
+      @media (max-width: 600px) {
         .social-media {
             flex-direction: column;
         }
-    
+      
         .social-media span {
             margin-bottom: 10px;
         }
-    }
-    .d-flex {
+      }
+      .d-flex {
         
         justify-content: space-between;
-    }
-    .d-flex img {
-        
+      }
+      .d-flex img {
+        margin: 0 2px; /* Adjust the gap between images */
         padding: 5px; /* Optional: add padding inside the border */
         border-radius: 5px; /* Optional: add rounded corners */
-    }
-    .footer .bottom-section {
+      }
+      .footer .bottom-section {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -1065,6 +1059,77 @@ right:inherit;
                     margin-top: 5px;
                 }
             }
-    a{
-    text-decoration: none;
+      a{
+      text-decoration: none;
+      }
+    
+    
+
+
+    .values-section {
+        background-color: #f8f8f8; /* Example background color */
+        padding: 50px 0;
     }
+    
+    .values-heading {
+        text-align: center;
+        font-size: 34px;
+        margin-bottom: 50px;
+    }
+    
+    .list-heading {
+        color: #77c15f; /* Example heading color */
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .values-list {
+        list-style: none;
+        padding-left: 0;
+    }
+    
+    .values-list li {
+        position: relative;
+        margin-bottom: 15px;
+        padding-left: 30px; /* Space for custom bullet */
+        font-size: 20px;
+        direction: ltr;
+        line-height: 1.88213932em;
+        color: #000;
+    }
+    
+    .values-list li:before {
+        content: "\2713"; /* Unicode for check mark */
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #04974d; /* Example color for the check mark */
+        font-size: 20px;
+    }
+    
+    /* Media queries for responsiveness */
+    @media (max-width: 768px) {
+        .values-heading {
+            font-size: 30px;
+        }
+    
+        .list-heading {
+            font-size: 1.25rem;
+        }
+    
+        .values-list li {
+            font-size: 18px;
+            padding-left: 25px; /* Adjust for smaller screens */
+        }
+    
+        .values-list li:before {
+            font-size: 1.25rem;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .values-list {
+            padding-left: 15px; /* Adjust padding for smaller screens */
+        }
+    }
+    

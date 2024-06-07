@@ -194,7 +194,6 @@ overflow: hidden;
 }
 
 .logo-normal {
-  transition: all 0.3s ease;
   opacity: 1.0;
   transform: scale(1.1);
   height: 150px;
@@ -203,11 +202,11 @@ overflow: hidden;
 }
 
 .logo-scrolled {
-  transition: all 0.3s ease;
   transform: scale(0.9);
   height: 40px;
   width: 138px;
 }
+
 
 .phone-icon {
   font-size: 24px;
@@ -513,22 +512,18 @@ a:hover {
         }
     }
     .borderless-input {
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        border-bottom: 1px solid #ccc; /* Border at the bottom only */
+        border-radius: 30px;
+        border: 2px solid #4b8e3f;
         padding: 10px; /* Padding for comfort */
         outline: none; /* Remove outline on focus */
         width: 80%; /* Reduced width */
     }
     .borderless-inputs{
-      border-top: none;
-      border-left: none;
-      border-right: none;
-      border-bottom: 1px solid #ccc; /* Border at the bottom only */
+      border-radius: 30px;
+      border: 2px solid #4b8e3f; /* Border at the bottom only */
       padding: 10px; /* Padding for comfort */
       outline: none; /* Remove outline on focus */
-      width: 50%; /* Reduced width */
+      width: 40%; /* Reduced width */
     }
     .contact-form-container {
       margin-top: 50px;
@@ -636,7 +631,7 @@ a:hover {
         color: white; /* text color for active/hover state */
     }
     .card{
-        border-radius: 0px;
+        border-radius: 15px;
     }
     
     .tab-pane {

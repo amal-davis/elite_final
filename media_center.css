@@ -147,7 +147,6 @@ overflow: hidden;
 }
 
 .logo-normal {
-  transition: all 0.3s ease;
   opacity: 1.0;
   transform: scale(1.1);
   height: 150px;
@@ -156,11 +155,10 @@ overflow: hidden;
 }
 
 .logo-scrolled {
-  transition: all 0.3s ease;
   transform: scale(0.9);
-  height: 40px;
-  width: 138px;
+ 
 }
+
 
 .phone-icon {
   font-size: 24px;
@@ -370,10 +368,10 @@ a:hover {
       transform: scale(1.0);
   }
 
-  .logo-scrolled {
-      height: 30px;
-      width: 104px;
-  }
+  /* .logo-scrolled {
+      height: 43.48px;
+      width: 172.5px;
+  } */
 }
 
 @media (max-width: 576px) {
@@ -382,16 +380,24 @@ a:hover {
   }
 
   .logo-normal {
-      height: 100px;
+      height: 130px;
       transform: scale(0.9);
-      margin-top: -20px;
+      margin-top: -10px;
   }
 
-  .logo-scrolled {
-      height: 34px;
-      width: 98px;
-  }
+  /* .logo-scrolled {
+      height: 43.48px;
+      width: 172.5px;
+  } */
 }
+
+/* Hero Section Styles */
+
+
+.buttons {
+  margin-bottom: 10px;
+}
+
 .media-link:hover{
 color: #111;
 }
@@ -585,27 +591,48 @@ color: #111;
     }
 }
 
+.custom-navigation {
+  position: relative;
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .custom-nav-btn {
-    background-color: #4b8e3f;
-    /* Dark background for contrast */
-    color: white;
-    /* White text for visibility */
-    border: none;
-    /* No border for clean look */
-    padding: 10px 20px;
-    /* Padding for button */
-    cursor: pointer;
-    /* Pointer cursor on hover */
-    transition: all 0.3s;
-    border-radius: 50%;
-    /* Smooth transition on hover */
+  background-color: #4b8e3f; /* Dark background for contrast */
+  color: white; /* White text for visibility */
+  border: none; /* No border for clean look */
+  width: 50px; /* Fixed width to make a perfect circle */
+  height: 50px; /* Fixed height to make a perfect circle */
+  padding: 0; /* Remove padding to maintain circle shape */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 0.3s; /* Smooth transition on hover */
+  border-radius: 50%; /* Perfectly rounded */
+  display: inline-flex; /* Center the icon */
+  align-items: center; /* Center the icon */
+  justify-content: center; /* Center the icon */
+  margin: 0 10px; /* Add margin between buttons */
 }
 
 .custom-nav-btn:hover {
-    background-color: #555;
-    /* Lighter background on hover */
-    color: #fff;
+  background-color: #555; /* Lighter background on hover */
+  color: #fff;
 }
+
+/* Media queries for responsiveness */
+@media (max-width: 767px) {
+  .custom-navigation {
+      flex-direction: row; /* Ensure buttons stay in a row */
+      justify-content: center; /* Center the buttons horizontally */
+  }
+
+  .custom-nav-btn {
+      margin: 10px; /* Maintain margin between buttons */
+  }
+}
+
 
 a {
     color: #111;
@@ -735,8 +762,6 @@ margin-left: 10px; /* Move the icon to the right on hover and focus */
   width: 100%;
   position: relative; /* Added to position the overlay correctly */
   color: white; /* Ensure text remains visible */
-  padding: 50px;
-  
 }
 
 .footer::before {
@@ -761,7 +786,6 @@ margin-left: 10px; /* Move the icon to the right on hover and focus */
   
  
 }
-
 .logo-section {
   display: flex;
   align-items: center;
@@ -815,7 +839,7 @@ margin-left: 10px; /* Move the icon to the right on hover and focus */
   justify-content: space-between;
 }
 .d-flex img {
-  
+  margin: 0 2px; /* Adjust the gap between images */
   padding: 5px; /* Optional: add padding inside the border */
   border-radius: 5px; /* Optional: add rounded corners */
 }
@@ -912,6 +936,7 @@ margin-left: 10px; /* Move the icon to the right on hover and focus */
 a{
 text-decoration: none;
 }
+
 
   .read-btns {
     display: inline-block; /* Allows setting width and vertical alignment */

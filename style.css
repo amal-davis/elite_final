@@ -148,7 +148,6 @@ opacity: 1;
 }
 
 .logo-normal {
-    transition: all 0.3s ease;
     opacity: 1.0;
     transform: scale(1.1);
     height: 150px;
@@ -157,11 +156,10 @@ opacity: 1;
 }
 
 .logo-scrolled {
-    transition: all 0.3s ease;
     transform: scale(0.9);
-    height: 40px;
-    width: 138px;
+   
 }
+
 
 .phone-icon {
     font-size: 24px;
@@ -371,10 +369,10 @@ a:hover {
         transform: scale(1.0);
     }
 
-    .logo-scrolled {
-        height: 30px;
-        width: 104px;
-    }
+    /* .logo-scrolled {
+        height: 43.48px;
+        width: 172.5px;
+    } */
 }
 
 @media (max-width: 576px) {
@@ -383,15 +381,15 @@ a:hover {
     }
 
     .logo-normal {
-        height: 100px;
+        height: 130px;
         transform: scale(0.9);
-        margin-top: -20px;
+        margin-top: -10px;
     }
 
-    .logo-scrolled {
-        height: 34px;
-        width: 98px;
-    }
+    /* .logo-scrolled {
+        height: 43.48px;
+        width: 172.5px;
+    } */
 }
 
 /* Hero Section Styles */
@@ -774,37 +772,54 @@ a:hover {
         font-size: 14px;
     }
 }
-/* Top heading with uppercase text and bold font */
 .custom-section {
     background-color: #ede9e2; /* Example background color */
     padding: 220px;
-  }
-  
-  .custom-section .image-container {
-    margin-bottom: 20px;
-  }
+}
 
-  .custom-section .image-container img {
-    
+.custom-section .image-container {
+    margin-bottom: 20px;
+    position: relative;
+    text-align: center; /* Center align the image */
+}
+
+.custom-section .image-wrapper {
+    position: relative;
     width: 400px;
     height: 400px;
+    margin: 0 auto; /* Center align */
+}
+
+.custom-section .main-img {
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     object-fit: cover;
-  }
+}
 
-  .custom-section .content-container {
+.custom-section .logo-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px; /* Adjust the logo size as needed */
+    height: 100px; /* Adjust the logo size as needed */
+    border-radius: 50%;
+}
+
+.custom-section .content-container {
     padding-left: 0;
-    
-  }
+    text-align: center; /* Center align the text */
+}
 
-  .custom-section .content-container h2 {
+.custom-section .content-container h2 {
     font-size: 34px;
     margin-bottom: 50px;
     margin-top: 50px;
-  }
+}
 
-  .custom-section .content-container p {
-    font-size: 20px;
+.custom-section .content-container p {
+    font-size: 22px;
     line-height: 1.98213932em;
     margin-bottom: 50px;
     width: 80%;
@@ -814,82 +829,97 @@ a:hover {
     color: #000000;
     direction: ltr;
     font-weight: 400
-  }
+}
 
-  .custom-section .btn-custom {
+.custom-section .btn-custom {
     background-color: transparent;
     border: 2px solid #4b8e3f;
     color: #4b8e3f;
-    padding: 10px 20px;
-    border-radius: 25px;
+    padding: 20px 55px;
+    border-radius: 45px;
     transition: all 0.3s ease-in-out;
     margin-top: 10px;
-  }
+}
 
-  .custom-section .btn-custom:hover {
+.custom-section .btn-custom:hover {
     background-color: #4b8e3f;
     color: white;
-  }
+}
 
-  /* Media queries for responsiveness */
-  @media (min-width: 768px) {
+/* Media queries for responsiveness */
+@media (min-width: 768px) {
     .custom-section {
-      padding: 20px;
+        padding: 20px;
     }
 
     .custom-section .image-container {
-      flex: 1 1 40%;
-      margin-bottom: 0;
-      text-align: right;
-      padding-right: 15px;
+        /* flex: 1 1 40%; */
+        margin-bottom: 0;
+        text-align: left;
+        padding-right: 15px;
     }
 
     .custom-section .content-container {
-      flex: 1 1 60%;
-      padding-left: 30px;
-      text-align: left;
+        flex: 1 1 60%;
+        padding-left: 30px;
+        text-align: left;
     }
+}
 
-    
-    
-  }
-
-  @media (min-width: 992px) {
+@media (min-width: 992px) {
     .custom-section {
-      padding: 120px;
+        padding: 120px;
     }
 
     .custom-section .image-container {
-      flex: 1 1 40%;
+        flex: 1 1 40%;
     }
 
     .custom-section .content-container {
-      flex: 1 1 60%;
+        flex: 1 1 60%;
     }
-  }
-  @media (max-width:567px){
+}
+
+@media (max-width: 767px) {
     .custom-section {
         padding: 30px;
-      }
-      .custom-section .image-container img {
-    
-        width: 400px;
-        height: 350px;
-        border-radius: 50%;
-        object-fit: cover;
-      }
-    
-  
-  }
-  @media (max-width:400px){
-    .custom-section .image-container img {
-    
-        width: 400px;
+    }
+
+    .custom-section .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .custom-section .image-wrapper {
+        width: 300px;
         height: 300px;
-        border-radius: 50%;
-        object-fit: cover;
-      }
-  }
+    }
+
+    .custom-section .logo-img {
+        width: 75px; /* Adjust the logo size for smaller screens */
+        height: 75px;
+    }
+
+    .custom-section .btn-custom {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .custom-section .image-wrapper {
+        width: 250px;
+        height: 250px;
+    }
+
+    .custom-section .logo-img {
+        width: 60px; /* Adjust the logo size for smaller screens */
+        height: 60px;
+    }
+}
+
+
   .locations-section {
     padding: 60px 0;
     
@@ -901,7 +931,7 @@ a:hover {
   }
   
   .locations-section p {
-    font-size:20px;
+    font-size:25px;
     margin-bottom: 40px;
     line-height: 1.98213932em;
     text-align: justify;
@@ -912,8 +942,8 @@ a:hover {
   .locations-section .btn-custom {
     border: 2px solid #4b8e3f;
     color: #4b8e3f;
-    padding: 10px 20px;
-    border-radius: 25px;
+    padding: 20px 55px;
+    border-radius: 45px;
     transition: all 0.3s ease-in-out;
     margin: 0 10px;
     min-width: 150px;
@@ -1076,194 +1106,209 @@ a:hover {
     }
 }
 
-  .card-title {
-          font-size: 34px;
-          font-weight: 600;
-          line-height: 30px;
-          text-align: left;
-        }
-      
-        .card-text {
-          font-size: 20px;
-          font-weight: 400;
-          line-height: 24px;
-          text-align: left;
-          margin-top: 20px;
-        }
-      
-        .small_h {
-          font-size: 18px;
-          font-weight: 600;
-          line-height: 21px;
-          text-align: left;
-          margin-top: 20px;
-        }
-      
-        .card-texts {
-          font-size: 16px;
-          font-weight: 300;
-          line-height: 21px;
-          text-align: left;
-        }
-      
-        .card {
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .card-body{
-            padding: 32px;
-        }
-        .btn-customs {
-            background-color: transparent;
-            border: 2px solid #4b8e3f;
-            color: #4b8e3f;
-            padding: 5px 8px;
-            border-radius: 25px;
-            transition: all 0.3s ease-in-out;
-            margin-top: 10px;
-          }
-          
-          .btn-customs:hover {
-            background-color: #4b8e3f;
-            color: white;
-          }
-          
-          .btn-customse {
-            background-color: #4b8e3f;
-            border: 2px solid #4b8e3f;
-            color: #fff;
-            padding: 5px 9px;
-            border-radius: 25px;
-            transition: all 0.3s ease-in-out;
-            margin-top: 10px;
-          }
-          
-          .btn-customse:hover {
-            background-color: #fff;
-            color: #4b8e3f;
-          }
-          
-          .property-btn-small {
-            margin-left: 12px;
-            background-color: #0ECA6D;
-            color: #fff;
-            border-radius: 27px;
-          }
-          
-          .phone-btn {
-            background-color: #f8f9fa;
-            color: #212529;
-            border-radius: 27px;
-          }
-          
-          .content-buttons {
-            flex-wrap: wrap;
-            justify-content: center;
-          }
-          
-          @media (max-width: 400px) {
-            .content-buttons {
-              flex-direction: column;
-              align-items: center;
-            }
-          
-            .btn-customs, .btn-customse {
-              width: 90%;
-              margin-left: 0;
-              margin-right: 0;
-              margin-top: 5px;
-              margin-bottom: 5px;
-            }
-          
-            .property-btn-small, .phone-btn {
-              width: 90%;
-              margin-left: 0;
-              margin-right: 0;
-              margin-top: 5px;
-              margin-bottom: 5px;
-            }
-          }
-          
-      
-        /* Responsive styles for tablet screens (iPad Air, iPad Mini, etc.) */
-        @media (max-width: 992px) {
-          .col-md-4 {
-            flex: 0 0 50%;
-            max-width: 50%;
-          }
-      
-          .card-title {
-            font-size: 18px;
-          }
-      
-          .card-text {
-            font-size: 14px;
-          }
-      
-      
-          .small_h {
-            font-size: 16px;
-          }
-      
-          .card-texts {
-            font-size: 14px;
-          }
-        }
-      
-        /* Responsive styles for smaller tablets (like iPad Mini) */
-        @media (max-width: 768px) {
-          .col-md-4 {
-            flex: 0 0 100%;
-            max-width: 100%;
-          }
-      
-          .card-title {
-            font-size: 20px;
-          }
-      
-          .card-text {
-            font-size: 18px;
-            margin-top: 12px;
-          }
-      
-          .small_h {
-            font-size: 16px;
-          }
-      
-          .card-texts {
-            font-size: 14px;
-          }
-        }
-        @media (max-width: 768px) {
-          .property-btn {
-            padding: 6px 12px; /* Smaller padding for smaller screens */
-            font-size: 0.8rem; /* Smaller font size */
-          }
-      
-          .property-btn-small {
-            padding: 4px 8px; /* Further reduced padding for smaller screens */
-            font-size: 0.7rem; /* Further reduced font size */
-          }
-        }
-        @media (max-width: 1024px) { /* iPad Pro screen width */
-          .property-btn {
-            padding: 8px 16px; /* Adjust padding */
-            font-size: 10px; /* Decrease font size */
-          }
-      
-          .property-btn-small {
-            padding: 4px 10px; /* Decrease padding for smaller buttons */
-            font-size: 20px; /* Decrease font size */
-          }
-      
-          .card-body {
-            padding: 20px; /* Adjust card body padding */
-          }
-      
-          .status-label {
-            font-size: 0.8rem; /* Adjust status label font size */
-            padding: 4px 8px; /* Adjust padding for status label */
-          }
-        }
+.card-title {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: left;
+}
+
+.card-text {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.small_h {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21px;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.card-texts {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 21px;
+    text-align: left;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+    padding: 32px;
+}
+
+.btn-customs {
+    background-color: transparent;
+    border: 2px solid #4b8e3f;
+    color: #4b8e3f;
+    padding: 5px 8px;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+    margin-top: 10px;
+}
+
+.btn-customs:hover {
+    background-color: #4b8e3f;
+    color: white;
+}
+
+.btn-customse {
+    background-color: #4b8e3f;
+    border: 2px solid #4b8e3f;
+    color: #fff;
+    padding: 5px 9px;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+    margin-top: 10px;
+}
+
+.btn-customse:hover {
+    background-color: #fff;
+    color: #4b8e3f;
+}
+
+.property-btn-small {
+    margin-left: 12px;
+    background-color: #0ECA6D;
+    color: #fff;
+    border-radius: 27px;
+}
+
+.phone-btn {
+    background-color: #f8f9fa;
+    color: #212529;
+    border-radius: 27px;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.content-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media (max-width: 400px) {
+    .content-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-customs, .btn-customse {
+        width: 90%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .property-btn-small, .phone-btn {
+        width: 90%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+/* Responsive styles for tablet screens (iPad Air, iPad Mini, etc.) */
+@media (max-width: 992px) {
+    .col-md-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .card-title {
+        font-size: 18px;
+    }
+
+    .card-text {
+        font-size: 14px;
+    }
+
+    .small_h {
+        font-size: 16px;
+    }
+
+    .card-texts {
+        font-size: 14px;
+    }
+}
+
+/* Responsive styles for smaller tablets (like iPad Mini) */
+@media (max-width: 768px) {
+    .col-md-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .card-title {
+        font-size: 20px;
+    }
+
+    .card-text {
+        font-size: 18px;
+        margin-top: 12px;
+    }
+
+    .small_h {
+        font-size: 16px;
+    }
+
+    .card-texts {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .property-btn {
+        padding: 6px 12px; /* Smaller padding for smaller screens */
+        font-size: 0.8rem; /* Smaller font size */
+    }
+
+    .property-btn-small {
+        padding: 4px 8px; /* Further reduced padding for smaller screens */
+        font-size: 0.7rem; /* Further reduced font size */
+    }
+}
+
+@media (max-width: 1024px) { /* iPad Pro screen width */
+    .property-btn {
+        padding: 8px 16px; /* Adjust padding */
+        font-size: 10px; /* Decrease font size */
+    }
+
+    .property-btn-small {
+        padding: 4px 10px; /* Decrease padding for smaller buttons */
+        font-size: 20px; /* Decrease font size */
+    }
+
+    .card-body {
+        padding: 20px; /* Adjust card body padding */
+    }
+
+    .status-label {
+        font-size: 0.8rem; /* Adjust status label font size */
+        padding: 4px 8px; /* Adjust padding for status label */
+    }
+}
+
 
 /* Styling for Swiper Slides */
 
@@ -1286,7 +1331,7 @@ a:hover {
     font-style: italic;
     color: #77c15f; /* Match the text color */
     margin-bottom: 20px;
-    font-size: 34px;
+    font-size: 37px;
     line-height: 1.47656827em;
     letter-spacing: 0em;
     direction: ltr;
@@ -1294,10 +1339,10 @@ a:hover {
 
   .quote-section .btn-custom {
     background-color: transparent;
-    border: 2px solid #000; /* Black border */
+    border: 2px solid #4b8e3f; /* Black border */
     color: #4b8e3f; /* Match the text color */
-    padding: 10px 20px;
-    border-radius: 25px;
+    padding: 20px 55px;
+    border-radius: 45px;
     transition: all 0.3s ease-in-out;
   }
 
@@ -1309,6 +1354,10 @@ a:hover {
 @media(max-width:547px){
     .quote-section h2{
         font-size: 20px;
+    }
+    .quote-section .btn-custom{
+        padding: 8px 15px;
+        font-size: 0.9rem;
     }
 }
 /* .custom-nav-buttons-2{
@@ -1401,7 +1450,7 @@ a:hover {
 }
 
 .text {
-    font-size: 20px;
+    font-size: 25px;
     font-style: italic;
     line-height: 1.96875308em;
     text-align: left;
@@ -1443,7 +1492,7 @@ a:hover {
   }
   
   .services-section p {
-    font-size: 20px;
+    font-size: 25px;
     margin-bottom: 40px;
     line-height: 1.98213932em;
     letter-spacing: 0em;
@@ -1559,7 +1608,7 @@ a:hover {
 }
 
 .captcha-circle {
-    width: 45px;
+    width: 52px;
     height: 45px;
     background-color: #4b8e3f;
     border-radius: 50%;
@@ -1567,10 +1616,11 @@ a:hover {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    margin-right: 10px; /* Increased margin to avoid squishing */
+    margin-right: 20px; /* Increased margin to avoid squishing */
     color: white;
     font-size: 20px; /* Adjusted font size for better visibility */
-    padding: 5px; /* Optional: Add padding if needed */
+    padding: 0; /* Ensure no additional padding distorts the circle */
+    box-sizing: border-box; /* Ensure padding doesn't affect the size */
 }
 
 /* Ensure responsiveness */
@@ -1584,7 +1634,7 @@ a:hover {
 
 @media (max-width: 576px) {
     .captcha-circle {
-        width: 35px;
+        width: 45px;
         height: 35px;
         font-size: 16px; /* Adjust font size for even smaller screens */
     }
@@ -1593,7 +1643,7 @@ a:hover {
 .captcha-code {
     background-color: black;
     color: white;
-    padding: 10px;
+    padding: 8px;
     border-radius: 20px;
     margin-right: 10px;
     min-width: 70px;
@@ -1608,6 +1658,7 @@ a:hover {
     font-size: 16px;
     box-sizing: border-box;
 }
+
 .btn-submit {
     background-color: #4b8e3f;
     color: #fff;
@@ -1618,6 +1669,7 @@ a:hover {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
 .btn-submit:hover {
     background-color: #77c15f;
     color: #fff;
@@ -1709,11 +1761,9 @@ a:hover {
     width: 100%;
     position: relative; /* Added to position the overlay correctly */
     color: white; /* Ensure text remains visible */
-    padding: 50px;
-    
-}
-
-.footer::before {
+  }
+  
+  .footer::before {
     content: '';
     position: absolute;
     top: 0;
@@ -1722,42 +1772,41 @@ a:hover {
     height: 100%;
     background: rgba(0, 0, 0, 0.85); /* Adjust the last value to control the brightness */
     z-index: 1; /* Ensure the overlay is above the background image */
-}
-
-.footer .container {
+  }
+  
+  .footer .container {
     position: relative;
     z-index: 2; /* Ensure the content is above the overlay */
-}
-.footer-link {
+  }
+  .footer-link {
     display: block;
     color: #fff;
     line-height: 1.49998125em;
     
    
-}
-
-.logo-section {
+  }
+  .logo-section {
     display: flex;
     align-items: center;
-}
-
-.logo-section img {
+  }
+  
+  .logo-section img {
     margin-bottom: 10px; /* Margin between logo and vertical line */
-}
-.social-media {
+  }
+  .social-media {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
-}
-
-.social-media span {
+  }
+  
+  .social-media span {
     color: #77c15f;
     font-size: 1.5em;
     margin-right: 20px;
-}
-
-.social-media-icon {
+  }
+  
+  .social-media-icon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1768,32 +1817,32 @@ a:hover {
     color: #77c15f;
     font-size: 1.5em;
     transition: background-color 0.3s, color 0.3s;
-}
-
-.social-media-icon:hover {
+  }
+  
+  .social-media-icon:hover {
     background-color: #77c15f;
     color: #333;
-}
-
-@media (max-width: 600px) {
+  }
+  
+  @media (max-width: 600px) {
     .social-media {
         flex-direction: column;
     }
-
+  
     .social-media span {
         margin-bottom: 10px;
     }
-}
-.d-flex {
+  }
+  .d-flex {
     
     justify-content: space-between;
-}
-.d-flex img {
-    
+  }
+  .d-flex img {
+    margin: 0 2px; /* Adjust the gap between images */
     padding: 5px; /* Optional: add padding inside the border */
     border-radius: 5px; /* Optional: add rounded corners */
-}
-.footer .bottom-section {
+  }
+  .footer .bottom-section {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -1883,14 +1932,11 @@ a:hover {
                 margin-top: 5px;
             }
         }
-a{
-text-decoration: none;
-}
+  a{
+  text-decoration: none;
+  }
 
 
-a {
-    text-decoration: none;
-}
 
 
 .whatsapp-icon {

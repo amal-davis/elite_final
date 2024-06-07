@@ -122,7 +122,7 @@ body.menu-active .menu-overlay {
     color: white;
     position: fixed;
     top: 0;
-    z-index: 3;
+    z-index: 21100;
 }
 
 .header-bg {
@@ -147,7 +147,6 @@ body.menu-active .menu-overlay {
 }
 
 .logo-normal {
-    transition: all 0.3s ease;
     opacity: 1.0;
     transform: scale(1.1);
     height: 150px;
@@ -156,11 +155,10 @@ body.menu-active .menu-overlay {
 }
 
 .logo-scrolled {
-    transition: all 0.3s ease;
     transform: scale(0.9);
-    height: 40px;
-    width: 138px;
+   
 }
+
 
 .phone-icon {
     font-size: 24px;
@@ -173,7 +171,7 @@ body.menu-active .menu-overlay {
     width: 495px;
     height: 100vh;
     background-color: rgba(59, 59, 59, 0.7);
-    z-index: 1000;
+    z-index: 21100;
     border-top-right-radius: 30px;
     padding: 20px;
     backdrop-filter: blur(5px);
@@ -370,10 +368,10 @@ a:hover {
         transform: scale(1.0);
     }
 
-    .logo-scrolled {
-        height: 30px;
-        width: 104px;
-    }
+    /* .logo-scrolled {
+        height: 43.48px;
+        width: 172.5px;
+    } */
 }
 
 @media (max-width: 576px) {
@@ -382,16 +380,20 @@ a:hover {
     }
 
     .logo-normal {
-        height: 100px;
+        height: 130px;
         transform: scale(0.9);
-        margin-top: -20px;
+        margin-top: -10px;
     }
 
-    .logo-scrolled {
-        height: 34px;
-        width: 98px;
-    }
+    /* .logo-scrolled {
+        height: 43.48px;
+        width: 172.5px;
+    } */
 }
+
+/* Hero Section Styles */
+
+
 /* Hero Section Styles */
   /* Hero Section Styles */
 
@@ -874,7 +876,7 @@ a:hover {
   }
 }
 .text_para{
-  font-size: 20px;
+  font-size: 25px;
   color: #000000;
   font-weight: 300;
   line-height: 1.9821287em;
@@ -987,7 +989,7 @@ ul.list-unstyled li:last-child {
 }
 
 .captcha-circle {
-  width: 45px;
+  width: 52px;
   height: 45px;
   background-color: #4b8e3f;
   border-radius: 50%;
@@ -995,10 +997,11 @@ ul.list-unstyled li:last-child {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  margin-right: 10px; /* Increased margin to avoid squishing */
+  margin-right: 20px; /* Increased margin to avoid squishing */
   color: white;
   font-size: 20px; /* Adjusted font size for better visibility */
-  padding: 5px; /* Optional: Add padding if needed */
+  padding: 0; /* Ensure no additional padding distorts the circle */
+  box-sizing: border-box; /* Ensure padding doesn't affect the size */
 }
 
 /* Ensure responsiveness */
@@ -1012,7 +1015,7 @@ ul.list-unstyled li:last-child {
 
 @media (max-width: 576px) {
   .captcha-circle {
-      width: 35px;
+      width: 45px;
       height: 35px;
       font-size: 16px; /* Adjust font size for even smaller screens */
   }
@@ -1021,12 +1024,13 @@ ul.list-unstyled li:last-child {
 .captcha-code {
   background-color: black;
   color: white;
-  padding: 10px;
+  padding: 8px;
   border-radius: 20px;
   margin-right: 10px;
   min-width: 70px;
   text-align: center;
 }
+
 
 .captcha-input {
   flex-grow: 1;
@@ -1177,9 +1181,11 @@ ul.list-unstyled li:last-child {
 .card {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-.card-body{
-    padding: 32px;
+
+.card-body {
+  padding: 32px;
 }
+
 .btn-customs {
   background-color: transparent;
   border: 2px solid #4b8e3f;
@@ -1223,6 +1229,18 @@ ul.list-unstyled li:last-child {
   border-radius: 27px;
 }
 
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: flex-start;
+}
+
 .content-buttons {
   flex-wrap: wrap;
   justify-content: center;
@@ -1230,104 +1248,106 @@ ul.list-unstyled li:last-child {
 
 @media (max-width: 400px) {
   .content-buttons {
-    flex-direction: column;
-    align-items: center;
+      flex-direction: column;
+      align-items: center;
   }
 
   .btn-customs, .btn-customse {
-    width: 90%;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 5px;
-    margin-bottom: 5px;
+      width: 90%;
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 5px;
+      margin-bottom: 5px;
   }
 
   .property-btn-small, .phone-btn {
-    width: 90%;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 5px;
-    margin-bottom: 5px;
+      width: 90%;
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 5px;
+      margin-bottom: 5px;
   }
 }
+
 /* Responsive styles for tablet screens (iPad Air, iPad Mini, etc.) */
 @media (max-width: 992px) {
   .col-md-4 {
-    flex: 0 0 50%;
-    max-width: 50%;
+      flex: 0 0 50%;
+      max-width: 50%;
   }
 
   .card-title {
-    font-size: 18px;
+      font-size: 18px;
   }
 
   .card-text {
-    font-size: 14px;
+      font-size: 14px;
   }
 
-
   .small_h {
-    font-size: 16px;
+      font-size: 16px;
   }
 
   .card-texts {
-    font-size: 14px;
+      font-size: 14px;
   }
 }
 
 /* Responsive styles for smaller tablets (like iPad Mini) */
 @media (max-width: 768px) {
   .col-md-4 {
-    flex: 0 0 100%;
-    max-width: 100%;
+      flex: 0 0 100%;
+      max-width: 100%;
   }
 
   .card-title {
-    font-size: 30px;
+      font-size: 20px;
   }
 
   .card-text {
-    font-size: 18px;
-    margin-top: 12px;
+      font-size: 18px;
+      margin-top: 12px;
   }
 
   .small_h {
-    font-size: 16px;
+      font-size: 16px;
   }
 
   .card-texts {
-    font-size: 14px;
+      font-size: 14px;
   }
 }
+
 @media (max-width: 768px) {
   .property-btn {
-    padding: 6px 12px; /* Smaller padding for smaller screens */
-    font-size: 0.8rem; /* Smaller font size */
+      padding: 6px 12px; /* Smaller padding for smaller screens */
+      font-size: 0.8rem; /* Smaller font size */
   }
 
   .property-btn-small {
-    padding: 4px 8px; /* Further reduced padding for smaller screens */
-    font-size: 0.7rem; /* Further reduced font size */
+      padding: 4px 8px; /* Further reduced padding for smaller screens */
+      font-size: 0.7rem; /* Further reduced font size */
   }
 }
+
 @media (max-width: 1024px) { /* iPad Pro screen width */
   .property-btn {
-    padding: 8px 16px; /* Adjust padding */
-    font-size: 10px; /* Decrease font size */
+      padding: 8px 16px; /* Adjust padding */
+      font-size: 10px; /* Decrease font size */
   }
 
   .property-btn-small {
-    padding: 4px 10px; /* Decrease padding for smaller buttons */
-    font-size: 10px; /* Decrease font size */
+      padding: 4px 10px; /* Decrease padding for smaller buttons */
+      font-size: 20px; /* Decrease font size */
   }
 
   .card-body {
-    padding: 20px; /* Adjust card body padding */
+      padding: 20px; /* Adjust card body padding */
   }
 
   .status-label {
-    font-size: 0.8rem; /* Adjust status label font size */
-    padding: 4px 8px; /* Adjust padding for status label */
+      font-size: 0.8rem; /* Adjust status label font size */
+      padding: 4px 8px; /* Adjust padding for status label */
   }
 }
 

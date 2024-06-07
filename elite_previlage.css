@@ -137,7 +137,6 @@ overflow: hidden;
 }
 
 .logo-normal {
-  transition: all 0.3s ease;
   opacity: 1.0;
   transform: scale(1.1);
   height: 150px;
@@ -146,11 +145,10 @@ overflow: hidden;
 }
 
 .logo-scrolled {
-  transition: all 0.3s ease;
   transform: scale(0.9);
-  height: 40px;
-  width: 138px;
+ 
 }
+
 
 .phone-icon {
   font-size: 24px;
@@ -360,27 +358,10 @@ a:hover {
       transform: scale(1.0);
   }
 
-  .logo-scrolled {
-      height: 30px;
-      width: 104px;
-  }
-}
-
-@media (max-width: 576px) {
-  .phone-icon {
-      font-size: 14px;
-  }
-
-  .logo-normal {
-      height: 100px;
-      transform: scale(0.9);
-      margin-top: -20px;
-  }
-
-  .logo-scrolled {
-      height: 34px;
-      width: 98px;
-  }
+  /* .logo-scrolled {
+      height: 43.48px;
+      width: 172.5px;
+  } */
 }
 
 
@@ -534,6 +515,7 @@ border: 1px solid #b59900;
 border-radius: 0px;
 padding: 20px;
 box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+border-radius: 15px;
 }
 
 .icon i {
@@ -556,8 +538,6 @@ color: #000;
   width: 100%;
   position: relative; /* Added to position the overlay correctly */
   color: white; /* Ensure text remains visible */
-  padding: 50px;
-  
 }
 
 .footer::before {
@@ -582,7 +562,6 @@ color: #000;
   
  
 }
-
 .logo-section {
   display: flex;
   align-items: center;
@@ -636,7 +615,7 @@ color: #000;
   justify-content: space-between;
 }
 .d-flex img {
-  
+  margin: 0 2px; /* Adjust the gap between images */
   padding: 5px; /* Optional: add padding inside the border */
   border-radius: 5px; /* Optional: add rounded corners */
 }
